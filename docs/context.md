@@ -1,13 +1,13 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+Nosso objetivo é tornar a interação com o mundo de cuidados com o seu pet, viemos com a idea de tornar mais tecnologico a interação do dono do pet com profissionais e serviços que irão acresentar mais carinho e cuidado com o pet.
+Nossa idea e montar uma aplicação completa a respeito de facilitar o contato com um veterinario podendo marcar consultas com mais rapidez e facilidade, nele tera todo o acompanhamento com seu pet, tendo uma ficha unica para ele com todas as informações importante desde nome a tamanho, peso, raça e etc...
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+Queremos quebrar todo esse processo burocrático, da pessoa ter que ligar e as vezes elas nem são atendidas mesmo as vezes tendo uma emergência em mãos e esta com o tempo bem apertado por conta da rotina diaria. E ate quando ela é atendida ela é mal atendida, sem ter um acompanhamento bem proximo do pet.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Nos vamos montar essa aplicação justamente para facilitar esse acesso a atendimento veterinario, botar isso na palma da mão, no qual a pessoa facilmente vai conseguir contactar com um atendimento profissional e competente sem ter que procurar muito e tirar tempo para fazer ligações para saber informações basicas como preço, metodo de atendimento ou ate as vezes tirar uma duvida que e considerada basica, vamos otimizar o tempo e manter a qualidade de todo esse processo, afinal esse mundo pet tem crescido cada vez mais com os anos, aumentando a procura desse serviço.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
 > **Links Úteis**:
 > - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
