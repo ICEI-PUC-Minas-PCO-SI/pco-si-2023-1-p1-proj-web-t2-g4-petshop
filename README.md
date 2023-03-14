@@ -15,7 +15,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Carolina Alves Baião Pessoa
 * João Vitor Vitalino da Silva Roveda
 * Erick Fabricio Rodrigues Ribeiro
-* Nome completo do aluno 5
+* Gabriel Leandro Emerick de Azevedo
+* Nome do aluno 6
 
 ## Orientador
 
