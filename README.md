@@ -16,7 +16,8 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * João Vitor Vitalino da Silva Roveda
 * Erick Fabricio Rodrigues Ribeiro
 * Gabriel Leandro Emerick de Azevedo
-* Nome do aluno 6
+* Arthur Magalhães Fonseca
+* Carolina Alves Baião Pessoa
 
 ## Orientador
 
