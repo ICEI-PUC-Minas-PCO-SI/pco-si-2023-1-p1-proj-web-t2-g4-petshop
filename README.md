@@ -14,7 +14,7 @@ Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo de
 * Gabriel Henrique de Jesus Paiva
 * Carolina Alves Baião Pessoa
 * João Vitor Vitalino da Silva Roveda
-* Nome completo do aluno 4
+* Erick Fabricio Rodrigues Ribeiro
 * Nome completo do aluno 5
 
 ## Orientador
