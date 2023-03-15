@@ -1,9 +1,4 @@
-# CUIDADO ONDE DEIXAS SEU PROJETO ABERTO, EXISTEM SERES MALIGNOS ONDE QUEREM SEU MAL.
-# EU PORTADOR DA DESGRAÇA CELESTIAL REVERSA IREI SALVAR SEU PROJETO DOS MALFEITORES DO MUNDO 
-## BY: SMARTING CHECKINLILTER
-// DROP SCHEMA;
-
-## Introdução
+# Introdução
 
 Nosso objetivo é tornar a interação com o mundo de cuidados com o seu pet, viemos com a idea de tornar mais tecnologico a interação do dono do pet com profissionais e serviços que irão acresentar mais carinho e cuidado com o pet.
 Nossa idea e montar uma aplicação completa a respeito de facilitar o contato com um veterinario podendo marcar consultas com mais rapidez e facilidade, nele tera todo o acompanhamento com seu pet, tendo uma ficha unica para ele com todas as informações importante desde nome a tamanho, peso, raça e etc...
