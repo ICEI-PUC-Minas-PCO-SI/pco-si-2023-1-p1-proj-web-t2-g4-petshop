@@ -15,9 +15,9 @@ Com a demanda, muitos petshops acabam recebendo muitos clientes de uma vez só, 
 Desenvolver uma aplicação web que facilitará a comunicação entre cliente e petshop.
 
 **Específicos:**
--> Levantar as necessidades e preferências dos donos de pets e dos peshops em relação ao uso da aplicação.
--> Fornecer informações básicas, como preço e método de atendimento, para o cliente.
--> Permitir o gerenciamente dos dias e horários disponiveis para atendimento.
+ 1) Levantar as necessidades e preferências dos donos de pets e dos peshops em relação ao uso da aplicação.
+ 2) Fornecer informações básicas, como preço e método de atendimento, para o cliente.
+ 3) Permitir o gerenciamente dos dias e horários disponiveis para atendimento.
  
 
 ## Justificativa
@@ -27,6 +27,7 @@ Tendo em vista o avanço da tecnologia, as aplicações web acabaram se tornando
 Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais qualidade e organização, diluindo os atendimentos ao longo do dia, além de acompanhar quais são os horários mais vazios, podendo implementar ações que irão atrair público para aquele período do dia/semana².
 
 ¹https://tdsa.com.br/blog/conheca-os-beneficios-de-aderir-aos-agendamentos-on-line/
+
 ²https://wbagestao.com/comece-a-usar-a-agenda-do-pet-shop-para-trabalhar-com-horario-fixo/
 
 
