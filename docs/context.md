@@ -1,41 +1,38 @@
 # Introdução
 
-Nosso objetivo é tornar a interação com o mundo de cuidados com o seu pet, viemos com a idea de tornar mais tecnologico a interação do dono do pet com profissionais e serviços que irão acresentar mais carinho e cuidado com o pet.
-Nossa idea e montar uma aplicação completa a respeito de facilitar o contato com um veterinario podendo marcar consultas com mais rapidez e facilidade, nele tera todo o acompanhamento com seu pet, tendo uma ficha unica para ele com todas as informações importante desde nome a tamanho, peso, raça e etc...
+Com o advento da pandemia, observou-se um aumento em relação à adoção/aquisição de pets. Devido à taxa de carência que maximizou nesse período, visto que a população foi submetida à um longo tempo de isolamento, as pessoas em estado de depressão e solidão, na maioria dos casos, só conseguiram conforto ao obter um “amiguinho”. Este ato de bondade elevou a autoestima e a alegria dos novos donos e proporcionou um novo lar aos pets, sendo um ato benéfico para ambos. 
+
+Diante disso, a demanda de serviços gerais em relação aos pets foi aumentando cada vez mais, causando a necessidade de mais profissionais atuando na área.
 
 ## Problema
-Queremos quebrar todo esse processo burocrático, da pessoa ter que ligar e as vezes elas nem são atendidas mesmo as vezes tendo uma emergência em mãos e esta com o tempo bem apertado por conta da rotina diaria. E ate quando ela é atendida ela é mal atendida, sem ter um acompanhamento bem proximo do pet.
 
-Nos vamos montar essa aplicação justamente para facilitar esse acesso a atendimento veterinario, botar isso na palma da mão, no qual a pessoa facilmente vai conseguir contactar com um atendimento profissional e competente sem ter que procurar muito e tirar tempo para fazer ligações para saber informações basicas como preço, metodo de atendimento ou ate as vezes tirar uma duvida que e considerada basica, vamos otimizar o tempo e manter a qualidade de todo esse processo, afinal esse mundo pet tem crescido cada vez mais com os anos, aumentando a procura desse serviço.
+Com a demanda, muitos petshops acabam recebendo muitos clientes de uma vez só, e ficando ociosos num determinado período de tempo. Ou seja, o estabelecimento tem de forma concentrada um número alto de atendimentos num período e ficam sem produtividade em outro, o que acaba prejudicando a gestão de tempo do petshop. Além disso, o cliente, muitas vezes, só sabe se terá vaga para seu pet ser atendido indo até o local, o que pode gerar uma viagem perdida, ou passando pelo processo burocrático de ter que ligar/enviar mensagem, e pode acabar não obtendo resposta, o que gera insatisfação no cliente.
 
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+**Geral:**
+Desenvolver uma aplicação web que facilitará a comunicação entre cliente e petshop.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+**Específicos:**
+-> Levantar as necessidades e preferências dos donos de pets e dos peshops em relação ao uso da aplicação.
+-> Fornecer informações básicas, como preço e método de atendimento, para o cliente.
+-> Permitir o gerenciamente dos dias e horários disponiveis para atendimento.
  
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+Tendo em vista o avanço da tecnologia, as aplicações web acabaram se tornando uma facilitadora tanto para o cliente quanto para os donos de petshop, pois além das informações relevantes ficarem disponíveis para o cliente de maneira prática, é possível proporcionar a ele o agendamento online. Os benefícios do agendamento online para os clientes são que as informações sobre dias e horarios disponíveis para atendimento no petshop ficam exibidas na aplicação 24 horas por dia todos os dias, possibilitando que o cliente acesse a qualquer momento a agenda do petshop e veja qual será o melhor período do dia para levar seu pet sem que atrapalhe seus outros compromissos. Por conseguir marcar o serviço para seu pet, ele não corre risco de chegar e não ser atendido e,se por acaso ocorrer um imprevisto, pode desmarcar de maneira rápida e prática, consguindo otimizar o tempo dos donos de petshop e até o seu tempo¹.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais qualidade e organização, diluindo os atendimentos ao longo do dia, além de acompanhar quais são os horários mais vazios, podendo implementar ações que irão atrair público para aquele período do dia/semana².
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+¹https://tdsa.com.br/blog/conheca-os-beneficios-de-aderir-aos-agendamentos-on-line/
+²https://wbagestao.com/comece-a-usar-a-agenda-do-pet-shop-para-trabalhar-com-horario-fixo/
+
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+A aplicação será construida visando atender aos clientes do "Petshop Ducão". Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem cães de porte pequeno, médio e grande. 
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
