@@ -1,8 +1,6 @@
 # Especificações do Projeto
 
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A aplicação web tem o intuito de facilitar a vida tanto do cliente quanto do dono de um petshop, fazendo que o atendimento online maximize a produtividade de tempo para eles. Para entender melhor a perspectiva do usuário, será utilizado o método das personas, que é a representação fictícia do cliente ideal. Ela é baseada em dados reais sobre comportamento e características demográficas dos clientes. Também serão contadas as histórias pessoais dos usuários,com suas motivações, objetivos, desafios e preocupações. Diante dessas informações será feito o levantamento de requisitos funcionais, que correspondem a uma funcionalidade que deve estar presente na aplicação, e requisitos não funcionais, que  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança e outros mais. E por fim, as restrições do projeto, que nada mais são as regras que devem ser seguidas para desenvolver a aplicação.
 
 ## Personas
 
