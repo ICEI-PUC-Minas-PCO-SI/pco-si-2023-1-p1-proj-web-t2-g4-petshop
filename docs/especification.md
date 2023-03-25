@@ -3,20 +3,18 @@
 A aplicação web tem o intuito de facilitar a vida tanto do cliente quanto do dono de um petshop, fazendo que o atendimento online maximize a produtividade de tempo para eles. Para entender melhor a perspectiva do usuário, será utilizado o método das personas, que é a representação fictícia do cliente ideal. Ela é baseada em dados reais sobre comportamento e características demográficas dos clientes. Também serão contadas as histórias pessoais dos usuários,com suas motivações, objetivos, desafios e preocupações. Diante dessas informações será feito o levantamento de requisitos funcionais, que correspondem a uma funcionalidade que deve estar presente na aplicação, e requisitos não funcionais, que  correspondem a uma característica técnica, seja de usabilidade, desempenho, confiabilidade, segurança e outros mais. E por fim, as restrições do projeto, que nada mais são as regras que devem ser seguidas para desenvolver a aplicação.
 
 ## Personas
+Matheus Magalhães tem 23 anos e tem seu próprio negócio, é dono de sua própria padaria, ele pensa muito em desenvolver mais o seu projeto e na maioria do tempo quando não está trabalhando está em casa sozinho jogando seu videogame, ele é  independente e arca com maioria dos seus problemas, e muitas vezes por seguir a vida dessa maneira ele se sente muito sozinho e por isso ele decidiu ter um cachorro de estimação, ele é uma pessoa muito protetora e apegado com tudo, por isso é um dos nossos primeiros clientes, houve uma identificação enorme com o nosso trabalho pois proporcionamos uma proximidade maior do cliente com o seu pet.
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
+Ludmilla Rodrigues tem 17 anos, está no terceiro ano do ensino médio e irá prestar vestibular no ano atual. Por conta da pressão e por estar estudando o dia inteiro, resolveu adotar um gato, que sempre foi sua paixão, para que pudesse lhe distrair a cabeça. Entretanto, por não ter clínicas veterinárias perto de sua casa, ela procura uma plataforma confiável que a auxilie a encontrar bons médicos veterinários para cuidar de seu animalzinho. 
 
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
+Júlia Santos tem 35 anos, é uma mulher solteira, sem filhos e de classe média e adotou um gato há 10 anos, quando saiu da casa de seus pais. Foi promovida a um cargo maior na empresa em que trabalha, e com isso, novas responsabilidades surgiram, fazendo com que ela tivesse menos tempo para dedicar ao seu pet. Contudo, por seu gatinho ser mais velho, começou a apresentar problemas de saúde, e que, por conta do cotidiano agitado de sua dona, não foram percebidos imediatamente. Ao perceber do comportamento estranho de seu bichinho, Júlia imediatamente procurou ajuda de um médico veterinário, em que tivesse a facilidade e praticidade de poder marcar uma consulta sem precisar ligar ou mandar mensagem, podendo consultar os dias e horários disponíveis sem burocracia, de modo que sua única preocupação fosse em comparecer no dia marcado. 
 
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+Cristiano Aveiro tem 45 anos é um ex-futebolista e também é casado, possui 4 filhos e 5 cachorros, sempre foi uma pessoa bem focada e sempre teve grande vocação para tudo que fez, por isso teve uma grande carreira na área do futebol, agora depois de tudo o que passou na área de futebol e toda sua carreira e em sua própria vida, ele procura sempre estar mais em sua zona de conforto e sempre busca facilitar mais as coisas, então por possuir uma família bem grande e grande quantidade de cachorros nosso trabalho o ajudou muito e facilitou muito a sua vida em questão sobre o cuidado com os seus pets.
+
+Helena Freire tem 54 anos é casada, tem um filho já maior de idade, esse seu filho sempre quis ter um irmãozinho, mas infelizmente ela não pode lhe dar, então com o tempo ela decidiu adotar um cachorro para seu filho, como ela é uma mulher que trabalha muito e sempre viaja para vários lugares o nosso trabalho lhe ajuda a cuidar melhor do pet do seu filho e ficar menos preocupada e desta maneira pode dar mais prioridade ainda ao trabalho com essa preocupação a menos. 
+
+José Afonso tem 76 anos, é viúvo e possui 3 filhos já independentes. Por morar sozinho e seus filhos não poderem estar presentes diariamente com ele, decidiram presenteá-lo com um cachorro para que José ficasse menos solitário. Porém, por ele não ser tão independente, precisa de ajuda em tarefas como levar o animal para vacinar, ou para fazer consultas de rotina. Dessa forma, seus filhos procuraram uma resolução prática e ágil, de forma que pudessem resolver tudo seguramente via internet, tendo boas opções de profissionais disponíveis e precisassem apenas ajudar apenas no traslado de ida e volta para o veterinário.
+
 
 ## Histórias de Usuários
 
