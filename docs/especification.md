@@ -42,9 +42,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA |  |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | |
-
+|RF-001| Cadastrar produtos | ALTA | João Vitor Vitalino da Silva Roveda |
+|RF-002| Cadastrar produtos  | ALTA | Carolina Alves Baião Pessoa |
+|RF-003| Agendamento de serviço | ALTA | Guilherme Souto Borges da Costa |
+|RF-004| Gerenciar perfis | MÉDIA | Arthur Magalhães Fonseca |
+|RF-005| Registro de serviço | ALTA | Erick Fabrício Rodrigues Ribeiro |
+|RF-006| Controle de estoque | MÉDIA | Gabriel Leandro Emerick de Azevedo |
+|RF-007| Cadastro de pet | ALTA | Gabriel Henrique de Jesus Paiva |
 
 ### Requisitos não Funcionais
 
