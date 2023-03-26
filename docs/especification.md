@@ -76,11 +76,20 @@ todos os aspectos capturados nas Histórias de Usuário foram cobertos.
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
+|ID| Restrição                                             | Descrição                                                                                                                                                                                                     | Solução
+|--|-------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|01| O projeto deverá ser entregue até o final do semestre. | - | - |
+|02| Não pode ser desenvolvido um módulo de backend.        | - | - |
+|03| Prioridade dos requisitos.                             | Os requisitos RF-001, RF-002, RF-003, RF-005 e RF-007 possuem prioridade alta, enquanto RF-004 e RF-006 possuem prioridade média. | Priorizar a implementação dos requisitos de alta prioridade e ajustar o cronograma de desenvolvimento, se necessário. |
+|04| Responsabilidade pelos requisitos.                     | Cada requisito possui um responsável designado para sua implementação. Caso o responsável não possa cumprir com sua responsabilidade, será necessário realocar o requisito para outro membro da equipe. | Garantir que cada membro da equipe tenha clareza sobre suas responsabilidades e esteja disponível para realizar as tarefas atribuídas. Em caso de imprevistos, garantir uma comunicação clara e rápida para realocar os requisitos necessários. |
+|05| Requisitos não funcionais                             | Os requisitos RNF-001 e RNF-002 apresentam restrições específicas relacionadas ao desempenho e à compatibilidade do sistema. | Garantir que o sistema seja desenvolvido de forma responsiva e compatível com dispositivos móveis, além de implementar estratégias para garantir o processamento rápido das requisições do usuário. Isso pode envolver o uso de tecnologias específicas, a otimização do código ou o uso de servidores de alta performance.| 
+|06| Problemas de conexão com o banco de dados.	| - | Utilizar um provedor de banco de dados confiável e seguro. |
+|07| Falhas no processamento de pagamentos. | - |	Utilizar uma API de pagamento confiável e segura. |
+|08| Problemas de escalabilidade do sistema. | - |	Utilizar técnicas de escalabilidade, como a criação de clusters e balanceamento de carga. |
+|09| Dificuldade de integração com sistemas externos. | - |	Utilizar padrões de integração, como APIs RESTful. |
+|10| Incompatibilidade com determinados dispositivos e navegadores. | - |	Realizar testes em diferentes dispositivos e navegadores. |
+|11| Problemas de segurança. | - |	Implementar medidas de segurança, como criptografia e autenticação segura. |
+|12| Problemas de desempenho. | - |	Realizar testes de desempenho e otimizar o código. |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
