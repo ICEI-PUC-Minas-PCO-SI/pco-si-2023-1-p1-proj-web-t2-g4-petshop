@@ -56,7 +56,11 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-|RNF-003| Tem que ser seguro para que os usuarios tenham confiança em nossa empresa | ALTA |
+|RNF-003| Tem que ser confiavel para que os clientes possam dar exclusividade no nossa empresa | MEDIA |
+|RNF-004| Deve ter segurança em qualquer aplicação que o cliente for utilizar  | ALTA |
+|RNF-005| A disponibilidade é excepcional para qualquer duvida do cliente | ALTA |
+|RNF-006| Tentar manter tudo em sempre otimo funcionamento livre de erros | ALTA |
+
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
 - [Requisitos Funcionais
