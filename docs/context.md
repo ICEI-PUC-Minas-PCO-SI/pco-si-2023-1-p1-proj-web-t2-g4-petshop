@@ -33,7 +33,7 @@ Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais 
 
 ## Público-Alvo
 
-A aplicação será construida visando atender aos clientes do "Petshop Ducão". Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem cães de porte pequeno, médio e grande. 
+A aplicação será construida visando atender aos clientes do "Petshop Dog&Cats". Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem gatos e cães de porte pequeno, médio e grande. 
 
 Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
