@@ -36,8 +36,4 @@ Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais 
 A aplicação será construida visando atender aos clientes do "Petshop Dog&Cats". Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem gatos e cães de porte pequeno, médio e grande. 
 
 
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+
