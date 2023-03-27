@@ -22,7 +22,7 @@ Desenvolver uma aplicação web que facilitará a comunicação entre cliente e 
 
 ## Justificativa
 
-Tendo em vista o avanço da tecnologia, as aplicações web acabaram se tornando uma facilitadora tanto para o cliente quanto para os donos de petshop, pois além das informações relevantes ficarem disponíveis para o cliente de maneira prática, é possível proporcionar a ele o agendamento online. Os benefícios do agendamento online para os clientes são que as informações sobre dias e horarios disponíveis para atendimento no petshop ficam exibidas na aplicação 24 horas por dia todos os dias, possibilitando que o cliente acesse a qualquer momento a agenda do petshop e veja qual será o melhor período do dia para levar seu pet sem que atrapalhe seus outros compromissos. Por conseguir marcar o serviço para seu pet, ele não corre risco de chegar e não ser atendido e,se por acaso ocorrer um imprevisto, pode desmarcar de maneira rápida e prática, consguindo otimizar o tempo dos donos de petshop e até o seu tempo¹.
+Tendo em vista o avanço da tecnologia, as aplicações web acabaram se tornando uma facilitadora tanto para o cliente quanto para os donos de petshop, pois além das informações relevantes ficarem disponíveis para o cliente de maneira prática, é possível proporcionar a ele o agendamento online. Os benefícios do agendamento online para os clientes são que as informações sobre dias e horarios disponíveis para atendimento no petshop ficam exibidas na aplicação 24 horas por dia todos os dias, possibilitando que o cliente acesse a qualquer momento a agenda do petshop e veja qual será o melhor período do dia para levar seu pet sem que atrapalhe seus outros compromissos. Por conseguir marcar o serviço para seu pet, ele não corre risco de chegar e não ser atendido e, se por acaso ocorrer um imprevisto, pode desmarcar de maneira rápida e prática, conseguindo otimizar o tempo dos donos de petshop e até o seu tempo¹.
 
 Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais qualidade e organização, diluindo os atendimentos ao longo do dia, além de acompanhar quais são os horários mais vazios, podendo implementar ações que irão atrair público para aquele período do dia/semana².
 
@@ -35,7 +35,6 @@ Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais 
 
 A aplicação será construida visando atender aos clientes do "Petshop Dog&Cats". Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem gatos e cães de porte pequeno, médio e grande. 
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
 
 > **Links Úteis**:
 > - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
