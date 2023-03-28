@@ -12,7 +12,7 @@
 `DISCIPLINA: Projeto - Aplicações Web`
 
 `SEMESTRE: 1º`
-Iremos desenvolver uma aplicação para petshop, que ira ter varias funcionalidades como, agendamento de serviços online, cadastro de pessoas, cadastro de pets e etc..
+> Iremos desenvolver uma aplicação para petshop, que ira ter varias funcionalidades como, agendamento de serviços online, cadastro de pessoas, cadastro de pets e etc..
 
 * Nessa aplicação usaremos as seguintes tecnologias no front-end: HTML, CSS E BOOTSTRAP.
 * No Back-end usaremos as seguintes tecnologias: JAVASCRIPT E LOCAL STORAGE.
