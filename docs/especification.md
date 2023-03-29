@@ -22,12 +22,13 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Tutor De Pet | Ser capaz de registrar meus pets, consultar serviços e disponibilidade dos mesmos, esclarecer dúvidas, consumir serviços, conctatar a empresa e filtrar serviços por preço e categoria para encontrar o que estou procurando dentro do meu orçamento ou preferência.  | Agilidade, simplicidade, eficiência e visibilidade. |
-|Dono Do Dog&Cats | Ser capaz de gerenciar os clientes e controlar o estoque de produtos para garantir que sempre haja itens disponíveis para execução dos trabalhos oferecido aos clientes. | Organização e controle maior sobre o estoque. |
-
-
-
-
+|Tutor De Pets/usuario | Ser capaz de registrar meus pets e consultar serviços e disponibilidade dos mesmos. | Agilidade, simplicidade, eficiência. |
+|Dono Do Dog&Cats/administrador | Ser capaz de gerenciar os clientes. | Organização e Controle de clientes. |
+|Tutor De Pets/usuario | Consumir serviços e conctatar a empresa. | Agilidade, simplicidade, eficiência. |
+|Dono Do Dog&Cats/administrador |Controlar o estoque de produtos para garantir que sempre haja itens disponíveis para execução dos trabalhos oferecido aos clientes. | Organização e controle maior sobre o estoque. |
+|Veterinário/Clinica | Ter controle maior de suas consultas e marcações. | Agilidade e organização. |
+|Tutor De Pets/usuario | Ter acesso a clinicas confiaveis. | Segurança e Praticidade. |
+|Dono Do Dog&Cats/administrador | Cadastrar sua empresa e serviços. |Visibilidade e maior numero de clientes. |
 ## Requisitos
 
 As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto.
