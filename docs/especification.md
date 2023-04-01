@@ -57,6 +57,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-006| Tentar manter tudo em sempre otimo funcionamento livre de erros | ALTA |
 
 
+
 ## Restrições
 
 O projeto está restrito pelos itens apresentados na tabela a seguir.
@@ -76,3 +77,5 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |11| Problemas de segurança. | - |	Implementar medidas de segurança, como criptografia e autenticação segura. |
 |12| Problemas de desempenho. | - |	Realizar testes de desempenho e otimizar o código. |
 
+## Diagrama de caso de uso
+![diagrama drawio](https://user-images.githubusercontent.com/110940580/229305474-2664fa99-9d63-4af4-b993-73e3866fab71.png)
