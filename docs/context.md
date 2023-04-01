@@ -1,8 +1,12 @@
 # Introdução
 
-Com o advento da pandemia, observou-se um aumento em relação à adoção/aquisição de pets. Devido à taxa de carência que maximizou nesse período, visto que a população foi submetida à um longo tempo de isolamento, as pessoas em estado de depressão e solidão, na maioria dos casos, só conseguiram conforto ao obter um “amiguinho”. Este ato de bondade elevou a autoestima e a alegria dos novos donos e proporcionou um novo lar aos pets, sendo um ato benéfico para ambos. 
+Com o advento da pandemia, observou-se um aumento em relação a adoção/aquisição de pets. Devido a taxa de carência que maximizou nesse período, visto que a população foi submetida à um longo tempo de isolamento, as pessoas em estado de depressão e solidão, na maioria dos casos, só conseguiram conforto ao obter um “amiguinho”. Este ato de bondade elevou a autoestima e a alegria dos novos donos e proporcionou um novo lar aos pets, sendo um ato benéfico para ambos. 
 
 Diante disso, a demanda de serviços gerais em relação aos pets foi aumentando cada vez mais, causando a necessidade de mais profissionais atuando na área.
+
+* Nessa aplicação usaremos as seguintes tecnologias no front-end: HTML, CSS E BOOTSTRAP.
+* No Back-end usaremos as seguintes tecnologias: JAVASCRIPT E LOCAL STORAGE.
+Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
 
 ## Problema
 
@@ -33,7 +37,7 @@ Para o petshop, o agendamento online proporciona que a equipe trabalhe com mais 
 
 ## Público-Alvo
 
-A aplicação será construida visando atender aos clientes do "Petshop Dog&Cats". Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem gatos e cães de porte pequeno, médio e grande. 
+Os clientes atendidos pelo estabelecimento são de idade variada, gênero feminino e masculino, com conhecimento diversificado da tecnologia, de classe média alta, que moram na região metropolitana de Belo Horizonte, e possuem gatos e cães de porte pequeno, médio e grande. 
 
 
 
