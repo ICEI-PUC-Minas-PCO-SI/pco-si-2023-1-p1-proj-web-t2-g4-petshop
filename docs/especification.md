@@ -63,18 +63,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
-|01|O projeto deverá ser entregue até o final do semestre.|
-|02|Não pode ser desenvolvido um módulo de backend.|
-|03|Prioridade dos requisitos. Os requisitos RF-001, RF-002, RF-003, RF-005 e RF-007 possuem prioridade alta, enquanto RF-004 e RF-006 possuem prioridade média.|
-|04|Responsabilidade pelos requisitos. Cada requisito possui um responsável designado para sua implementação. Caso o responsável não possa cumprir com sua responsabilidade, será necessário realocar o requisito para outro membro da equipe.|
-|05|Requisitos não funcionais. Os requisitos RNF-001 e RNF-002 apresentam restrições específicas relacionadas ao desempenho e à compatibilidade do sistema.
-|06|Problemas de conexão com o banco de dados.|
-|07|Falhas no processamento de pagamentos.|
-|08|Problemas de escalabilidade do sistema.|
-|09|Dificuldade de integração com sistemas externos.|
-|10|Incompatibilidade com determinados dispositivos e navegadores.|
-|11|Problemas de segurança.|
-|12|Problemas de desempenho.|
+|--|-------------------------------------------------------|
+|01| O projeto deverá ser entregue até o final do semestre.|
+|02| Não pode ser desenvolvido um módulo de backend.|
+|03| Prioridade dos requisitos. Os requisitos RF-001, RF-002, RF-003, RF-005 e RF-007 possuem prioridade alta, enquanto RF-004 e RF-006 possuem prioridade média.|
+|04| Responsabilidade pelos requisitos. Cada requisito possui um responsável designado para sua implementação. Caso o responsável não possa cumprir com sua responsabilidade, será necessário realocar o requisito para outro membro da equipe.|
+|05| Requisitos não funcionais. Os requisitos RNF-001 e RNF-002 apresentam restrições específicas relacionadas ao desempenho e à compatibilidade do sistema.
+|06| Problemas de conexão com o banco de dados.|
+|07| Falhas no processamento de pagamentos.|
+|08| Problemas de escalabilidade do sistema.|
+|09| Dificuldade de integração com sistemas externos.|
+|10| Incompatibilidade com determinados dispositivos e navegadores.|
+|11| Problemas de segurança.|
+|12| Problemas de desempenho.|
 
 ## Diagrama de caso de uso
 ![diagrama drawio](https://user-images.githubusercontent.com/110940580/229305474-2664fa99-9d63-4af4-b993-73e3866fab71.png)
