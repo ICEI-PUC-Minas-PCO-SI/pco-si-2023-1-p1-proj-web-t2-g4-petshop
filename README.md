@@ -24,7 +24,6 @@
 * Erick Fabricio Rodrigues Ribeiro
 * Gabriel Leandro Emerick de Azevedo
 * Arthur Magalhães Fonseca
-* Carolina Alves Baião Pessoa
 * Guilherme Souto Borges da Costa
 
 ## Orientador
