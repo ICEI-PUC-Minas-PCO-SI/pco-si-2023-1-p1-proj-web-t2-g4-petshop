@@ -54,7 +54,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-003| O sistema deve ser confiavel para que os clientes possam dar exclusividade no nossa empresa | MEDIA |
 |RNF-004| O sistema deve ter segurança em qualquer aplicação que o cliente for utilizar  | ALTA |
 |RNF-005| O sistema deve ter disponibilidade que é excepcional para qualquer duvida do cliente | ALTA |
-|RNF-006| O sistema deve tentar manter tudo em sempre otimo funcionamento livre de erros | ALTA |
+|RNF-006| O sistema deve estar sempre em otimo funcionamento livre de erros | ALTA |
 
 
 
