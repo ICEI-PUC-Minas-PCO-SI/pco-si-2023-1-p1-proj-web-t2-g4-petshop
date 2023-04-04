@@ -6,7 +6,7 @@ Diante disso, a demanda de serviços gerais em relação aos pets foi aumentando
 
 * Nessa aplicação usaremos as seguintes tecnologias no front-end: HTML, CSS E BOOTSTRAP.
 * No Back-end usaremos as seguintes tecnologias: JAVASCRIPT E LOCAL STORAGE.
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+
 
 ## Problema
 
