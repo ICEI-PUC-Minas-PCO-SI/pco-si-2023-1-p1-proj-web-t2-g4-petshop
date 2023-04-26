@@ -4,3 +4,7 @@
 
 # Carolina Alves Baião Pessoa 
 >- Contribui para a segunda etapa fazendo o user flow e o template da aplicação. 
+
+
+# Erick Fabricio Rodrigues Ribeiro
+>- Contribui nessa segunda etapa ajudando na interface, ficando com a responsabilidade de seguir os criterios decididos do grupo e mantendo o padrão definido, participando das "reuniões" e por fim finalizei a parte Home e Cadastro de Pets da interface da nossa aplicação.
