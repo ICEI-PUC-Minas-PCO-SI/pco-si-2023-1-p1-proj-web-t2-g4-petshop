@@ -4,3 +4,6 @@
 
 # Carolina Alves Baião Pessoa 
 >- Eu contribui para a segunda etapa me dispondo a fazer o user flow e o template, além de participar ativamente das reuniões que o grupo realizou, tanto em chamadas quanto nas próprias aulas, contibuindo não apenas com ideias a fim de aprimorar o trabalho, mas também ajudando os membros do meu grupo e procurando sempre saber suas opiniões para que a aplicação fique cada vez melhor através de novas ideias. 
+
+# Erick Fabricio Rodrigues Ribeiro
+>- Contribui nessa segunda etapa ajudando na interface, ficando com a responsabilidade de seguir os criterios decididos do grupo e mantendo o padrão definido, participando das "reuniões" em aula e chamadas e por fim finalizei a parte Home e Cadastro de Pets da interface da nossa aplicação.
