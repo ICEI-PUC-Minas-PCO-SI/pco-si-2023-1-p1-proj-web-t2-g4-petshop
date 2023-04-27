@@ -2,9 +2,118 @@
 
 Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com a definição de identidade visual, aspectos de responsividade e iconografia.
 
-> **Links Úteis**:
->
-> - [CSS Website Layout (W3Schools)](https://www.w3schools.com/css/css_website_layout.asp)
-> - [Website Page Layouts](http://www.cellbiol.com/bioinformatics_web_development/chapter-3-your-first-web-page-learning-html-and-css/website-page-layouts/)
-> - [Perfect Liquid Layout](https://matthewjamestaylor.com/perfect-liquid-layouts)
-> - [How and Why Icons Improve Your Web Design](https://usabilla.com/blog/how-and-why-icons-improve-you-web-design/)
+Aqui está o HTML do template base, usado para criação de todas as páginas da aplicação:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs & Cats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./Logo_sem_fundo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--Início header-->
+    <header>
+        <div class="header">
+            <img class="logo" src="./Logo_sem_fundo.png" alt="Logo do site">
+            <h1 class="titulo_header">Lorem, ipsum.</h1>
+            <nav>
+                <div class="botoes">
+                    <button title="Home">
+                        <img class="botoesheader" src="./home.png" alt="Botão Início">
+                    </button>
+                    <button title="Agendar serviço">
+                        <img class="botoesheader" src="./agendarservico.png" alt="Agendar serviço">
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--Fim header-->
+
+    <!--Início main-->
+    <main>
+        <div class="secoesprincipal">
+            <section class="sectionmain">
+                <h2>Section 1</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsa reprehenderit repellendus
+                    corrupti quod cum mollitia omnis aperiam! Quis eaque voluptas ut. Cum culpa, alias quae dolorum
+                    laboriosam impedit doloremque ad iusto modi harum odio. Reprehenderit, doloribus quam sunt
+                    voluptates
+                    quasi sequi ipsa quisquam at maxime a? Voluptatem minus maiores beatae iusto excepturi! Magni ad
+                    odio
+                    architecto recusandae iste, alias atque corrupti expedita in omnis. Magni doloremque vero nisi sed
+                    aliquam rem eveniet facilis dolor vel eligendi, rerum nam? Odit deleniti, excepturi maiores quidem
+                    ipsum
+                    architecto facere minus, non modi nihil eius cumque, temporibus cum voluptates? Quibusdam fugiat
+                    incidunt debitis.</p>
+            </section>
+            <section class="sectionmain">
+                <h2>Section 2</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsa reprehenderit repellendus
+                    corrupti quod cum mollitia omnis aperiam! Quis eaque voluptas ut. Cum culpa, alias quae dolorum
+                    laboriosam impedit doloremque ad iusto modi harum odio. Reprehenderit, doloribus quam sunt
+                    voluptates
+                    quasi sequi ipsa quisquam at maxime a? Voluptatem minus maiores beatae iusto excepturi! Magni ad
+                    odio
+                    architecto recusandae iste, alias atque corrupti expedita in omnis. Magni doloremque vero nisi sed
+                    aliquam rem eveniet facilis dolor vel eligendi, rerum nam? Odit deleniti, excepturi maiores quidem
+                    ipsum
+                    architecto facere minus, non modi nihil eius cumque, temporibus cum voluptates? Quibusdam fugiat
+                    incidunt debitis.</p>
+            </section>
+            <section class="sectionmain">
+                <h2>Section 3</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ipsa reprehenderit repellendus
+                    corrupti quod cum mollitia omnis aperiam! Quis eaque voluptas ut. Cum culpa, alias quae dolorum
+                    laboriosam impedit doloremque ad iusto modi harum odio. Reprehenderit, doloribus quam sunt
+                    voluptates
+                    quasi sequi ipsa quisquam at maxime a? Voluptatem minus maiores beatae iusto excepturi! Magni ad
+                    odio
+                    architecto recusandae iste, alias atque corrupti expedita in omnis. Magni doloremque vero nisi sed
+                    aliquam rem eveniet facilis dolor vel eligendi, rerum nam? Odit deleniti, excepturi maiores quidem
+                    ipsum
+                    architecto facere minus, non modi nihil eius cumque, temporibus cum voluptates? Quibusdam fugiat
+                    incidunt debitis.</p>
+            </section>
+        </div>
+        <button type="submit" class="submeter">Lorem</button>
+    </main>
+    <!--Fim main-->
+
+    <!--Início aside-->
+    <aside></aside>
+    <!--Fim aside-->
+
+    <!--Início footer-->
+    <footer>
+        <div class="copyright">
+            <p>Copyright© 2023 Dogs & Cats Comércio e Participações S/A</p>
+            <p>Todos os direitos reservados</p>
+        </div>
+    </footer>
+    <!--Fim footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+Entrega da interface completa:
+[TIAW - entrega.zip](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g4-petshop/files/11339034/TIAW.-.entrega.zip)
+
+
+
