@@ -12,10 +12,13 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 ## Wireframes
 
+Após definição do esquema de cores, logo, e outros elementos de design, foram criados os protótipos das telas para exemplificar como serão as interfaces da aplicação web.
+
+Aqui está a interface que o usuario irá conseguir agendar seus serviços na aplicação.
+
 ![Exemplo de Wireframe](img/agendarserviço.png)
 
-> Aqui esta a interface que o usuario ira conseguir agendar seus serviços na aplicação.
-
+Nesta interface ele conseguirá visualizar todos os seus agendamentos com a opção de excluí-los, caso necessario.
 
 ![agendamentos](https://user-images.githubusercontent.com/110940580/234738819-6543aaf7-affb-4af3-b0b1-ab85b46b2187.png)
 
