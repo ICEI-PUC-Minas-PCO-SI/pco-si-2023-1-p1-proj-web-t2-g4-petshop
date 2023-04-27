@@ -9,4 +9,4 @@
 >- Contribui nessa segunda etapa ajudando na interface, ficando com a responsabilidade de seguir os criterios decididos do grupo e mantendo o padrão definido, participando das "reuniões" em aula e chamadas e por fim finalizei a parte Home e Cadastro de Pets da interface da nossa aplicação.
 
 # João Vitor Vitalino da Silva Roveda
->- Contribui nessa segunda etapa ajudando na interface, ficando com a responsabilidade de seguir os criterios decididos do grupo e mantendo o padrão definido, participando das "reuniões" em aula e chamadas e por fim finalizei a parte de registro de produtos e gerenciamento de estoque da interface da nossa aplicação.
+>- Na segunda parte, ajudei na interface sendo responsável pelo wireframe na parte de registro de produtos e gerenciamento de estoques. Também participei das reuniões do grupo para discutir as ideias e assim finalizar essa etapa. 
