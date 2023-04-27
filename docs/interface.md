@@ -28,7 +28,6 @@ Nesta interface ele conseguirá visualizar todos os seus agendamentos com a opç
 
 Aqui esta a interface da pagina cadastro de pets da aplicação
 
-
 ![Cadastro de Pets](img/cadpet.jpg)
  
 
