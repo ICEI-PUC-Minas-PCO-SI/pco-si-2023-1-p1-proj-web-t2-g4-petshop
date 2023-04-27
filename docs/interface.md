@@ -30,7 +30,6 @@ Segue interface de perfil de usuario na aplicação.
 ![img_jpg3](https://user-images.githubusercontent.com/126624552/234746302-2a12400a-63a1-418f-846e-6eff36d2f6b0.jpg)
 
 
-
 Aqui está a interface que o usuario irá conseguir agendar seus serviços na aplicação.
 
 ![Exemplo de Wireframe](img/agendarserviço.png)
