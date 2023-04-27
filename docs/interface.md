@@ -17,6 +17,13 @@ Aqui esta a interface Home da aplicação
 
 ![Home](img/Home.jpg)
 
+Aqui esta a interface de login do usuario.
+
+![login](https://user-images.githubusercontent.com/126624396/234745266-98717b4e-2f98-4954-98ea-9480f20ea39d.png)
+
+Aqui esta a interface de cadastro do usuario.
+
+![cadastro](https://user-images.githubusercontent.com/126624396/234745392-f5ef5323-0b46-443d-b59c-e977f9e2ffa9.png)
 
 Aqui está a interface que o usuario irá conseguir agendar seus serviços na aplicação.
 
