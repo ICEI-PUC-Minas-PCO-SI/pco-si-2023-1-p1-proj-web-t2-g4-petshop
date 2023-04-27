@@ -2,8 +2,10 @@
 # Projeto de Interface
 ## User Flow
 
-![Exemplo de UserFlow](img/userflow.jpg)
+Após as telas de interface prontas, foi feito o user flow e o flow do administrador, para que um exemplo de interação com a aplicação seja visualizado.
+![image](https://user-images.githubusercontent.com/120069870/234744391-17ba0904-1634-4c41-99ca-39fe467dd3fa.png)
 
+Link do figma para melhor visualização: https://www.figma.com/file/VOldq5gSTP2cJRY0AWv9e8/User-Flow?node-id=0%3A1&t=40RQVmxS2qMHkxB2-1
 
 Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapear todo fluxo de telas do site ou app. Essa técnica funciona para alinhar os caminhos e as possíveis ações que o usuário pode fazer junto com os membros de sua equipe.
 
