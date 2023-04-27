@@ -10,3 +10,6 @@
 
 # João Vitor Vitalino da Silva Roveda
 >- Na segunda parte, ajudei na interface sendo responsável pelo wireframe na parte de registro de produtos e gerenciamento de estoques. Também participei das reuniões do grupo para discutir as ideias e assim finalizar essa etapa. 
+
+# Gabriel Leandro Emerick de Azevedo
+>- Eu contribui para a segunda etapa fazendo parte da contrução da inteface projetando o wireframe de registro de serviço e listagem de serviço. Participei das reuniões de discução de ideias para o nosso trabalho e cooperei com o que pude dando ideias e sugestões.
