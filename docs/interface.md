@@ -14,10 +14,6 @@ Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor mapea
 
 Após definição do esquema de cores, logo, e outros elementos de design, foram criados os protótipos das telas para exemplificar como serão as interfaces da aplicação web.
 
-Aqui esta a interface da pagina Home da aplicação
-
-![Home](img/Home.jpg)
-
 Aqui está a interface que o usuario irá conseguir agendar seus serviços na aplicação.
 
 ![Exemplo de Wireframe](img/agendarserviço.png)
@@ -36,9 +32,14 @@ Aqui está a interface que o funcionário irá conseguir gerenciar o estoque
 
 ![gerenciamento-de-estoque](https://user-images.githubusercontent.com/126635207/234742288-6f8eebef-3a78-47e2-900a-ef8a59f1f081.jpg)
 
+Aqui está a interface que o funcionário irá conseguir registrar o serviço.
 
-Aqui esta a interface da pagina cadastro de pets da aplicação
+![Registro de serviço](https://user-images.githubusercontent.com/127259130/234743125-91cd1c33-b749-415f-b0f9-f6b105d0388d.jpeg)
 
-![Cadastro de Pets](img/cadpet.jpg)
+Aqui está a interface que o funcionário irá conseguir ver a listagem do serviço.
+
+![listagem do serviço](https://user-images.githubusercontent.com/127259130/234743278-b93cb30f-1fd2-43cf-bf8b-988c24a07918.jpeg)
+
+São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
 
