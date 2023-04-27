@@ -4,9 +4,9 @@ Layout padrão do site (HTML e CSS) que será utilizado em todas as páginas com
 
 Aqui está o HTML do template base, usado para criação de todas as páginas da aplicação:
 
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -109,7 +109,6 @@ Aqui está o HTML do template base, usado para criação de todas as páginas da
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
 </body>
-
 </html>
 
 Entrega da interface completa:
