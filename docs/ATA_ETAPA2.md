@@ -16,3 +16,6 @@
 
 # Guilherme Souto Borges da Costa
 >- Na segunda fase do projeto, eu contribuí com a equipe na criação da interface, seguindo as diretrizes definidas pelo grupo. Além disso, participei ativamente das reuniões virtuais e em sala de aula, e assumi a responsabilidade pelas funcionalidades de Login e Cadastro de usuários na interface. Sempre que possível, ofereci ajuda aos colegas de equipe e fiz o que estava ao meu alcance para colaborar com o sucesso do projeto.
+
+# Arthur Magalhães Fonseca 
+>-Bom além de eu ter ajudado muito dando ideias sobre o forma padrão que meu grupo realizou o site, e outras ideias de estrutura, mas eu fiquei mais direcionado para fazer a tela de perfil do site onde tem os dados do usuário como seu nome, número e informações do seu pet. 
