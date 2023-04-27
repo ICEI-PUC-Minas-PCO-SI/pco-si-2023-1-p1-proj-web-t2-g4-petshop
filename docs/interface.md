@@ -45,8 +45,7 @@ Aqui está a interface que o funcionário irá conseguir ver a listagem do servi
 
 ![listagem do serviço](https://user-images.githubusercontent.com/127259130/234743278-b93cb30f-1fd2-43cf-bf8b-988c24a07918.jpeg)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
+
 Aqui esta a interface Cadastro de Pets da aplicação
 
 ![Cadastro de Pets](img/cadpet.jpg)
