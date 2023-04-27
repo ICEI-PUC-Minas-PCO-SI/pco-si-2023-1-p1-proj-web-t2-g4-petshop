@@ -25,6 +25,12 @@ Aqui esta a interface de cadastro do usuario.
 
 ![cadastro](https://user-images.githubusercontent.com/126624396/234745392-f5ef5323-0b46-443d-b59c-e977f9e2ffa9.png)
 
+Segue interface de perfil de usuario na aplicação. 
+
+![img_jpg3](https://user-images.githubusercontent.com/126624552/234746302-2a12400a-63a1-418f-846e-6eff36d2f6b0.jpg)
+
+
+
 Aqui está a interface que o usuario irá conseguir agendar seus serviços na aplicação.
 
 ![Exemplo de Wireframe](img/agendarserviço.png)
