@@ -72,29 +72,41 @@ h1 {
     height: 90vh;
 }
 
+#form-pessoa-fisica {
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+#form-pessoa-juridica {
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
+}
+
 .containerInputs {
-    width: 100%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .containerForm form fieldset label {
     display: block;
-    width: 80%;
+    width: 100%;
     margin: auto;
 }
 
 input:not([type="checkbox"]) {
-    width: 100%;
+    width: 90%;
     height: 2.2em;
     border-color: rgba(127, 178, 241, 0.567);
 }
 
 select {
-    width: 100%;
+    width: 90%;
     height: 2.2em;
     border-color: rgba(127, 178, 241, 0.567);
     border-width: 2px;
