@@ -13,10 +13,11 @@ html {
 }
 
 .titulo_header {
-   margin-left: 100px;
-   margin-top: 30px;
-    
+    margin-left: 100px;
+    margin-top: 30px;
+
 }
+
 
 .botoesheader {
     width: 4em;
@@ -25,12 +26,13 @@ html {
 }
 
 
-
+/* icone editar*/
 button {
     background-color: #F9E6B3;
     border: none;
 }
 
+/* parametros para encaixar o meio corretamente*/
 main {
     background-color: #fcfdfd;
     color: rgb(255, 255, 255);
@@ -40,7 +42,7 @@ main {
     margin-top: 20px;
 }
 
-
+/* cabeçalho(topo da pagina)*/
 header {
     width: 100vw;
     height: 17vh;
@@ -48,15 +50,15 @@ header {
 }
 
 
-
+/* rodape (final da pagina)*/
 .copyright {
     margin-top: 100px;
     text-align: center;
     background-color: #888787;
 }
 
-
-  .totalmeio {
+/* meio da pagina onde fica todo o conteudo*/
+.totalmeio {
     margin-top: 100px;
     color: rgb(5, 177, 250);
     justify-content: center;
@@ -66,30 +68,24 @@ header {
     text-align: center;
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    
-  }
 
-  .botao{
-    color:white;
+
+}
+
+/* botao registrar*/
+.botao {
+    color: white;
     background-color: rgb(10, 146, 213);
     margin-top: 50px;
     height: 50px;
-    width: 150px; 
-    height: 50px; 
-    
+    width: 150px;
+    height: 50px;
 
-  }
 
- 
-  
-  
+}
 
-  
-  
-  
-  
-  
-
-  
-  
+/* palavra abaixo do icone*/
+.palcab{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
