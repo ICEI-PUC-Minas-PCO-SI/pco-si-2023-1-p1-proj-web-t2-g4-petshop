@@ -9,7 +9,7 @@ html {
 }
 
 .logo {
-    width: 10em;
+    width: 8em;
 }
 
 .titulo_header {
@@ -40,18 +40,10 @@ main {
     display: flex;
 }
 
-.secoesprincipal {
-    display: flex;
-    margin-top: 2em;
-}
-
-.sectionmain {
-    flex: 1;
-}
 
 .submeter {
-    width: 10em;
-    height: 4em;
+    width: 9em;
+    height: 2em;
     position: absolute;
     bottom: 5px;
     left: 50%;
