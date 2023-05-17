@@ -45,23 +45,44 @@ form.addEventListener("submit", (event) => {
 const pessoaFisicaRadio = document.getElementById("pessoa-fisica");
 const pessoaJuridicaRadio = document.getElementById("pessoa-juridica");
 
+const JuridicaPessoaFisicaRadio = document.getElementById("pessoa-fisica-juridica");
+const JuridicaPessoaJuridicaRadio = document.getElementById("pessoa-juridica-juridica");
+
 const formularioPessoaFisica = document.getElementById("form-pessoa-fisica");
 const formularioPessoaJuridica = document.getElementById("form-pessoa-juridica");
 
-pessoaFisicaRadio.addEventListener("click", function() {
+const FieldPessoaJuridica = document.getElementById("fieldsetPessoaJur");
+const FieldPessoaFis = document.getElementById("fieldsetPessoaFis");
+
+pessoaFisicaRadio.addEventListener("click", function () {
   if (document.getElementById("pessoa-fisica").checked) {
     document.getElementById("pessoa-juridica").checked = false;
-}
-  formularioPessoaFisica.style.display = "flex";
-  formularioPessoaJuridica.style.display = "none";
+
+    FieldPessoaFis.style.display = "flex";
+    FieldPessoaJuridica.style.display = "none";
+  }
 });
 
-pessoaJuridicaRadio.addEventListener("click", function() {
+pessoaJuridicaRadio.addEventListener("click", function () {
   if (document.getElementById("pessoa-juridica").checked) {
     document.getElementById("pessoa-fisica").checked = false;
-    formularioPessoaFisica.style.display = "none";
-  formularioPessoaJuridica.style.display = "flex";
-}
+    FieldPessoaFis.style.display = "none";
+    FieldPessoaJuridica.style.display = "flex";
+    formularioPessoaJuridica.style.display = "flex";
+    JuridicaPessoaFisicaRadio.checked = false;
+    JuridicaPessoaJuridicaRadio.checked = true;
+  }
+});
+
+JuridicaPessoaFisicaRadio.addEventListener("click", function () {
+  if (document.getElementById("pessoa-fisica-juridica").checked) {
+    document.getElementById("pessoa-juridica-juridica").checked = false;
+    FieldPessoaFis.style.display = "flex";
+    FieldPessoaJuridica.style.display = "none";
+    formularioPessoaJuridica.style.display = "none";
+    pessoaFisicaRadio.checked = true;
+    pessoaJuridicaRadio.checked = false;
+  }
 });
 
 // validando o botao isento de ie (!!!)
@@ -69,10 +90,12 @@ const checkboxIsento = document.getElementById("isentoIE");
 const inscricaoEstadual = document.getElementById("inscricao-estadual");
 const estadoInscricao = document.getElementById("estado-inscricao");
 
-checkboxIsento.addEventListener("change", function() {
-  if(checkboxIsento.checked) {
+checkboxIsento.addEventListener("change", function () {
+  if (checkboxIsento.checked) {
+    inscricaoEstadual.removeAttribute('required');
     inscricaoEstadual.setAttribute('disabled', 'disabled');
     inscricaoEstadual.style.backgroundColor = "#A9A9A9";
+    estadoInscricao.removeAttribute('required');
     estadoInscricao.setAttribute('disabled', 'disabled');
     estadoInscricao.style.backgroundColor = "#A9A9A9";
   } else {
@@ -82,3 +105,30 @@ checkboxIsento.addEventListener("change", function() {
     estadoInscricao.style.backgroundColor = "initial";
   }
 });
+
+// alerta ao clicar no botao de cadastro
+const BtnCriarConta = document.querySelector('.criarconta');
+const BtnCriarContaJuridica = document.getElementById("BtnCriarContaJuridica");
+
+BtnCriarConta.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  if (!formCriarConta.reportValidity()) {
+    alert('Preencha os campos corretamente!');
+  } else {
+    alert('Usuário cadastrado com sucesso!');
+    formCriarConta.submit();
+  }
+});
+
+BtnCriarContaJuridica.addEventListener('click', function (event) {
+  event.preventDefault();
+
+  if (!formCriarConta.reportValidity()) {
+    alert('Preencha os campos corretamente!');
+  } else {
+    alert('Usuário cadastrado com sucesso!');
+    formCriarConta.submit();
+  }
+});
+
