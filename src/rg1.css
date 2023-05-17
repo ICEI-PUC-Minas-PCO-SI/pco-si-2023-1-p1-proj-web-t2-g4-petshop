@@ -13,7 +13,9 @@ html {
 }
 
 .titulo_header {
-    margin: auto;
+   margin-left: 100px;
+   margin-top: 30px;
+    
 }
 
 .botoesheader {
@@ -22,10 +24,7 @@ html {
     margin-top: 1em;
 }
 
-.botoes {
-    margin-top: 2em;
-    margin-right: 2em;
-}
+
 
 button {
     background-color: #F9E6B3;
@@ -33,31 +32,14 @@ button {
 }
 
 main {
-    background-color: #edf3f9;
-    color: white;
+    background-color: #fcfdfd;
+    color: rgb(255, 255, 255);
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
+    margin-top: 20px;
 }
 
-
-.submeter {
-    width: 9em;
-    height: 2em;
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 3px;
-    border: 3px solid black;
-}
-
-@media screen and (max-width: 768px) {
-    .submeter {
-        position: static;
-        margin: 20px auto 0;
-    }
-}
 
 header {
     width: 100vw;
@@ -65,11 +47,49 @@ header {
     background-color: #F9E6B3;
 }
 
-footer {
-    background-color: #FFFFFF;
-}
+
 
 .copyright {
+    margin-top: 100px;
     text-align: center;
-    background-color: #808080;
+    background-color: #888787;
 }
+
+
+  .totalmeio {
+    margin-top: 100px;
+    color: rgb(5, 177, 250);
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 425px;
+    text-align: center;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    
+  }
+
+  .botao{
+    color:white;
+    background-color: rgb(10, 146, 213);
+    margin-top: 50px;
+    height: 50px;
+    width: 150px; 
+    height: 50px; 
+    
+
+  }
+
+ 
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
