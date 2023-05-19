@@ -89,6 +89,7 @@ header {
     color: black;
     font-family: 'Times New Roman', Times, serif;
     width: 3px;
+    margin-left: 100px;
 }
 
 input{

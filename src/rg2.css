@@ -13,7 +13,7 @@ html {
 }
 
 .titulo_header {
-    margin-left: 100px;
+    
     margin-top: 30px;
 
 }
@@ -34,8 +34,8 @@ button {
 
 /* parametros para encaixar o meio corretamente*/
 main {
-    background-color: #fcfdfd;
-    color: rgb(255, 255, 255);
+    background-color: #faf5f5;
+    color: rgb(254, 249, 249);
     width: 100vw;
     height: 90vh;
     display: flex;
@@ -65,7 +65,7 @@ header {
 
 
 
-/
+
   
   
   
