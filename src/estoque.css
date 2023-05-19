@@ -39,3 +39,11 @@ pagina {
 body {
     background-color: #D9D9D9;
 }
+footer {
+    background-color: #FFFFFF;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #808080;
+}
