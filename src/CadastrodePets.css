@@ -1,3 +1,26 @@
 #card{
     box-shadow: 6px 6px 10px;
 }
+
+#mcadas{
+    justify-content: right;
+}
+
+#button{
+    
+        
+        padding: 10px 20px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+     
+        
+}
+
+#rodape{
+    margin-top: 375px;
+}
