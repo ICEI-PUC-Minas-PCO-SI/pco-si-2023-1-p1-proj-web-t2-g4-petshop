@@ -15,12 +15,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <!--Início header-->
     <header>
-       <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
+        <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
             <div class="container-fluid">
                 <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -153,26 +154,30 @@
                                     <input type="checkbox" name="termos" id="termos" required>
                                     Eu li e concordo com os <a href="#">termos e condições</a>.
                                 </label>
-                                <button type="button" class="criarconta" id="BtnCriarContaFisica" title="Criar minha conta">Cadastrar</button>
+                                <button type="button" class="criarconta" id="BtnCriarContaFisica"
+                                    title="Criar minha conta">Cadastrar</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!--começando o codigo de pessoa juridica-->
                 <form action="" id="CriarContaJuridica">
-                    <fieldset id="fieldsetPessoaJur" style="display: flex; justify-content: space-around; display: none;">
+                    <fieldset id="fieldsetPessoaJur"
+                        style="display: flex; justify-content: space-around; display: none;">
                         <div
                             style="display: flex; flex-direction: column; justify-content: start; align-items: center; gap: 1em; ">
                             <div class="tipo-cadastro">
-                                <input type="radio" name="pessoa-fisica-juridica" id="pessoa-fisica-juridica" value="fisica" checked>
+                                <input type="radio" name="pessoa-fisica-juridica" id="pessoa-fisica-juridica"
+                                    value="fisica" checked>
                                 <label for="pessoa-fisica-juridica">Física</label>
                             </div>
                             <div class="tipo-cadastro">
-                                <input type="radio" name="pessoa-juridica-juridica" id="pessoa-juridica-juridica" value="juridica">
+                                <input type="radio" name="pessoa-juridica-juridica" id="pessoa-juridica-juridica"
+                                    value="juridica">
                                 <label for="pessoa-juridica-juridica">Jurídica</label>
                             </div>
                         </div>
-                        
+
                         <div id="form-pessoa-juridica" style="display: flex; display: none;">
                             <div class="containerInputs">
                                 <label for="razao-social">
@@ -275,7 +280,8 @@
                                     <input type="checkbox" name="termos-juridica" id="termos-juridica" required>
                                     Eu li e concordo com os <a href="#">termos e condições</a>.
                                 </label>
-                                <button type="button" class="criarconta" id="BtnCriarContaJuridica" title="Criar minha conta">Cadastrar</button>
+                                <button type="button" class="criarconta" id="BtnCriarContaJuridica"
+                                    title="Criar minha conta">Cadastrar</button>
                             </div>
                         </div>
                     </fieldset>
@@ -296,12 +302,50 @@
 
 
     <!--Início footer-->
-    <footer>
-        <div class="copyright">
-            <p>Copyright© 2023 Dogs & Cats Comércio e Participações S/A</p>
-            <p>Todos os direitos reservados</p>
+    <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
+        <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
+            <div class="col-md-6 col-lg-3 mt-4">
+                <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
+
+                <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
+                <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
+                <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mt-4">
+                <h6 class="text-black"><strong>Funcionamento</strong></h6>
+                <p>Segunda à Sexta - 08:00 às 18:00</p>
+                <p>Sábado - 08:00 às 14:00</p>
+                Domingo e Feriado - Fechado
+
+            </div>
+
+            <div class="col-md-6 col-lg-2 mt-4">
+                <h6 class="text-black"><strong>Redes sociais</strong></h6>
+                <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                        style="color: #000000; font-size:36px"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+                        style="color: #000000; font-size:36px"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5531998765432" target="_blank"><i class="fa fa-whatsapp"
+                        style="color: #000000; font-size:36px"></i></a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mt-4 mb-4">
+                <h6 class="text-black"><strong>Entre em contato</strong></h6>
+
+                <i class="fa fa-map-marker ps-1 pe-2" style="color: #000000; font-size:22px"></i>Rua Jardins, 57,
+                Savassi, BH
+                <br>
+                <i class="fa fa-envelope mt-2 pe-1" style="font-size:22px; color: #000000;"></i> <a
+                    href="mailto:dogsecats@gmail.com">dogsecats@gmail.com</a>
+                <br>
+                <i class="fa fa-phone mt-2 ps-1 pe-2" style="color: #000000; font-size:22px"></i>(31) 3345-9876
+            </div>
         </div>
-    </footer>
+        <footer style="background-color: #f8e2a7; text-align: center;">
+            <i class="fa fa-copyright" style="font: size 22px; color: #000000;"> <strong> Dogs&Cats - 2023</strong></i>
+        </footer>
+    </div>
     <!--Fim footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
