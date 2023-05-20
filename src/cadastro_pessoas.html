@@ -20,24 +20,54 @@
 <body>
     <!--Início header-->
     <header>
-        <div class="header">
-            <img class="logo" src="../src/imagens/Logo_sem_fundo.png" alt="Logo do site">
-            <h1 class="titulo_header">Cadastre-se</h1>
-            <nav>
-                <div class="botoes" style="display: flex;">
-                    <div class="botaoheader">
-                        <button title="Voltar" onclick="window.location.href = '/src/login.html'">
-                            <img class="iconeheader" src="../src/imagens/voltar.png" alt="Botão Voltar">
-                        </button>
-                    </div>
-                    <div class="botaoheader">
-                        <button title="Home">
-                            <img class="iconeheader" src="../src/imagens/home.png" alt="Botão Início">
-                        </button>
-                    </div>
+       <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/home.png" alt="" height="45px">
+                                <br>
+                                <b>Início</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/livro.png" alt="" height="45px">
+                                <br>
+                                <b>Agenda</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../src/imagens/pata.png" alt="" height="45px">
+                                <br>
+                                <b>Pets</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/usuario.png" alt="" height="45px">
+                                <br>
+                                <b>Perfil</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/sair.png" alt="" height="45px">
+                                <br>
+                                <b>Sair</b>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
-        </div>
+            </div>
+        </nav>
     </header>
     <!--Fim header-->
 
