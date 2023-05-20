@@ -1,6 +1,3 @@
-html {
-    background-color: #808080;
-}
 
 header {
     background-color: #F9E6B3;
@@ -142,6 +139,9 @@ button span {
 
 footer {
     background-color: #FFFFFF;
+    height: 0;
+    width: 100vw;
+    margin-bottom: 0;
 }
 
 .copyright {
