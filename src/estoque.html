@@ -6,27 +6,58 @@
     <title>Document</title>
     <link rel="stylesheet" href="estoque.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<header class="pagina">
-    <div class="header">
-        <img class="logo" src="Logo_sem_fundo.png" alt="Logo do site">
-        <h1 class="titulo_header">Estoque de Produto</h1>
-        <div class="botoes" style="display: flex;">
-            <div class="botaoheader">
-                <button title="Voltar" onclick="window.location.href = '/src/tela1/login.html'">
-                    <a class="nav-link text-black m-5" href="#">
-                        <img src="../src/imagens/home.png" alt="" height="45px">
-                        <br>
-                        <b>Início</b>
-                    </a>
+<header>
+        <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/home.png" alt="" height="45px">
+                                <br>
+                                <b>Início</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/livro.png" alt="" height="45px">
+                                <br>
+                                <b>Agenda</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <img src="../src/imagens/pata.png" alt="" height="45px">
+                                <br>
+                                <b>Pets</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/usuario.png" alt="" height="45px">
+                                <br>
+                                <b>Perfil</b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-black" href="#">
+                                <img src="../src/imagens/sair.png" alt="" height="45px">
+                                <br>
+                                <b>Sair</b>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-        <nav>
         </nav>
-    </div>
-
-</header>
+    </header>
 <body>
     <div class="container mt-3 mb-3">
         <table class="table table-striped table-hover">
@@ -167,12 +198,51 @@
             </tbody>
         </table>
     </div>
-    <footer>
-        <div class="copyright">
-            <p>Copyright© 2023 Dogs & Cats Comércio e Participações S/A</p>
-            <p>Todos os direitos reservados</p>
+        <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
+        <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
+            <div class="col-md-6 col-lg-3 mt-4">
+                <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
+
+                <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
+                <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
+                <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mt-4">
+                <h6 class="text-black"><strong>Funcionamento</strong></h6>
+                <p>Segunda à Sexta - 08:00 às 18:00</p>
+                <p>Sábado - 08:00 às 14:00</p>
+                Domingo e Feriado - Fechado
+
+            </div>
+
+            <div class="col-md-6 col-lg-2 mt-4">
+                <h6 class="text-black"><strong>Redes sociais</strong></h6>
+                <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                        style="color: #000000; font-size:36px"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+                        style="color: #000000; font-size:36px"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=5531998765432" target="_blank"><i class="fa fa-whatsapp"
+                        style="color: #000000; font-size:36px"></i></a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 mt-4 mb-4">
+                <h6 class="text-black"><strong>Entre em contato</strong></h6>
+
+                <i class="fa fa-map-marker ps-1 pe-2" style="color: #000000; font-size:22px"></i>Rua Jardins, 57,
+                Savassi, BH
+                <br>
+                <i class="fa fa-envelope mt-2 pe-1" style="font-size:22px; color: #000000;"></i> <a
+                    href="mailto:dogsecats@gmail.com">dogsecats@gmail.com</a>
+                <br>
+                <i class="fa fa-phone mt-2 ps-1 pe-2" style="color: #000000; font-size:22px"></i>(31) 3345-9876
+            </div>
         </div>
-    </footer>
+        <footer style="background-color: #f8e2a7; text-align: center;">
+            <i class="fa fa-copyright" style="font: size 22px; color: #000000;"> <strong> Dogs&Cats - 2023</strong></i>
+        </footer>
+    </div>
+
 </body>
 </html>
             
