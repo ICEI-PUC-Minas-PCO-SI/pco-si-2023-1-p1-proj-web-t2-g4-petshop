@@ -1,7 +1,6 @@
 /* parametros para encaixar o meio corretamente*/
 main {
-    background-color: #faf5f5;
-    color: rgb(254, 249, 249);
+    color: rgb(9, 9, 9);
     width: 100vw;
     height: 90vh;
     display: flex;
@@ -11,3 +10,8 @@ main {
 #rodape{
     margin-top: 375px;
 }
+
+#cards2{
+    margin-top: 100px;
+}
+
