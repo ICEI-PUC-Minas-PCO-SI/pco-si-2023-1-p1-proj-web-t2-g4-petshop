@@ -1,0 +1,111 @@
+
+
+/* inicio estilização header*/
+
+header {
+    background-color: #F9E6B3;
+    width: 100vw;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Pacifico', cursive;
+}
+
+.logo {
+    width: 10em;
+}
+
+.titulo_header {
+    margin: auto;
+}
+
+.botoesheader {
+    width: 4em;
+    margin-right: 1em;
+    margin-top: 1em;
+}
+
+.botoes {
+    margin-top: 2em;
+    margin-right: 2em;
+}
+
+button {
+    background-color: #F9E6B3;
+    border: none;
+}
+/*fim estilização header*/
+
+/*início estilização main*/
+main {
+    background-color: white;
+    color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.containerForm {
+    height: 100vh;
+    width: 75vw;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.containerForm form fieldset {
+    display: flex;
+    height: 90vh;
+}
+
+#form-registro-produto {
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.containerInputs {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerForm form fieldset label {
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+
+input:not([type="checkbox"]) {
+    width: 90%;
+    height: 2.2em;
+    border-color: rgba(127, 178, 241, 0.567);
+}
+
+.registro {
+    width: 17em;
+    height: 2.5em;
+    margin-bottom: auto;
+
+    background-color: #1877f2;
+    border-radius: 3px;
+
+    color: white;
+    font-weight: bolder;
+    font-size: 17px;
+}
+/*Fim estilização Main*/
+
+/*Início estilização footer*/
+#rodape{
+    margin-top: 375px;
+}
+/*Fim estilização footer*/
