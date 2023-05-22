@@ -1,0 +1,49 @@
+header {
+    background-color: #F9E6B3;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.logo {
+    width: 10em;
+}
+
+.titulo_header {
+    margin: auto;
+}
+
+.iconeheader {
+    width: 4em;
+    margin-right: 5em;
+    margin-top: 1em;
+}
+
+.botaoheader {
+    margin: auto;
+}
+
+button {
+    background-color: #F9E6B3;
+    border: none;
+}
+pagina {
+    background-color: #D9D9D9;
+}
+body {
+    background-color: #D9D9D9;
+}
+footer {
+    background-color: #FFFFFF;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #808080;
+}
