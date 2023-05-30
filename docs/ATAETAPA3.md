@@ -16,4 +16,4 @@
 
 # Guilherme Souto Borges da Costa
 
->-Eu contribui para a etapa três, reunindo como grupo e desenvolvendo em código a tela de Agendamento de Serviço, participando ativamente do projeto, sempre presente dando opiniao ao grupo e entregando trabalho no github e sempre em disposição para colaborar com meu grupo.
+>- Eu contribui para a etapa três, reunindo como grupo e desenvolvendo em código a tela de Agendamento de Serviço, participando ativamente do projeto, sempre presente dando opiniao ao grupo e entregando trabalho no github e sempre em disposição para colaborar com meu grupo.
