@@ -9,3 +9,7 @@
 # Erick Fabricio Rodrigues Ribeiro
 
 >- Eu contribui  para a etapa três, colocando em alinhamento com todo o grupo o padrão e organização decididos , contribuindo também com minha tela que fiquei responsável "Registro De Serviço" desenvolvida em códigos , organizando meu projeto e subindo para o GitHub. Estando presentes em todas reuniões e decisões do grupo.
+
+# João Vitor Vitalino da Silva Roveda
+
+>- Eu contribuí para a etapa três desenvolvendo a tela de cadastro de produtos, além de estar disponível para reuniões e discussões sobre o trabalho com o grupo para alterações no trabalho e ajudas necessárias.
