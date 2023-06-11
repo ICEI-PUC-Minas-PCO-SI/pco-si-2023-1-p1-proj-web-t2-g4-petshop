@@ -83,6 +83,9 @@ function Exibir() {
 
     document.querySelector("#Cards").innerHTML = cards;
   }
+  
+// Preencher o modal de editar
+ 
 
   const modal = document.getElementById("edit")
 
