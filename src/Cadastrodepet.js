@@ -31,7 +31,7 @@ function Exibir() {
                       <div class="col-md-6 text-center">
                         <img src="${img}" alt="" class="pt-4  pb-1" width="100px" id="imgcard">
                         <!-- Botão de excluir --><br>
-                        <button type="button" class="btn btn-danger mt-4 mb-4" onclick = "excluirPet(${index})">
+                        <button type="button" class="btn btn-danger mt-4 mb-4" onclick = "AlertExcluir(${index})">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
                             viewBox="0 0 16 16">
                             <path
@@ -162,7 +162,7 @@ function cadastroPet() {
   var raca = document.getElementById("raca").value;
 
   if (nome == '' || idade == '' || raca == '') {
-    alert("Preencha todos os campos.")
+    AlertPreencher();
   } else {
     var novoPet = {
       "pessoa": idPessoa,
@@ -175,7 +175,7 @@ function cadastroPet() {
 
     bancoPets.push(novoPet);
     localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
-    alert("Pet Cadastrado com sucesso!")
+    AlertSucesso("Cadastro");
     $('#Cadastro').modal('hide');
     
     Exibir();
@@ -187,20 +187,70 @@ function cadastroPet() {
 
 }
 
+//Alert preencher campos
+
+function AlertPreencher(){
+  Swal.fire(
+    'Erro',
+    'Preencha todos os campos!',
+    'error'
+  )
+}
+
+//Alert sucesso
+function AlertSucesso(opcao){
+  var texto = '';
+  if(opcao == 'Cadastro'){
+    texto = "Pet cadastrado com sucesso!"
+  }else{
+    texto = "Informações do pet editadas com sucesso!"
+  }
+  Swal.fire(
+    'Concluído',
+    texto,
+    'success'
+  )
+}
+
 
 //Função Excluir
 
+function AlertExcluir(id){
+  
+  Swal.fire({
+    title: 'Excluir',
+    text: "Deseja prosseguir com a exclusão do pet " + bancoPets[id].nome + "?",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Sim',
+    cancelButtonText: 'Não'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      
+     
+      Swal.fire(
+        'Excluido',
+        'Pet excluido com sucesso!',
+        'success'
+        
+      )
+      excluirPet(id)
+    }
+  })
+  
+                        
+}
+
 function excluirPet(id) {
 
-  var petExluir = id;
-  var res = confirm("Prosseguir com a exclusão do pet " + bancoPets[petExluir].nome + "?")
-
-  if (res == true) {
-    bancoPets.splice(petExluir, 1);
+  
+    bancoPets.splice(id, 1);
     localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
 
     Exibir();
-  }
+  
 
 }
 //Função de editar pet
@@ -236,7 +286,7 @@ function Editar() {
   }
 
     if(nomeEdit == '' || racaEdit == '' || idadeEdit == ''){
-      alert("Preencha todos os campos!!")
+      AlertPreencher();
     }else{
       bancoPets[pegarID].nome = nomeEdit
       bancoPets[pegarID].idade = idadeEdit
@@ -245,7 +295,7 @@ function Editar() {
       bancoPets[pegarID].especie = valorSelecionadoAltEspecie
 
       localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
-      alert("Editado com sucesso!")
+      AlertSucesso("Editar");
       $('#edit').modal('hide');
     
     Exibir();

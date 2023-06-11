@@ -22,7 +22,7 @@
 }
 
 #rodape{
-    margin-top: 375px;
+    margin-top: 260px;
 }
 
 /* 
@@ -32,3 +32,7 @@ h3{
     width: 40px;
     height: 80px;
 } */
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
