@@ -13,6 +13,8 @@
 </head>
 
 <body>
+  <script src ="Cadastrodepet.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
@@ -29,12 +31,12 @@
 
             <label for="Especie" class="pe-2  pb-4"><b>Espécie:</b></label>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+              <input class="form-check-input" type="radio" name="altEspecie"  value="Cachorro" />
               <label class="form-check-label" for="Radio1">Cachorro</label>
             </div>
             
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+              <input class="form-check-input" type="radio" name="altEspecie"  value="Gato" />
               <label class="form-check-label" for="Radio2">Gato</label>
             </div>
             <br>
@@ -43,13 +45,13 @@
             <br>
             <label for="sexo" class="pe-2  pb-4"><b>Sexo:</b></label>
           <div class="form-check-inline">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiom">
+            <input class="form-check-input" type="radio" name="altSexo" id="flexRadiom" value="Macho">
             <label class="form-check-label" for="flexRadioDefault1">
               Macho
             </label>
           </div>
           <div class="form-check-inline">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadiof" checked>
+            <input class="form-check-input" type="radio" name="altSexo" id="flexRadiof" value="Fêmea">
             <label class="form-check-label" for="flexRadioDefault2">
              Fêmea
             </label>
@@ -61,7 +63,8 @@
           </div>
          
           <div class="modal-footer">
-           <button type="button" class="btn btn-success">Salvar</button>
+            <input type="text" id="cofreBanco" style = "visibility: hidden;">
+           <button type="button" class="btn btn-success" onclick="Editar()">Salvar</button>
           </div>
         </div>
       </div>
@@ -69,7 +72,7 @@
 
     <!-- Modal Cadastrar -->
     
-    <div class="modal" tabindex="-1" id="cadastro">
+    <div class="modal fade" tabindex="-1" id="Cadastro" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -80,43 +83,43 @@
 
           <label for="Especie" class="pe-2  pb-4"><b>Espécie:</b></label>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" />
+              <input class="form-check-input" type="radio" name="Especie" id="inlineRadio1" value="Cachorro" checked/>
               <label class="form-check-label" for="inlineRadio1">Cachorro</label>
             </div>
             
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+              <input class="form-check-input" type="radio" name="Especie" id="inlineRadio2" value="Gato" />
               <label class="form-check-label" for="inlineRadio2">Gato</label>
             </div>
             <br>
             
           
           
-            <label for="name" class="pe-2  pb-4"><b>Nome:</b></label><input type="text" name="Nome" id="name" placeholder="Digite o nome do seu pet.">
+            <label for="name" class="pe-2  pb-4"><b>Nome:</b></label><input type="text" name="Nome" id="name" placeholder="Digite o nome do seu pet." required>
             <br>
             <label for="sexo" class="pe-2  pb-4"><b>Sexo:</b></label>
-          <div class="form-check-inline">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <div class="form-check-inline"> 
+            <input class="form-check-input" type="radio" name="Sexo" id="flexRadioDefault1" value = "Macho">
             <label class="form-check-label" for="flexRadioDefault1">
               Macho
             </label>
           </div>
           <div class="form-check-inline">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+            <input class="form-check-input" type="radio" name="Sexo" id="flexRadioDefault2" value="Fêmea" checked>
             <label class="form-check-label" for="flexRadioDefault2">
              Fêmea
             </label>
           </div>
            <br>
            <label for="Idade" class="pe-2  pb-4"><b>Idade:</b></label>
-         <input type="text" name="Idade" id="idade" placeholder="Digite a Idade do seu pet.">
+         <input type="text" name="Idade" id="idade" placeholder="Digite a Idade do seu pet." required>
          <br>
          <label for="Raça" class="pe-2  pb-4"><b>Raça:</b></label>
-          <input type="text" name="Raca" id="raca" placeholder="Digite a Raça do seu pet."> 
+          <input type="text" name="Raca" id="raca" placeholder="Digite a Raça do seu pet." required> 
           </div>
          
           <div class="modal-footer">
-           <button type="button" class="btn btn-primary">Cadastrar</button>
+           <button type="button" class="btn btn-primary" onclick = "cadastroPet()">Cadastrar</button>
           </div>
         </div>
       </div>
@@ -185,8 +188,8 @@
 <main>
   <div class="container-fluid" id="content">
     <div class="row justify-content-center pt-3">
-      <div class="col-md-3 text-center">
-        <button type="button" class="btn mt-1 " data-bs-toggle="modal" data-bs-target="#cadastro" id="mcadas" style="background-color: #f9e6d3;">
+      <div class="col-md-4 text-center">
+        <button type="button" class="btn mt-1 " data-bs-toggle="modal" data-bs-target="#Cadastro" id="mcadas" style="background-color: #f9e6d3;">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
       <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path>
       </svg>
@@ -194,112 +197,9 @@
         </button>
       </div>
     </div>
-    <div class="row justify-content-center pt-4">
+    <div class="row justify-content-center pt-4" id="Cards">
 
-      <div class="col-md-5">
-
-        <!-- Card 1 -->
-        <div class="card" id="card">
-          <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-              <img src="../src/imagens/puppy.png" alt="" class="pt-4  pb-1" width="100px" id="imgcard">
-              <!-- Botão de excluir --><br>
-              <button type="button" class="btn btn-danger mt-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z">
-                  </path>
-                  <path
-                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z">
-                  </path>
-                </svg>
-                Excluir
-              </button>
-
-              <!-- Botão de editar -->
-
-              <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#edit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-pencil-square" viewBox="0 0 16 16">
-                  <path
-                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
-                  </path>
-                  <path fill-rule="evenodd"
-                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
-                  </path>
-                </svg>
-                Editar
-              </button>
-            </div>
-
-
-            <div class="col-md-4 text-center">
-              <p class="pt-4"><b>Boby Marley</b></p>
-              <p>Macho</p>
-              <p>03 Anos</p>
-              <p>Pitbull</p>
-              
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-
-
-
-
-      <div class="col-md-5">
-          
-        <div class="card" id="card">
-          <div class="row justify-content-center">
-            <div class="col-md-6 text-center">
-              <img src="../src/imagens/cat main.png" alt="" class="pt-4  pb-1" width="100px" id="imgcard">
-              <!-- Botão de excluir --><br>
-              <button type="button" class="btn btn-danger mt-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash"
-                  viewBox="0 0 16 16">
-                  <path
-                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z">
-                  </path>
-                  <path
-                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z">
-                  </path>
-                </svg>
-                Excluir
-              </button>
-
-              <!-- Botão de editar -->
-
-              <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal" data-bs-target="#edit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                  class="bi bi-pencil-square" viewBox="0 0 16 16">
-                  <path
-                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
-                  </path>
-                  <path fill-rule="evenodd"
-                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
-                  </path>
-                </svg>
-                Editar
-              </button>
-            </div>
-
-
-            <div class="col-md-4 text-center">
-              <p class="pt-4"><b>Mel</b></p>
-              <p>Fêmea</p>
-              <p>08 Anos</p>
-              <p>Persian cat</p>
-              
-            </div>
-          </div>
-        </div>
-
-        
-
-      </div>
+    
     </div>
   </div>
 </main>
