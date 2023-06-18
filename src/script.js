@@ -1,0 +1,100 @@
+// pagina inicial de login 
+const login_url = "login.html";
+
+// pagina de cadastro de pessoas 
+const cadastro_url = "cadastro.html";
+
+// objeto para o banco de dados de usuarios baseado em json
+var db_usuarios = {};
+
+// objeto para o usuario corrente 
+var usuarioCorrente = {};
+
+
+// dados de usuarios p/ serem utilizados como carga inicial
+const dadosIniciais = {
+    usuarios: [
+        {
+            "nome": "admin", "email": "admin@admin.com", "celular": "(31) 99999-9999",
+            "nascimento": "03/03/2003", "cpf": "999.999.999-99", "senha": "123"
+        },
+        {
+            "nome": "user", "email": "user@user.com", "celular": "(31) 98888-8888",
+            "nascimento": "04/04/2004", "cpf": "888.888.888-88", "senha": "321"
+        },
+    ]
+};
+
+// inicializar usuario corrente e banco de dados da aplicação de login
+function initLoginApp() {
+    // inicializando usuario corrente (caso exista) a partir de dados no local storage 
+    let usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+    if (usuarioCorrenteJSON) {
+        usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+    }
+
+    // inicializando banco de dados 
+    // obtem a string json com os dados de usuarios a partir do localstorage 
+    var usuariosJSON = localStorage.getItem('db_usuarios');
+
+    // verifica se existem dados já armazenados no localStorage 
+    if (!usuariosJSON) { // se não há dados no LS
+        alert('Dados de usuários não encontrados no localStorage. \n Fazendo carga inicial');
+
+        // copia os dados iniciais para o banco de dados 
+        db_usuarios = dadosIniciais;
+
+        // salva os dados iniciais no localstorage convertendo-os para string antes 
+        localStorage.setItem('db_usuarios', JSON.stringify(dadosIniciais));
+        console.log(localStorage.getItem('db_usuarios'));
+    } else {
+        // converte a string em obj colocando no banco de dados baseado em JSON 
+        db_usuarios = JSON.parse(usuariosJSON);
+        console.log(db_usuarios);
+    }
+}
+
+// COMEÇANDO PARTE DE LOGIN
+// função para verificar se o login do usuario está ok e, se positivo, direciona p/ página inicial
+function loginUser(login, senha) {
+    // verifica todos os itens do banco de dados de usuarios p/ localizar o usuario informado no form de login
+    for (var i = 0; i < db_usuarios.usuarios.length; i++) {
+        var usuario = db_usuarios.usuarios[i];
+
+        // se encontrou login, carrega usuario corrente e salva no session storage
+        if (login == usuario.email && senha == usuario.senha) {
+            usuarioCorrente.email = usuario.email;
+            
+            usuarioCorrente.senha = usuario.senha;
+
+            // salva os dados do usuario corrente no session storage (convertendo antes para string)
+            sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+
+            // retorna true p/ usuario encontrado
+            return true;
+        }
+    }
+    // caso não encontre o usuario, retorna false
+    return false;
+}
+
+
+
+// adicionando usuario no banco de dados 
+function addUser(nome, email, celular, nascimento, cpf, senha) {
+    // criando obj de usuario para o novo usuario
+    let usuario = { "nome": nome, "email": email, "celular": celular, "nascimento": nascimento, "cpf": cpf, "senha": senha };
+
+    // inclui o novo usuario no banco de dados baseado em JSON
+    db_usuarios.usuarios.push(usuario);
+    console.log(usuario);
+    console.log(db_usuarios);
+
+    // salva o novo banco de dados com o novo usuario no localStorage
+    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+}
+
+// incializa as estruturas utilizadas pelo LoginApp
+initLoginApp();
+
+// 18/06 parte de login não funciona (não entra no if e so retorna false)

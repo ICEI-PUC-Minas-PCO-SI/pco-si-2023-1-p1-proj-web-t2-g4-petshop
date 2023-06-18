@@ -26,6 +26,7 @@ function compararSenhas() {
 }
 
 // Adicionar eventos de validação e de comparação das senhas
+/*
 senhaInput.addEventListener("input", validarSenha);
 confirmarSenhaInput.addEventListener("input", compararSenhas);
 
@@ -39,6 +40,7 @@ form.addEventListener("submit", (event) => {
     event.preventDefault();
   }
 });
+*/
 
 
 // manipulando os inputs radio 
@@ -85,7 +87,7 @@ JuridicaPessoaFisicaRadio.addEventListener("click", function () {
   }
 });
 
-// validando o botao isento de ie (!!!)
+// validando o botao isento de ie
 const checkboxIsento = document.getElementById("isentoIE");
 const inscricaoEstadual = document.getElementById("inscricao-estadual");
 const estadoInscricao = document.getElementById("estado-inscricao");
@@ -106,11 +108,9 @@ checkboxIsento.addEventListener("change", function () {
   }
 });
 
-// alerta ao clicar no botao de cadastro
-const BtnCriarConta = document.querySelector('.criarconta');
-const BtnCriarContaJuridica = document.getElementById("BtnCriarContaJuridica");
 
-BtnCriarConta.addEventListener('click', function (event) {
+
+btnCriarContaJuridica.addEventListener('click', function (event) {
   event.preventDefault();
 
   if (!formCriarConta.reportValidity()) {
@@ -121,14 +121,25 @@ BtnCriarConta.addEventListener('click', function (event) {
   }
 });
 
-BtnCriarContaJuridica.addEventListener('click', function (event) {
+// começando parte do cadastro do usuario 
+
+// obtendo os dados do formulario 
+function salvaLogin(event) {
+  // cancela a submissão do form para tratar sem fazer refresh da tela
   event.preventDefault();
 
-  if (!formCriarConta.reportValidity()) {
-    alert('Preencha os campos corretamente!');
-  } else {
-    alert('Usuário cadastrado com sucesso!');
-    formCriarConta.submit();
-  }
-});
+  // obtendo dados do formulario
+  let nome = document.getElementById('nome').value;
+  let email = document.getElementById('email').value;
+  let celular = document.getElementById('celular').value;
+  let nascimento = document.getElementById('data').value;
+  let cpf = document.getElementById('cpf').value;
+  let senha = document.getElementById('senha').value;
 
+  // adicionando usuario no banco de dados (função ja existente na parte script.js)
+  addUser(nome, email, celular, nascimento, cpf, senha);
+  alert ('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
+}
+
+// associando salvamento ao botao 
+document.getElementById('btnCriarContaFisica').addEventListener('click', salvaLogin);
