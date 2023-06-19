@@ -95,29 +95,29 @@
                                 <label for="nome">
                                     Nome completo:
                                     <br>
-                                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo"
+                                    <input type="text" name="nome" class="nome" id="nome" placeholder="Digite seu nome completo"
                                         required>
                                 </label>
                                 <label for="email">
                                     E-mail:
                                     <br>
-                                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail"
+                                    <input type="email" name="email" class="email" id="email" placeholder="Digite seu e-mail"
                                         required>
                                 </label>
                                 <label for="celular">
                                     Celular:
                                     <br>
-                                    <input type="tel" name="celular" id="celular" placeholder="DDD + Celular" required>
+                                    <input type="tel" name="celular" class="celular" id="celular" placeholder="DDD + Celular" required>
                                 </label>
                                 <label for="telefone">
                                     Telefone (opcional):
                                     <br>
-                                    <input type="tel" name="telefone" id="telefone" placeholder="DDD + Telefone">
+                                    <input type="tel" name="telefone" class="telefone" id="telefone" placeholder="DDD + Telefone">
                                 </label>
                                 <label for="genero">
                                     Gênero:
                                     <br>
-                                    <select name="genero" id="">
+                                    <select name="genero" id="genero">
                                         <option value="masculino">Masculino</option>
                                         <option value="feminino">Feminino</option>
                                         <option value="naoinformar">Não informar</option>
@@ -134,34 +134,34 @@
                                 <label for="cpf">
                                     CPF:
                                     <br>
-                                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF"
+                                    <input type="text" name="cpf" class="cpf" id="cpf" placeholder="Digite seu CPF"
                                         pattern="^(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})$"
                                         required>
                                 </label>
                                 <label for="senha">
                                     Senha:
                                     <br>
-                                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha"
+                                    <input type="password" name="senha" class="senha" id="senha" placeholder="Digite sua senha"
                                         minlength="8" pattern="(?=.*\d.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </label>
                                 <label for="confirmarSenha">
                                     Confirme sua senha:
                                     <br>
-                                    <input type="password" name="confirmarSenha" id="confirmarSenha"
+                                    <input type="password" name="confirmarSenha" class="confirmarSenha" id="confirmarSenha"
                                         placeholder="Confirmar senha" required>
                                 </label>
                                 <label for="termos" style="display: flex; justify-content: center; gap: 5px;">
                                     <input type="checkbox" name="termos" id="termos" required>
                                     Eu li e concordo com os <a href="#">termos e condições</a>.
                                 </label>
-                                <button type="button" class="criarconta" id="btnCriarContaFisica"
+                                <button type="button" class="criarConta" id="btnCriarContaFisica"
                                     title="Criar minha conta">Cadastrar</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!--começando o codigo de pessoa juridica-->
-                <form action="" id="CriarContaJuridica">
+                <form action="GET" id="CriarContaJuridica">
                     <fieldset id="fieldsetPessoaJur"
                         style="display: flex; justify-content: space-around; display: none;">
                         <div
@@ -183,25 +183,25 @@
                                 <label for="razao-social">
                                     Razão social:
                                     <br>
-                                    <input type="text" name="nome-juridica" id="nome-juridica"
+                                    <input type="text" name="nome-juridica" class="nome" id="nome-juridica"
                                         placeholder="Digite a razão social" required>
                                 </label>
                                 <label for="email">
                                     E-mail:
                                     <br>
-                                    <input type="email" name="email-juridica" id="email-juridica"
+                                    <input type="email" name="email-juridica" class="email" id="email-juridica"
                                         placeholder="Digite seu e-mail" required>
                                 </label>
                                 <label for="celular">
                                     Celular:
                                     <br>
-                                    <input type="tel" name="celular-juridica" id="celular-juridica"
+                                    <input type="tel" name="celular-juridica" class="celular" id="celular-juridica"
                                         placeholder="DDD + Celular" required>
                                 </label>
                                 <label for="telefone">
                                     Telefone (opcional):
                                     <br>
-                                    <input type="tel" name="telefone-juridica" id="telefone-juridica"
+                                    <input type="tel" name="telefone-juridica" class="telefone" id="telefone-juridica"
                                         placeholder="DDD + Telefone">
                                 </label>
                                 <label for="nome-contato">
@@ -215,7 +215,7 @@
                                 <label for="cnpj">
                                     CNPJ:
                                     <br>
-                                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ">
+                                    <input type="text" name="cnpj" class="cpf" id="cnpj" placeholder="CNPJ">
                                 </label>
                                 <div style="display: flex; width: 90%; align-items:center;">
                                     <label for="isentoIE" style="width: 30%;">
@@ -266,21 +266,21 @@
                                 <label for="senha">
                                     Senha:
                                     <br>
-                                    <input type="password" name="senha-juridica" id="senha-juridica"
+                                    <input type="password" name="senha-juridica" class="senha" id="senha-juridica"
                                         placeholder="Digite sua senha" minlength="8"
                                         pattern="(?=.*\d.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
                                 </label>
                                 <label for="confirmarSenha">
                                     Confirme sua senha:
                                     <br>
-                                    <input type="password" name="confirmarSenha-juridica" id="confirmarSenha-juridica"
+                                    <input type="password" name="confirmarSenha-juridica" class="confirmarSenha" id="confirmarSenha-juridica"
                                         placeholder="Confirmar senha" required>
                                 </label>
                                 <label for="termos-juridica" style="display: flex; justify-content: center; gap: 5px;">
                                     <input type="checkbox" name="termos-juridica" id="termos-juridica" required>
                                     Eu li e concordo com os <a href="#">termos e condições</a>.
                                 </label>
-                                <button type="button" class="criarconta" id="btnCriarContaJuridica"
+                                <button type="button" class="criarConta" id="btnCriarContaJuridica"
                                     title="Criar minha conta">Cadastrar</button>
                             </div>
                         </div>

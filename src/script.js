@@ -25,6 +25,7 @@ const dadosIniciais = {
     ]
 };
 
+
 // inicializar usuario corrente e banco de dados da aplicação de login
 function initLoginApp() {
     // inicializando usuario corrente (caso exista) a partir de dados no local storage 
@@ -39,8 +40,7 @@ function initLoginApp() {
 
     // verifica se existem dados já armazenados no localStorage 
     if (!usuariosJSON) { // se não há dados no LS
-        alert('Dados de usuários não encontrados no localStorage. \n Fazendo carga inicial');
-
+        alert('Dados de usuários não encontrados no localStorage. \n Faça cadastro do usuario para prosseguir.');
         // copia os dados iniciais para o banco de dados 
         db_usuarios = dadosIniciais;
 
@@ -81,9 +81,23 @@ function loginUser(login, senha) {
 
 
 // adicionando usuario no banco de dados 
-function addUser(nome, email, celular, nascimento, cpf, senha) {
+function addUser(nome, email, celular, telefone, genero, nascimento, cpf, senha) {
     // criando obj de usuario para o novo usuario
-    let usuario = { "nome": nome, "email": email, "celular": celular, "nascimento": nascimento, "cpf": cpf, "senha": senha };
+    let usuario = { "nome": nome, "email": email, "celular": celular, "telefone": telefone, "genero": genero, "nascimento": nascimento, "cpf": cpf, "senha": senha };
+
+    // inclui o novo usuario no banco de dados baseado em JSON
+    db_usuarios.usuarios.push(usuario);
+    console.log(usuario);
+    console.log(db_usuarios);
+
+    // salva o novo banco de dados com o novo usuario no localStorage
+    localStorage.setItem('db_usuarios', JSON.stringify(db_usuarios));
+}
+
+// adicionando usuario juridico no banco de dados
+function addUserJuridico(razao, email, celular, telefone, nome, cnpj, inscricao, estadoIE, senha) {
+    // criando obj de usuario para o novo usuario
+    let usuario = { "razao social": razao, "email": email, "celular": celular, "telefone": telefone, "nome do contato": nome, "cnpj": cnpj, "inscricao estadual": inscricao, "estado inscricao": estadoIE, "senha": senha };
 
     // inclui o novo usuario no banco de dados baseado em JSON
     db_usuarios.usuarios.push(usuario);
@@ -96,5 +110,3 @@ function addUser(nome, email, celular, nascimento, cpf, senha) {
 
 // incializa as estruturas utilizadas pelo LoginApp
 initLoginApp();
-
-// 18/06 parte de login não funciona (não entra no if e so retorna false)
