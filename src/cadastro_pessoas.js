@@ -68,8 +68,7 @@ checkboxIsento.addEventListener("change", function () {
   }
 });
 
-
-// começando parte do cadastro do usuario 
+// começando parte do cadastro do usuario (pessoa FISICA)
 
 // obtendo os dados do formulario 
 function salvaLogin(event) {
@@ -96,7 +95,7 @@ function salvaLogin(event) {
 document.querySelector('.criarConta').addEventListener('click', salvaLogin);
 
 
-// começando parte de cadastro de usuario juridico
+// começando parte de cadastro de usuario JURIDICO
 function salvaLoginJuridico(event) {
   // cancela a submissão do form para tratar sem fazer refresh da tela
   event.preventDefault();
@@ -118,7 +117,5 @@ function salvaLoginJuridico(event) {
   alert ('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
   window.location.href = "login.html";
 }
-// associando salvamento ao botao 
+// associando salvamento ao botao de pessoa juridica
 document.getElementById('btnCriarContaJuridica').addEventListener('click', salvaLoginJuridico);
-
-// fazer função de comparação de senhas 
