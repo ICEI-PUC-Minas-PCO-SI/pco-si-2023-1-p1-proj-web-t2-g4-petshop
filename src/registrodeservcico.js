@@ -178,8 +178,8 @@ function cadastroPet() {
 
     bancoPets.push(novoPet);
     localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
-    AlertSucesso("Cadastro");
-    $('#Cadastro').modal('hide');
+    AlertSucesso("registro");
+    $('#registro').modal('hide');
     
     Exibir();
 
