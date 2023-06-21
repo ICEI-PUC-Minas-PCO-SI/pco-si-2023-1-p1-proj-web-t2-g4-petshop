@@ -123,10 +123,6 @@ function Exibir() {
 }
 
 
-
-
-
-
 //Registrar serviço
 
 function cadastroPet() {
