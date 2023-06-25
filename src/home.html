@@ -1,105 +1,79 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="shortcut icon" href="imagens/Logo_sem_fundo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="home.css">
-    <title>Dogs&Cats - Pets</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Dogs&Cats</title>
 </head>
 
-<body style="background-color: #03f0fc;">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
-        </script>
+<body>
+    <!--bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
 
-    <!-- início header -->
     <header>
-        <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
+        <nav class="navbar navbar-expand-sm" style="background-color:#F9E6B3 ;">
             <div class="container-fluid">
-                <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="../src/imagens/Logo_sem_fundo.png" alt="Avatar Logo" style="width:110px;"
+                        class="rounded-pill ms-4">
+                </a>
             </div>
-
-            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav text-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/home.png" alt="" height="45px">
-                            <br>
-                            <b>Início</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/livro.png" alt="" height="45px">
-                            <br>
-                            <b>Agenda</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <img src="../src/imagens/pata.png" alt="" height="45px">
-                            <br>
-                            <b>Pets</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/usuario.png" alt="" height="45px">
-                            <br>
-                            <b>Perfil</b>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/sair.png" alt="" height="45px">
-                            <br>
-                            <b>Sair</b>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <a href="./login.html" class="text-white"><button type="button" class="button btn btn-primary me-4">Entrar
+                    ou Cadastrar</button></a>
         </nav>
     </header>
-    <!-- fim header -->
 
-    <!--início main-->
-    <div class="container-fluid mt-5" style="background-color: #03f0fc;">
-        <div class="row  text-center">
-            <div class="col align-self-center">
-                <h1>Seja muito bem-vindo ao Dogs e Cats</h1>
-                <p class="text-black" style="font-size: 20px;">No Dogs e Cats Pet Shop, oferecemos <br> banho e tosa para cães e gatos. Nós <br> usamos shampoo e
-                    condicionador <br> específicos para cada tipo de pelo e <br> cuidamos das unhas, orelhas e dentes.
-                    <br>
-                    Na tosa,
-                    deixamos seu animalzinho com <br> um visual
-                    incrível e mais
-                    confortável. <br> Nossa equipe é composta por <br> profissionais qualificados e apaixonados <br> por
-                    animais.
-                    Agende já o banho e tosa do <br> seu pet e deixe-o ainda mais feliz e saudável!
+    <main class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-6">
+                <img src="../src/imagens/Tosa.png" width="100%" alt="">
+            </div>
+
+
+
+            <div class="col-lg-6 col-md-6">
+                <h5 class="mt-3 text-white text-center">Bem-vindo(a) ao Dogs & Cats!</h5>
+                <br>    
+
+                <p class="text-white text-center">
+                    Se você procura cuidado de alta qualidade para o seu amado cão ou gato, está no lugar certo. Aqui
+                    nos dedicamos a proporcionar uma experiência de banho e tosa excepcional, além de serviços
+                    veterinários.
+                </p>
+                <p class="text-white text-center">
+                    Cadastre-se em nosso site para conhecer mais sobre nossos serviços e agendar um horário de
+                    atendimento.  
+                </p>
+                <p class="text-white text-center">
+                    Estamos ansiosos para cuidar do seu pet!
                 </p>
             </div>
-            <div class="col">
-                <div class="image-main">
-                    <img src="./imagens/fotohome.jpeg" alt="Imagem Petshop">
-                </div>
-            </div>
         </div>
-    </div>
-    <!--fim main-->
 
-    <!--Início footer-->
-    <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape1">
-        <div class="row mt-5 ms-5 justify-content-center ">
+    </main>
+
+    
+         <!--Início footer-->
+    <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
+        <div class="row  ms-5 justify-content-center " id="rodape2">
             <div class="col-md-6 col-lg-3 mt-4">
                 <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
 
@@ -143,6 +117,8 @@
         </footer>
     </div>
     <!--Fim footer-->
+    
+
 </body>
 
 </html>
