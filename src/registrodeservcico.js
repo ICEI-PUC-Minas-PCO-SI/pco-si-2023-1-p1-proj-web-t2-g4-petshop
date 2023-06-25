@@ -17,12 +17,11 @@ function Exibir() {
   var cards = "";
   var img = "";
   if (bancoPets.length != 0) {
-
     for (var index = 0; index < bancoPets.length; index++) {
       if (idPessoa == bancoPets[index].pessoa) {
-        if (bancoPets[index].especie == "Cachorro") {
+        if (bancoPets[index].escolha == "Banho") {
           img = "../src/imagens/banhopet.png";
-        } else {
+        } else if (bancoPets[index].escolha == "Veterinário") {
           img = "../src/imagens/veterinariopet.png";
         }
         cards += `
@@ -63,7 +62,7 @@ function Exibir() {
           
                       <div class="col-md-4 text-center">
                         <p class="pt-4"><b>${bancoPets[index].nome}</b></p>
-                        <p>${bancoPets[index].idade}</p>
+                        <p>${bancoPets[index].obs}</p>
 
 
                        
@@ -103,14 +102,14 @@ function Exibir() {
 
       modal.querySelector('#cofreBanco').value = idrecipient;
       modal.querySelector('#altname').value = bancoPets[idrecipient].nome;
-      modal.querySelector('#altidade').value = bancoPets[idrecipient].idade;
+      modal.querySelector('#altobs').value = bancoPets[idrecipient].observacao;
       
         
       
 
-      opcoes = document.getElementsByName("altEspecie")
+      opcoes = document.getElementsByName("altobs")
       for(var i = 0; i < opcoes.length; i++){
-        if(opcoes[i].value === bancoPets[idrecipient].especie){
+        if(opcoes[i].value === bancoPets[idrecipient].escolha){
           opcoes[i].checked = true;
 
           break;
@@ -128,12 +127,12 @@ function Exibir() {
 function cadastroPet() {
 
   // Seleção do serviço
-  var opcaoEspecie = document.getElementsByName("Especie");
-  var valorSelecionadoEspecie = "";
+  var opcaoescolha = document.getElementsByName("escolha");
+  var valorSelecionadoescolha = "";
 
-  for (var i = 0; i < opcaoEspecie.length; i++) {
-    if (opcaoEspecie[i].checked) {
-      valorSelecionadoEspecie = opcaoEspecie[i].value;
+  for (var i = 0; i < opcaoescolha.length; i++) {
+    if (opcaoescolha[i].checked) {
+      valorSelecionadoescolha = opcaoescolha[i].value;
 
       break;
 
@@ -142,17 +141,17 @@ function cadastroPet() {
 
 
   var nome = document.getElementById("name").value;
-  var idade = document.getElementById("idade").value;
+  var observacao = document.getElementById("observacao").value;
   
 
-  if (nome == '' || idade == '' ) {
+  if (nome == '' || observacao == '' ) {
     AlertPreencher();
   } else {
     var addservico = {
       "pessoa": idPessoa,
       "nome": nome,
-      "idade": idade,
-      "especie": valorSelecionadoEspecie
+      "obs": observacao,
+      "escolha": valorSelecionadoescolha
     }
 
     bancoPets.push(addservico);
@@ -163,7 +162,7 @@ function cadastroPet() {
     Exibir();
 
      document.getElementById("name").value = '';
-     document.getElementById("idade").value = '';
+     document.getElementById("observacao").value = '';
     
   }
   
@@ -239,30 +238,29 @@ function excluirPet(id) {
 //Função de editar pet
 function Editar() {
 
-    var pegarID = document.getElementById("cofreBanco").value;
-
+  var pegarID = document.getElementById("cofreBanco").value;
   var nomeEdit = document.getElementById("altname").value;
-  var idadeEdit = document.getElementById("altidade").value;
+  var observEdit = document.getElementById("altobs").value;
   
   
-  var opcaoAltEspecie = document.getElementsByName("altEspecie");
-  var valorSelecionadoAltEspecie = "";
+  var opcaoAltescolha = document.getElementsByName("opcaoAltescolha");
+  var valorSelecionadoAltescolha = "";
 
-  for (var i = 0; i < opcaoAltEspecie.length; i++) {
-    if (opcaoAltEspecie[i].checked) {
-      valorSelecionadoAltEspecie = opcaoAltEspecie[i].value;
+  for (var i = 0; i < opcaoAltescolha.length; i++) {
+    if (opcaoAltescolha[i].checked) {
+      valorSelecionadoAltescolha = opcaoAltescolha[i].value;
 
       break;
 
     }
   }
 
-    if(nomeEdit == ''  || idadeEdit == ''){
+    if(nomeEdit == ''  || observEdit == ''){
       AlertPreencher();
     }else{
       bancoPets[pegarID].nome = nomeEdit
-      bancoPets[pegarID].idade = idadeEdit
-      bancoPets[pegarID].especie = valorSelecionadoAltEspecie
+      bancoPets[pegarID].obs = observEdit;
+      bancoPets[pegarID].escolha = valorSelecionadoAltescolha
 
       localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
       AlertSucesso("Editar");
