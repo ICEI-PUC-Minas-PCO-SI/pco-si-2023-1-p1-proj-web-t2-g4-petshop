@@ -10,16 +10,32 @@ var db_usuarios = {};
 // objeto para o usuario corrente 
 var usuarioCorrente = {};
 
+// função para gerar códigos randômicos a serem utilizados como código de usuário
+function generateUUID() { // Public Domain/MIT
+    var d = new Date().getTime();//Timestamp
+    var d2 = (performance && performance.now && (performance.now()*1000)) || 0;//Time in microseconds since page-load or 0 if unsupported
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random() * 16;//random number between 0 and 16
+        if(d > 0){//Use timestamp until depleted
+            r = (d + r)%16 | 0;
+            d = Math.floor(d/16);
+        } else {//Use microseconds since page-load if supported
+            r = (d2 + r)%16 | 0;
+            d2 = Math.floor(d2/16);
+        }
+        return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+}
 
 // dados de usuarios p/ serem utilizados como carga inicial
 const dadosIniciais = {
     usuarios: [
         {
-            "nome": "admin", "email": "admin@admin.com", "celular": "(31) 99999-9999",
+            "id": generateUUID (), "nome": "admin", "email": "admin@admin.com", "celular": "(31) 99999-9999",
             "nascimento": "03/03/2003", "cpf": "999.999.999-99", "senha": "123"
         },
         {
-            "nome": "user", "email": "user@user.com", "celular": "(31) 98888-8888",
+            "id": generateUUID (), "nome": "user", "email": "user@user.com", "celular": "(31) 98888-8888",
             "nascimento": "04/04/2004", "cpf": "888.888.888-88", "senha": "321"
         },
     ]
@@ -82,8 +98,10 @@ function loginUser(login, senha) {
 
 // adicionando usuario no banco de dados 
 function addUser(nome, email, celular, telefone, genero, nascimento, cpf, senha) {
+
     // criando obj de usuario para o novo usuario
-    let usuario = { "nome": nome, "email": email, "celular": celular, "telefone": telefone, "genero": genero, "nascimento": nascimento, "cpf": cpf, "senha": senha };
+    let newId = generateUUID(); // id do usuario 
+    let usuario = { "id": newId, "nome": nome, "email": email, "celular": celular, "telefone": telefone, "genero": genero, "nascimento": nascimento, "cpf": cpf, "senha": senha };
 
     // inclui o novo usuario no banco de dados baseado em JSON
     db_usuarios.usuarios.push(usuario);
@@ -97,7 +115,8 @@ function addUser(nome, email, celular, telefone, genero, nascimento, cpf, senha)
 // adicionando usuario juridico no banco de dados
 function addUserJuridico(razao, email, celular, telefone, nome, cnpj, inscricao, estadoIE, senha) {
     // criando obj de usuario para o novo usuario
-    let usuario = { "razao social": razao, "email": email, "celular": celular, "telefone": telefone, "nome do contato": nome, "cnpj": cnpj, "inscricao estadual": inscricao, "estado inscricao": estadoIE, "senha": senha };
+    let newId = generateUUID(); // id do usuario 
+    let usuario = { "id": newId, "razao social": razao, "email": email, "celular": celular, "telefone": telefone, "nome do contato": nome, "cnpj": cnpj, "inscricao estadual": inscricao, "estado inscricao": estadoIE, "senha": senha };
 
     // inclui o novo usuario no banco de dados baseado em JSON
     db_usuarios.usuarios.push(usuario);

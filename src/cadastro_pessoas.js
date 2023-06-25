@@ -86,9 +86,13 @@ function salvaLogin(event) {
   let senha = document.querySelector('.senha').value;
 
   // adicionando usuario no banco de dados (função ja existente na parte script.js)
-  addUser(nome, email, celular, telefone, genero, nascimento, cpf, senha);
-  alert ('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
-  window.location.href = "login.html";
+  if (nome && email && celular && genero && nascimento && cpf && senha) {
+    addUser(nome, email, celular, telefone, genero, nascimento, cpf, senha);
+    alert('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
+    window.location.href = "login.html";
+  } else {
+    alert('Por favor, preencha todos os campos obrigatórios.');
+  }
 }
 
 // associando salvamento ao botao 
@@ -113,9 +117,13 @@ function salvaLoginJuridico(event) {
   console.log(razao);
 
   // adicionando usuario no banco de dados (função ja existente na parte script.js)
-  addUserJuridico(razao, email, celular, telefone, nome, cnpj, inscricao, estadoIE, senha);
-  alert ('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
-  window.location.href = "login.html";
+  if (razao && email && celular && cnpj && senha) {
+    addUserJuridico(razao, email, celular, telefone, nome, cnpj, inscricao, estadoIE, senha);
+    alert('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
+    window.location.href = "login.html";
+  } else {
+    alert('Por favor, preencha todos os campos obrigatórios.');
+  }
 }
 // associando salvamento ao botao de pessoa juridica
 document.getElementById('btnCriarContaJuridica').addEventListener('click', salvaLoginJuridico);
