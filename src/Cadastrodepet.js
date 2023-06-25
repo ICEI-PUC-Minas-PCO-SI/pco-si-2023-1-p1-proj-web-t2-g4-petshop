@@ -6,9 +6,7 @@ if (!bancoPets) {
 
 }
 
-let idPessoa = 0;
-
-// let idPessoa = 1;
+let idPessoa = JSON.parse(localStorage.getItem("usuarioCorrente"))
 
 //Função para exibir pets
 
