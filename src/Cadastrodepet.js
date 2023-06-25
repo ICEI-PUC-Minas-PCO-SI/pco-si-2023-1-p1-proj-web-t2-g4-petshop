@@ -64,7 +64,7 @@ function Exibir() {
                       <div class="col-md-4 text-center">
                         <p class="pt-4"><b>${bancoPets[index].nome}</b></p>
                         <p>${bancoPets[index].sexo}</p>
-                        <p>${bancoPets[index].idade}</p>
+                        <p>${bancoPets[index].idade}  Ano(s)</p>
                         <p>${bancoPets[index].raca}</p>
                         
                       </div>
@@ -82,7 +82,34 @@ function Exibir() {
   } else {
 
     document.querySelector("#Cards").innerHTML = cards;
+
   }
+
+
+  //Função limitar caracteres
+
+  const input = document.getElementById('idade');
+  
+  input.addEventListener('input', function() {
+    const maxLength = parseInt(input.getAttribute('maxlength'));
+    const currentValue = input.value;
+    
+    if (currentValue.length > maxLength) {
+      input.value = currentValue.slice(0, maxLength);
+    }
+  });
+
+const altinput = document.getElementById('altidade');
+
+altinput.addEventListener('input', function() {
+  const maxxLength = parseInt(altinput.getAttribute('maxlength'));
+  const currenttValue = altinput.value;
+  
+  if (currenttValue.length > maxxLength) {
+    altinput.value = currenttValue.slice(0, maxxLength);
+  }
+});
+
   
 // Preencher o modal de editar
  
