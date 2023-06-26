@@ -23,7 +23,7 @@
 
 <body>
   
-
+<script src="sair.js"></script>
   <!-- Modal editar -->
     <div class="modal" tabindex="-1" id="edit">
       <div class="modal-dialog">
@@ -48,6 +48,10 @@
             <br>
 
             <label for="name" class="pe-2  pb-4 mt-5"><b>Funcionário:</b></label><input type="text" name="Nome" id="altname" placeholder="Digite o nome do Funcionário.">
+            <br>
+
+            <label for="text" class="pe-2  pb-4 mt-4"><b>Preço:</b></label><input type="text" name="altpreco" id="altpreco" placeholder="Digite o preco.">
+
             <br>
           
            <label for="Idade" class="pe-2  pb-4 mt-4"><b>Observações:</b></label><input type="text" name="observacaoo" id="altobs" placeholder="Digite as Observações.">
@@ -89,6 +93,11 @@
             <label for="name" class="pe-2  pb-4 mt-5"><b>Funcionário:</b></label><input type="text" name="Nome" id="name" placeholder="Digite o nome do Funcionário." required>
          
            <br>
+           <label for="Idade" class="pe-2  pb-4 mt-4"><b>Preço:</b></label>
+         <input type="number" name="pre" id="preco" placeholder="Digite o Preço." required>
+         
+         <br>
+
            <label for="Idade" class="pe-2  pb-4 mt-4"><b>Observações:</b></label>
          <input type="text" name="obs" id="observacao" placeholder="Digite as Observações." required>
          
@@ -117,41 +126,42 @@
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-            <a class="nav-link text-black" href="./home.html">
-              <img src="../src/imagens/home.png" alt="" height="45px">
-              <br>
-              <b>Início</b>
-            </a>
+              <a class="nav-link text-black " href="./HomeAdm.html">
+                  <img src="../src/imagens/home.png" alt="" height="45px">
+                  <br>
+                  <b>Início</b>
+              </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="./Agendamento de Serviços.html">
+              <a class="nav-link text-black" href="./registro-de-produtos.html">
+                  <img src="../src/imagens/produtos.png" alt="" height="45px">
+                  <br>
+                  <b>Produtos</b>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link text-black" href="./estoque2.html">
+                  <img src="../src/imagens/estoque.png" alt="" height="45px">
+                  <br>
+                  <b>Estoque</b>
+              </a>
+          </li>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link " href="registrodeserv2.html">
               <img src="../src/imagens/livro.png" alt="" height="45px">
               <br>
-              <b>Agenda</b>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">
-              <img src="../src/imagens/pata.png" alt="" height="45px">
-              <br>
-              <b>Pets</b>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-black" href="#">
-              <img src="../src/imagens/usuario.png" alt="" height="45px">
-              <br>
               <b>Serviços</b>
-            </a>
-          </li>
+          </a>
+      </li>
           <li class="nav-item">
-            <a class="nav-link text-black" href="./login.html">
-              <img src="../src/imagens/sair.png" alt="" height="45px">
-              <br>
-              <b>Sair</b>
-            </a>
+              <a class="nav-link text-black" href="#" onclick="sair()">
+                  <img src="../src/imagens/sair.png" alt="" height="45px">
+                  <br>
+                  <b>Sair</b>
+              </a>
           </li>
-        </ul>
+      </ul>
       </div>
 
     </div>

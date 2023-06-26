@@ -62,7 +62,9 @@ function Exibir() {
           
                       <div class="col-md-4 text-center">
                         <p class="pt-4"><b>${bancoPets[index].nome}</b></p>
+                        <p>${bancoPets[index].preco}</p>
                         <p>${bancoPets[index].obs}</p>
+                        
 
 
                        
@@ -102,6 +104,7 @@ function Exibir() {
 
       modal.querySelector('#cofreBanco').value = idrecipient;
       modal.querySelector('#altname').value = bancoPets[idrecipient].nome;
+      modal.querySelector('#altpreco').value = bancoPets[idrecipient].preco;
       modal.querySelector('#altobs').value = bancoPets[idrecipient].obs;
       
         
@@ -142,15 +145,17 @@ function cadastroPet() {
 
   var nome = document.getElementById("name").value;
   var observacao = document.getElementById("observacao").value;
+  var preco = document.getElementById("preco").value;
   
 
-  if (nome == '' || observacao == '' ) {
+  if (nome == '' || observacao == '' || preco == '') {
     AlertPreencher();
   } else {
     var addservico = {
       "pessoa": idPessoa,
       "nome": nome,
       "obs": observacao,
+      "preco": preco,
       "escolha": valorSelecionadoescolha
     }
 
@@ -163,6 +168,7 @@ function cadastroPet() {
 
      document.getElementById("name").value = '';
      document.getElementById("observacao").value = '';
+     document.getElementById("preco").value = '';
     
   }
   
@@ -241,6 +247,7 @@ function Editar() {
   var pegarID = document.getElementById("cofreBanco").value;
   var nomeEdit = document.getElementById("altname").value;
   var observEdit = document.getElementById("altobs").value;
+  var preco = document.getElementById("altpreco").value;
   
   
   var opcaoAltescolha = document.getElementsByName("Altescolha");
@@ -255,11 +262,12 @@ function Editar() {
     }
   }
 
-    if(nomeEdit == ''  || observEdit == ''){
+    if(nomeEdit == ''  || observEdit == '' || preco == ''){
       AlertPreencher();
     }else{
       bancoPets[pegarID].nome = nomeEdit
       bancoPets[pegarID].obs = observEdit;
+      bancoPets[pegarID].preco = preco;
       bancoPets[pegarID].escolha = valorSelecionadoAltescolha
 
       localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
