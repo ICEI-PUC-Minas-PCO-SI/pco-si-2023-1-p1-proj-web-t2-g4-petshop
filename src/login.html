@@ -28,46 +28,16 @@
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/home.png" alt="" height="45px">
-                                <br>
-                                <b>Início</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/livro.png" alt="" height="45px">
-                                <br>
-                                <b>Agenda</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="../src/imagens/pata.png" alt="" height="45px">
-                                <br>
-                                <b>Pets</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/usuario.png" alt="" height="45px">
-                                <br>
-                                <b>Perfil</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/sair.png" alt="" height="45px">
-                                <br>
-                                <b>Sair</b>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">
+                        <img src="../src/imagens/voltar.png" alt="" height="45px">
+                        <br>
+                        <b>Voltar</b>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
     <!--Fim header-->
@@ -84,8 +54,8 @@
                         gerenciar a sua Assinatura Petz e <strong> muito mais!</strong>
                     </p>
                     <hr style="width: 30em;">
-                    <button type="submit" class="criarconta" id="criar-conta-btn" title="Criar minha conta"
-                        onclick="window.location.href = '/src/cadastro_pessoas.html'">Criar minha conta</button>
+                    <button type="submit" onclick="window.location.href = 'cadastro_pessoas.html' " class="criarconta"
+                        id="criar-conta-btn" title="Criar minha conta">Criar minha conta</button>
                 </section>
             </div>
             <div class="containersections col-sm-12 col-md-6">
@@ -100,30 +70,27 @@
                         </svg>
                     </button>
                     <hr style="width: 25em;">
-                    <p> <strong> Insira seu e-mail ou CPF/CNPJ</strong></p>
-                    <input class="inscricao" type="text" id="dadosUsuario" autocomplete="email"
-                        title="Email ou CPF/CNPJ" placeholder="Digite seu e-mail ou CPF/CNPJ">
+                    <p> <strong> Insira o e-mail cadastrado</strong></p>
+                    <form action="" method="get" id="formLogin">
+                        <input class="inscricao" type="text" id="dadosUsuario" autocomplete="email"
+                            title="Digite o Email" placeholder="Digite seu e-mail">
 
-                    <p style="margin-top: 17px;"><strong>Senha</strong></p>
-                    <input class="inscricao" type="password" id="senha" autocomplete="new-password" title="Senha"
-                        placeholder="Digite sua senha">
-                    <button type="submit" class="botaoEntrar" title="Entrar">Entrar</button>
+                        <p style="margin-top: 17px;"><strong>Senha</strong></p>
+                        <input class="inscricao" type="password" id="senha" autocomplete="new-password" title="Senha"
+                            placeholder="Digite sua senha">
+                        <button type="submit" class="botaoEntrar" title="Entrar" id="entrar" form="formLogin">Entrar</button>
+                    </form>
                 </section>
             </div>
         </div>
     </main>
     <!--Fim main-->
 
-    <!--Início aside-->
-    <aside></aside>
-    <!--Fim aside-->
-
     <!--Início footer-->
     <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
         <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
             <div class="col-md-6 col-lg-3 mt-4">
                 <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
-
                 <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
                 <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
                 <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
@@ -164,10 +131,16 @@
         </footer>
     </div>
     <!--Fim footer-->
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="funcoesLogin.js"></script>
     <script src="login.js"></script>
 </body>
 

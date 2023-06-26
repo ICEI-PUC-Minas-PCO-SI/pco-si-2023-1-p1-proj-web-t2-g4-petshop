@@ -1,5 +1,7 @@
 
-/*início estilização header*/
+
+/* inicio estilização header*/
+
 header {
     background-color: #F9E6B3;
     width: 100vw;
@@ -8,9 +10,7 @@ header {
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     font-family: 'Pacifico', cursive;
-
 }
 
 .logo {
@@ -21,21 +21,21 @@ header {
     margin: auto;
 }
 
-.iconeheader {
+.botoesheader {
     width: 4em;
     margin-right: 1em;
     margin-top: 1em;
 }
 
-.botaoheader {
-    margin: auto;
+.botoes {
+    margin-top: 2em;
+    margin-right: 2em;
 }
 
 button {
     background-color: #F9E6B3;
     border: none;
 }
-
 /*fim estilização header*/
 
 /*início estilização main*/
@@ -47,13 +47,6 @@ main {
     display: flex;
 }
 
-aside {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    margin: auto;
-}
-
 .containerForm {
     height: 100vh;
     width: 75vw;
@@ -62,6 +55,7 @@ aside {
 h1 {
     display: flex;
     justify-content: center;
+    margin-left: 50px;
 }
 
 .containerForm form fieldset {
@@ -69,13 +63,7 @@ h1 {
     height: 90vh;
 }
 
-#form-pessoa-fisica {
-    width: 90%;
-    height: 100%;
-    justify-content: space-between;
-}
-
-#form-pessoa-juridica {
+#form-registro-produto {
     width: 90%;
     height: 100%;
     justify-content: space-between;
@@ -102,14 +90,7 @@ input:not([type="checkbox"]) {
     border-color: rgba(127, 178, 241, 0.567);
 }
 
-select {
-    width: 90%;
-    height: 2.2em;
-    border-color: rgba(127, 178, 241, 0.567);
-    border-width: 2px;
-}
-
-.criarConta {
+.registro {
     width: 17em;
     height: 2.5em;
     margin-bottom: auto;
@@ -121,17 +102,10 @@ select {
     font-weight: bolder;
     font-size: 17px;
 }
-/*fim estilização main*/
+/*Fim estilização Main*/
 
-/*início estilização footer*/
-footer {
-    background-color: #FFFFFF;
-    height: 0;
+/*Início estilização footer*/
+#rodape{
+    margin-top: 375px;
 }
-
-.copyright {
-    text-align: center;
-    background-color: #808080;
-}
-
-/*fim estilização footer*/
+/*Fim estilização footer*/
