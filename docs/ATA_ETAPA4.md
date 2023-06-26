@@ -9,3 +9,7 @@
 # Gabriel Leandro Emerick de Azevedo
 
 >- Eu contribui para a etapa quatro, me reunindo com o grupo em suas reuniões pra discução do projeto e desenvolvimento do mesmo. Fui responsável pela confecção da pagina de gerenciamento de estoque de produtos, tanto na parte visual quanto na parte funcional. Durante esse processo, recebi muitas dicas do que eu poderia fazer, o que ajudou muito na confecção do trabalho e no entendiento do programa, não deixando de atualizar as informações no github.
+
+# Carolina Alves Baião Pessoa
+
+>- Eu contribui para a etapa 4 ficando responsável pelas funcionalidades de cadastro de pessoa e login. Além disso, contribui diretamente na dinâmina do grupo, participando ativamente de reuniões e me colocando sempre à disposição para auxiliar meus colegas caso eles precisassem
