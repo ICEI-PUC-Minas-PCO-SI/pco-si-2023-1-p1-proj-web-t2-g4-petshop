@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link
         href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
         rel="stylesheet">
@@ -52,13 +54,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/usuario.png" alt="" height="45px">
-                            <br>
-                            <b>Perfil</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
                             <img src="../src/imagens/sair.png" alt="" height="45px">
                             <br>
                             <b>Sair</b>
@@ -72,65 +67,41 @@
   <!--Fim header-->
     <!--Início da main-->
     <main>
-        <section>
-            <div class="containerForm">
-                <h1 class="">Registre o produto</h1>
-                <form action="" id="reigstrarproduto">
-                    <fieldset id="registrar" style="display: flex; justify-content: space-around;">
-                        <div style="display: flex; flex-direction: column; justify-content: start; align-items: center; gap: 1em;">
-                            <div class="tiporegistro">
-                                <input type="radio" name="registrar-produto" id="registrar-produto" value="registrar" checked>
-                                <label for="registrar-produto">Ativo</label>
-                            </div>
-                            <div class="tiporegistro">
-                                <input type="radio" name="registrar-produto" id="registrar-produto" value="registrar">
-                                <label for="registrar-produto">Inativo</label>
-                            </div>
-                        </div>
-                        <div id="form-registro-produto" style="display: flex;">
-                            <div class="containerInputs">
-                                <label for="nomeproduto">
-                                    Nome do produto:
-                                    <br>
-                                    <input type="text" name="nomeproduto" id="nomeproduto" placeholder="Digite o nome do produto" required>
-                                </label>
-                                <label for="descricaoporduto">
-                                    Descrição do produto
-                                    <br>
-                                    <input type="text" name="descricaoporduto" id="descricaoporduto" placeholder="Descreva o produto" required>
-                                </label>
-                                <label for="codigo">
-                                    Código do produto:
-                                    <br>
-                                    <input type="cod" name="codigoproduto" id="codigoproduto" placeholder="Digite o código do produto" required>
-                                </label>
-                                <label for="qtdproduto">
-                                    Quantidade de produtos
-                                    <br>
-                                    <input type="qtd" name="qtdproduto" id="qtdproduto" placeholder="Digite a quantidade de produtos" required>
-                                </label>
-                                <label for="dataproduto">
-                                    Data de adição/alteração
-                                    <br>
-                                    <input type="data" name="dataporduto" id="dataporduto" placeholder="Digite a data de adição/alteração do produto" required>
-                                </label>
-                                <label for="categoriaproduto">
-                                    Categoria do produto
-                                    <br>
-                                    <input type="cate" name="categoriaproduto" id="categoriaproduto" placeholder="Digite a categoria do produto" required>
-                                </label>
-                                <label for="corporduto">
-                                  Cor do produto
-                                  <br>
-                                  <input type="cor" name="corporduto" id="corproduto" placeholder="Digite a cor do produto" required>
-                                </label>
-                                <button type="button" class="registro" id="BtnRegistrarProduto" title="Registrar produto">Registrar</button>
-                            </div>
-                        </div>
-                    </fieldset>
-                </form>
+        <div class="modal" tabindex="-1" id="cadastroprod">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title"><b>Cadastrar</b></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body float-center" >
+                    <label for="name" class="pe-2  pb-4"><b>Nome do produto:</b></label><input type="text" name="Nome" id="name" placeholder="Digite o nome do seu pet.">
+                    <br>
+                    <label for="id-prod" class="pe-2  pb-4"><b>ID do produto</b></label><input type="number" name="cod" id="cod" placeholder="Digite o id do produto.">
+                    
+                    <br>
+                    <label for="categoria" class="pe-2  pb-4"><b>Categoria do produto:</b></label>
+                    <input type="text" name="categoria" id="categoriaproduto" placeholder="Digite a categoria do produto.">
+                    <br>
+                    <label for="qtd" class="pe-2  pb-4"><b>Quantidade:</b></label><input type="text" name="qtd" id="qtdproduto" placeholder="Digite a quantidade de produtos.">
+                     <br>
+                    <label for="preco" class="pe-2  pb-4"><b>Preço do produto</b></label><input type="number" name="preco" id="preco" placeholder="Digite o preço do produto.">
+                    <br>
+                    <label for="descricao" class="pe-2  pb-4"><b>Descrição do produto:</b></label><input type="text" name="descricao" id="descricao" placeholder="Digite a descrição do produto."> 
+                </div>
+         
+                <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" onclick="registrarproduto">Cadastrar</button>
+                </div>
+              </div>
             </div>
-        </section>
+        </div>
+        <div class="container-fluid mt-3">
+            <div class="row">
+               <center> <button type="registrar" data-bs-toggle="modal" data-bs-target="#cadastroprod" class="btn btn-primary" style="width: 120px;">Registrar Produto</button></center>
+            </div>
+        </div>
+        
     </main>
     <!--Fim da Main-->
 
@@ -187,9 +158,9 @@
 
     <!--Fim do footer-->
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <script src="cadastro-produtos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="cadastro-produtos.js"></script>
 </body>
 </html>

@@ -2,303 +2,368 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dogs & Cats</title>
-    <link rel="stylesheet" href="rg2.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  </head>
+  
+<link rel="stylesheet" href="rg2.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="shortcut icon" href="../src/imagens/Logo_sem_fundo.png" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
-
+  <title>Registro de Serviço</title>
 </head>
 
 <body>
+  
 
-    <!--Início header-->
-    <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
-        <div class="container-fluid">
-            <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                <ul class="navbar-nav text-center">
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/home.png" alt="" height="45px">
-                            <br>
-                            <b>Início</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/livro.png" alt="" height="45px">
-                            <br>
-                            <b>Agenda</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/pata.png" alt="" height="45px">
-                            <br>
-                            <b>Pets</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/usuario.png" alt="" height="45px">
-                            <br>
-                            <b>Perfil</b>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-black" href="#">
-                            <img src="../src/imagens/sair.png" alt="" height="45px">
-                            <br>
-                            <b>Sair</b>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
-    <!--Fim header-->
-
-
-
-    <!--Inico do meio-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
-    <!-- Modal editar -->
+  <!-- Modal editar -->
     <div class="modal" tabindex="-1" id="edit">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Editar Dados</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body float-center">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Editar Dados de Registro</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body float-center">
 
 
-                    <label for="name" class="pe-2  pb-4 mt-2"><b>Nome do serviço:</b></label><input type="text"
-                        name="Nome" id="altname" placeholder="Digite o nome do serviço.">
-                    <br>
-                    <br>
-                    <label for="Idade" class="pe-2  pb-4 "><b>Tipo de serviço:</b></label><input type="text"
-                        name="Idade" id="altidade" placeholder="Digite o tipo de serviço.">
-
-                    <br>
-                    <label for="Idade" class="pe-2  pb-4 mt-4"><b>Funcionario:</b></label><input type="text" name="Raca"
-                        id="altraca" placeholder="Digite o nome do funcionario.">
-
-                    <br>
-                    <br>
-                    <label for="name" class="pe-2  pb-4 mt-2"><b>Valor:</b></label><input type="text" name="Nome"
-                        id="altname" placeholder="Digite o valor .">
-                    <br>
-
-                </div>
-
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Salvar</button>
-                </div>
+            <label for="escolha" class="pe-2  pb-4"><b>Tipo de Serviço:</b></label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Altescolha"  value="Banho" />
+              <label class="form-check-label" for="Radio1">Banho\Tosa</label>
             </div>
+            
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="Altescolha"  value="Veterinário" />
+              <label class="form-check-label" for="Radio2">Atendimento veterinário</label>
+            </div>
+            <br>
+
+            <label for="name" class="pe-2  pb-4 mt-5"><b>Funcionário:</b></label><input type="text" name="Nome" id="altname" placeholder="Digite o nome do Funcionário.">
+            <br>
+          
+           <label for="Idade" class="pe-2  pb-4 mt-4"><b>Observações:</b></label><input type="text" name="observacaoo" id="altobs" placeholder="Digite as Observações.">
+          
+          
         </div>
+         
+          <div class="modal-footer">
+            <input type="text" id="cofreBanco" style = "visibility: hidden;">
+           <button type="button" class="btn btn-success" onclick="Editar()">Salvar</button>
+          </div>
+        </div>
+      </div>
     </div>
 
+    <!-- Modal Cadastrar -->
+    
+    <div class="modal fade" tabindex="-1" id="Cadastro" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title"><b>Registrar Serviço</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body float-center" >
 
-
-    <!--Divisão-->
-    <main>
-        <div class="container-fluid" id="content">
-            <div class="row justify-content-center pt-3">
-                <div class="col-md-3 text-center">
-                    <button type="button" class="btn mt-1 " data-bs-toggle="modal" data-bs-target="#edit" id="cadastrar" style="background-color: #f9e6d3;">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                        <path
-                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
-                        </path>
-                        <path fill-rule="evenodd"
-                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
-                        </path>
-                    </svg>
-                    
-                    cadastrar novo Serviço
-                </button>
-                </div>
+          <label for="escolha" class="pe-2  pb-4"><b>Tipo de Serviço:</b></label>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="escolha" id="inlineRadio1" value="Banho" checked/>
+              <label class="form-check-label" for="inlineRadio1">banho\Tosa</label>
             </div>
-            <div class="row justify-content-center pt-4">
-
-                <div class="col-md-5">
-
-                    <!-- Card 1 -->
-                    <div class="card" id="card">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 text-center">
-                                <img src="imagens/medico.png" alt="" class="pt-4  pb-1" width="100px" id="imgcard">
-                                <!-- Botão de excluir --><br>
-                                <button type="button" class="btn btn-danger mt-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z">
-                                        </path>
-                                        <path
-                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z">
-                                        </path>
-                                    </svg>
-                                    Excluir
-                                </button>
-
-                                <!-- Botão de editar -->
-
-                                <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal"
-                                    data-bs-target="#edit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
-                                        </path>
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
-                                        </path>
-                                    </svg>
-                                    Editar
-                                </button>
-                            </div>
-
-
-                            <div class="col-md-4 text-center">
-                                <p class="pt-4"><b>Atendimento Veterinario</b></p>
-                                <p>100$</p>
-                                <p>Consulta</p>
-                                <p>Erick</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-
-
-                <div class="col-md-5">
-
-                    <div class="card" id="card">
-                        <div class="row justify-content-center">
-                            <div class="col-md-6 text-center">
-                                <img src="imagens/bathtub.png" alt="" class="pt-4  pb-1" width="100px" id="imgcard">
-                                <!-- Botão de excluir --><br>
-                                <button type="button" class="btn btn-danger mt-4">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-trash" viewBox="0 0 16 16">
-                                        <path
-                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5Zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6Z">
-                                        </path>
-                                        <path
-                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1ZM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118ZM2.5 3h11V2h-11v1Z">
-                                        </path>
-                                    </svg>
-                                    Excluir
-                                </button>
-
-                                <!-- Botão de editar -->
-
-                                <button type="button" class="btn btn-primary mt-4" data-bs-toggle="modal"
-                                    data-bs-target="#edit">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                        class="bi bi-pencil-square" viewBox="0 0 16 16">
-                                        <path
-                                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z">
-                                        </path>
-                                        <path fill-rule="evenodd"
-                                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z">
-                                        </path>
-                                    </svg>
-                                    Editar
-                                </button>
-                            </div>
-
-
-                            <div class="col-md-4 text-center">
-                                <p class="pt-4"><b>Banho</b></p>
-                                <br>
-                                <p>50$</p>
-                                <p>Higiene de Pets</p>
-                                <p>Carla</p>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-
-
-
-
-
-    </main>
-    <!--Fim do meio-->
-
-
-
-    <!--Início footer-->
-    <div class="container-fluid" style="background-color: #F9E6B3;">
-        <div class="row mt-5 ms-5 justify-content-center">
-            <div class="col-md-6 col-lg-3 mt-4">
-                <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
-
-                <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
-                <i class="fa fa-cc-visa" style="font-size:36px; color: #070707;"></i>
-                <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
+            
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="escolha" id="inlineRadio2" value="Veterinário" />
+              <label class="form-check-label" for="inlineRadio2">Atendimento Veterinário</label>
             </div>
-
-            <div class="col-md-6 col-lg-3 mt-4">
-                <h6 class="text-black"><strong>Funcionamento</strong></h6>
-                <p>Segunda à Sexta - 08:00 às 18:00</p>
-                <p>Sábado - 08:00 às 14:00</p>
-                Domingo e Feriado - Fechado
-
-            </div>
-
-
-            <div class="col-md-6 col-lg-2 mt-4">
-                <h6 class="text-black"><strong>Redes sociais</strong></h6>
-                <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook"
-                        style="color: #000000; font-size:36px"></i></a>
-                <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
-                        style="color: #000000; font-size:36px"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=5531998765432" target="_blank"><i class="fa fa-whatsapp"
-                        style="color: #000000; font-size:36px"></i></a>
-            </div>
-
-
-
-
-
-            <div class="col-md-6 col-lg-3 mt-4 mb-4">
-                <h6 class="text-black"><strong>Entre em contato</strong></h6>
-
-                <i class="fa fa-map-marker ps-1 pe-2" style="color: #000000; font-size:22px"></i>Rua Jardins, 57,
-                Savassi, BH
-                <br>
-                <i class="fa fa-envelope mt-2 pe-1" style="font-size:22px; color: #000000;"></i> <a
-                    href="mailto:dogsecats@gmail.com">dogsecats@gmail.com</a>
-                <br>
-                <i class="fa fa-phone mt-2 ps-1 pe-2" style="color: #000000; font-size:22px"></i>(31) 3345-9876
-            </div>
+            <br>
+  
+            <label for="name" class="pe-2  pb-4 mt-5"><b>Funcionário:</b></label><input type="text" name="Nome" id="name" placeholder="Digite o nome do Funcionário." required>
+         
+           <br>
+           <label for="Idade" class="pe-2  pb-4 mt-4"><b>Observações:</b></label>
+         <input type="text" name="obs" id="observacao" placeholder="Digite as Observações." required>
+         
+  
+          </div>
+         
+          <div class="modal-footer">
+           <button type="button" class="btn btn-primary" onclick = "cadastroPet()">Registrar</button>
+          </div>
         </div>
+      </div>
+    </div>
+  
+  
+  
+
+  
+    <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link text-black" href="./home.html">
+              <img src="../src/imagens/home.png" alt="" height="45px">
+              <br>
+              <b>Início</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="./Agendamento de Serviços.html">
+              <img src="../src/imagens/livro.png" alt="" height="45px">
+              <br>
+              <b>Agenda</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">
+              <img src="../src/imagens/pata.png" alt="" height="45px">
+              <br>
+              <b>Pets</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#">
+              <img src="../src/imagens/usuario.png" alt="" height="45px">
+              <br>
+              <b>Serviços</b>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="./login.html">
+              <img src="../src/imagens/sair.png" alt="" height="45px">
+              <br>
+              <b>Sair</b>
+            </a>
+          </li>
+        </ul>
+      </div>
+
     </div>
 
+    
+  </nav>
+
+  
+
+
+<main>
+  <div class="container-fluid" id="content">
+    <div class="row justify-content-center pt-3">
+      <div class="col-md-4 text-center">
+        <button type="button" class="btn mt-1 " data-bs-toggle="modal" data-bs-target="#Cadastro" id="mcadas" style="background-color: #f9e6d3;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+      <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path>
+      </svg>
+          <b>Registrar novo serviço</b>
+        </button>
+      </div>
+    </div>
+    <div class="row justify-content-center pt-4" id="Cards">
+
+    
+    </div>
+  </div>
+</main>
+
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+ 
+
+  <!-- footer -->
+
+  <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
+    <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
+      <div class="col-md-6 col-lg-3 mt-4">
+        <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
+
+        <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
+        <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
+        <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
+      </div>
+
+      <div class="col-md-6 col-lg-3 mt-4">
+        <h6 class="text-black"><strong>Funcionamento</strong></h6>
+        <p>Segunda à Sexta - 08:00 às 18:00</p>
+        <p>Sábado - 08:00 às 14:00</p>
+        Domingo e Feriado - Fechado
+
+      </div>
+
+
+      <div class="col-md-6 col-lg-2 mt-4">
+        <h6 class="text-black"><strong>Redes sociais</strong></h6>
+        <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook"
+            style="color: #000000; font-size:36px"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+            style="color: #000000; font-size:36px"></i></a>
+        <a href="https://api.whatsapp.com/send?phone=5531998765432" target="_blank"><i class="fa fa-whatsapp"
+            style="color: #000000; font-size:36px"></i></a>
+      </div>
+
+
+
+
+
+      <div class="col-md-6 col-lg-3 mt-4 mb-4">
+        <h6 class="text-black"><strong>Entre em contato</strong></h6>
+
+        <i class="fa fa-map-marker ps-1 pe-2" style="color: #000000; font-size:22px"></i>Rua Jardins, 57, Savassi, BH
+        <br>
+        <i class="fa fa-envelope mt-2 pe-1" style="font-size:22px; color: #000000;"></i> <a
+          href="mailto:dogsecats@gmail.com">dogsecats@gmail.com</a>
+        <br>
+        <i class="fa fa-phone mt-2 ps-1 pe-2" style="color: #000000; font-size:22px"></i>(31) 3345-9876
+      </div>
+    </div>
     <footer style="background-color: #f8e2a7; text-align: center;">
-        <i class="fa fa-copyright" style="font: size 22px; color: #000000;"> <strong> Dogs&Cats - 2023</strong></i>
+      <i class="fa fa-copyright" style="font: size 22px; color: #000000;"> <strong> Dogs&Cats - 2023</strong></i>
     </footer>
+  </div>
+  <script src ="registrodeservcico.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  
 </body>
 
+
 </html>
+
+
+
