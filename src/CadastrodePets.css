@@ -36,3 +36,11 @@ h3{
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+#altidade {
+        width: 50px;
+}
+
+#idade {
+    width: 50px;
+}

@@ -2,44 +2,6 @@ const form = document.querySelector("form");
 const senhaInput = document.querySelector("#senha");
 const confirmarSenhaInput = document.querySelector("#confirmarSenha");
 
-// Expressão regular para validar a senha
-const regexSenha = /^(?=.*\d.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/;
-
-// Função para validar a senha
-function validarSenha() {
-  if (!regexSenha.test(senhaInput.value)) {
-    senhaInput.setCustomValidity(
-      "A senha deve conter no mínimo 8 caracteres, com ao menos uma letra maiúscula, uma letra minúscula e dois números"
-    );
-  } else {
-    senhaInput.setCustomValidity("");
-  }
-}
-
-// Função para comparar as senhas
-function compararSenhas() {
-  if (senhaInput.value !== confirmarSenhaInput.value) {
-    confirmarSenhaInput.setCustomValidity("As senhas não coincidem");
-  } else {
-    confirmarSenhaInput.setCustomValidity("");
-  }
-}
-
-// Adicionar eventos de validação e de comparação das senhas
-senhaInput.addEventListener("input", validarSenha);
-confirmarSenhaInput.addEventListener("input", compararSenhas);
-
-form.addEventListener("submit", (event) => {
-  // Validar a senha
-  validarSenha();
-  // Comparar as senhas
-  compararSenhas();
-  // Checar se o formulário é válido
-  if (!form.checkValidity()) {
-    event.preventDefault();
-  }
-});
-
 
 // manipulando os inputs radio 
 const pessoaFisicaRadio = document.getElementById("pessoa-fisica");
@@ -85,7 +47,7 @@ JuridicaPessoaFisicaRadio.addEventListener("click", function () {
   }
 });
 
-// validando o botao isento de ie (!!!)
+// validando o botao isento de ie
 const checkboxIsento = document.getElementById("isentoIE");
 const inscricaoEstadual = document.getElementById("inscricao-estadual");
 const estadoInscricao = document.getElementById("estado-inscricao");
@@ -106,29 +68,62 @@ checkboxIsento.addEventListener("change", function () {
   }
 });
 
-// alerta ao clicar no botao de cadastro
-const BtnCriarConta = document.querySelector('.criarconta');
-const BtnCriarContaJuridica = document.getElementById("BtnCriarContaJuridica");
+// começando parte do cadastro do usuario (pessoa FISICA)
 
-BtnCriarConta.addEventListener('click', function (event) {
+// obtendo os dados do formulario 
+function salvaLogin(event) {
+  // cancela a submissão do form para tratar sem fazer refresh da tela
   event.preventDefault();
 
-  if (!formCriarConta.reportValidity()) {
-    alert('Preencha os campos corretamente!');
-  } else {
-    alert('Usuário cadastrado com sucesso!');
-    formCriarConta.submit();
-  }
-});
+  // obtendo dados do formulario
+  let nome = document.querySelector('.nome').value;
+  let email = document.querySelector('.email').value;
+  let celular = document.querySelector('.celular').value;
+  let telefone = document.querySelector('.telefone').value;
+  let genero = document.getElementById('genero').value;
+  let nascimento = document.getElementById('data').value;
+  let cpf = document.querySelector('.cpf').value;
+  let senha = document.querySelector('.senha').value;
 
-BtnCriarContaJuridica.addEventListener('click', function (event) {
+  // adicionando usuario no banco de dados (função ja existente na parte script.js)
+  if (nome && email && celular && genero && nascimento && cpf && senha) {
+    addUser(nome, email, celular, telefone, genero, nascimento, cpf, senha);
+    alert('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
+    window.location.href = "login.html";
+  } else {
+    alert('Por favor, preencha todos os campos obrigatórios.');
+  }
+}
+
+// associando salvamento ao botao 
+document.querySelector('.criarConta').addEventListener('click', salvaLogin);
+
+
+// começando parte de cadastro de usuario JURIDICO
+function salvaLoginJuridico(event) {
+  // cancela a submissão do form para tratar sem fazer refresh da tela
   event.preventDefault();
 
-  if (!formCriarConta.reportValidity()) {
-    alert('Preencha os campos corretamente!');
-  } else {
-    alert('Usuário cadastrado com sucesso!');
-    formCriarConta.submit();
-  }
-});
+  // obtendo dados do formulario
+  let razao = document.getElementById('nome-juridica').value;
+  let email = document.getElementById('email-juridica').value;
+  let celular = document.getElementById('celular-juridica').value;
+  let telefone = document.getElementById('telefone-juridica').value;
+  let nome = document.getElementById('nome-contato').value;
+  let cnpj = document.getElementById('cnpj').value;
+  let inscricao = document.getElementById('inscricao-estadual').value;
+  let estadoIE = document.getElementById('estado-inscricao').value;
+  let senha = document.getElementById('senha-juridica').value;
+  console.log(razao);
 
+  // adicionando usuario no banco de dados (função ja existente na parte script.js)
+  if (razao && email && celular && cnpj && senha) {
+    addUserJuridico(razao, email, celular, telefone, nome, cnpj, inscricao, estadoIE, senha);
+    alert('Usuário cadastrado com sucesso. Proceda com o login para continuar.');
+    window.location.href = "login.html";
+  } else {
+    alert('Por favor, preencha todos os campos obrigatórios.');
+  }
+}
+// associando salvamento ao botao de pessoa juridica
+document.getElementById('btnCriarContaJuridica').addEventListener('click', salvaLoginJuridico);
