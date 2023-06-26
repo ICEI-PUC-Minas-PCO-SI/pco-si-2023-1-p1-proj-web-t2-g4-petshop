@@ -5,3 +5,7 @@
 # Erick Fabricio Rodrigues Ribeiro
 
 >-Eu contribui nesta etapa quatro, como todas as etapas sempre alinhado com o grupo , participando das reiniões e colocando em dia nosso projeto.Fiquei responsável em fazer o registro de serviço e colocar essa parte funcional, fiquei mais em conjunto com Gabriel Paiva por nossa parte ser bem similar e tive um grande apoio, pra min quanto para o grupo e sempre atualizando informações no github como pedido.
+
+# Gabriel Leandro Emerick de Azevedo
+
+>- Eu contribui para a etapa quatro, me reunindo com o grupo em suas reuniões pra discução do projeto e desenvolvimento do mesmo. Fui responsável pela confecção da pagina de gerenciamento de estoque de produtos, tanto na parte visual quanto na parte funcional. Durante esse processo, recebi muitas dicas do que eu poderia fazer, o que ajudou muito na confecção do trabalho e no entendiento do programa, não deixando de atualizar as informações no github.
