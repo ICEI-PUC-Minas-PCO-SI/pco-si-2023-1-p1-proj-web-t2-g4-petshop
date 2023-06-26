@@ -1,3 +1,7 @@
+# Gabriel Henrique de Jesus Paiva
+
+>- Eu contribui gerenciando o grupo como um todo, marcando reuniões com meu grupo, auxiliando o maximo que posso, alinhando os ultimos detalhes, subindo toda a aplicação para a nuvem e tambem fiquei responsavel pela criação da funcionalidade de cadastro de pet, fiz a criação da home do ADM, tela index e home para cliente dentre outras coisas...
+
 # Guilherme Souto Borges da Costa
 
 >- Eu contribui para a etapa quatro, reunindo como grupo e desenvolvendo e melhorando em código a tela de Agendamento de Serviço, participando ativamente do projeto, sempre presente dando opiniao ao grupo e entregando trabalho no github e sempre em disposição para colaborar com meu grupo.
