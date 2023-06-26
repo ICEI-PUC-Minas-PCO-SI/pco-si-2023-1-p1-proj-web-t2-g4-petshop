@@ -10,7 +10,7 @@ let idPessoa;
 
 
 
-//Função para exibir pets
+//Função para exibir tipo de serviço
 
 function Exibir() {
 
@@ -102,12 +102,12 @@ function Exibir() {
 
       modal.querySelector('#cofreBanco').value = idrecipient;
       modal.querySelector('#altname').value = bancoPets[idrecipient].nome;
-      modal.querySelector('#altobs').value = bancoPets[idrecipient].observacao;
+      modal.querySelector('#altobs').value = bancoPets[idrecipient].obs;
       
         
       
 
-      opcoes = document.getElementsByName("altobs")
+      opcoes = document.getElementsByName("observacaoo")
       for(var i = 0; i < opcoes.length; i++){
         if(opcoes[i].value === bancoPets[idrecipient].escolha){
           opcoes[i].checked = true;
@@ -169,7 +169,7 @@ function cadastroPet() {
 
 }
 
-//Alert preencher campos
+//Alerta preencher campos
 
 function AlertPreencher(){
   Swal.fire(
@@ -179,7 +179,7 @@ function AlertPreencher(){
   )
 }
 
-//Alert sucesso
+//Alerta sucesso
 function AlertSucesso(opcao){
   var texto = '';
   if(opcao == 'Cadastro'){
@@ -218,14 +218,14 @@ function AlertExcluir(id){
         'success'
         
       )
-      excluirPet(id)
+      excluirPessoa(id)
     }
   })
   
                         
 }
 
-function excluirPet(id) {
+function excluirPessoa(id) {
 
   
     bancoPets.splice(id, 1);
@@ -235,7 +235,7 @@ function excluirPet(id) {
   
 
 }
-//Função de editar pet
+//Função de editar 
 function Editar() {
 
   var pegarID = document.getElementById("cofreBanco").value;
@@ -243,7 +243,7 @@ function Editar() {
   var observEdit = document.getElementById("altobs").value;
   
   
-  var opcaoAltescolha = document.getElementsByName("opcaoAltescolha");
+  var opcaoAltescolha = document.getElementsByName("Altescolha");
   var valorSelecionadoAltescolha = "";
 
   for (var i = 0; i < opcaoAltescolha.length; i++) {
