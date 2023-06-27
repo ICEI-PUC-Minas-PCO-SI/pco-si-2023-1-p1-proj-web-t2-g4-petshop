@@ -17,3 +17,7 @@
 # Carolina Alves Baião Pessoa
 
 >- Eu contribui para a etapa 4 ficando responsável pelas funcionalidades de cadastro de pessoa e login. Além disso, contribui diretamente na dinâmina do grupo, participando ativamente de reuniões e me colocando sempre à disposição para auxiliar meus colegas caso eles precisassem
+
+# João Vitor Vitalino da Silva Roveda
+
+>- Contribuí fazendo a parte de cadastro de produtos com a API para que possa ser ligada ao gerenciamento de produtos no estoque, contribuí no trabalho estando sempre presente nas reuniões do grupo e estando sempre ao dispor para ajudar no que eu podia e tentando tirar dúvidas para que o trabalho pudesse ser concluído.
