@@ -88,15 +88,9 @@ function Exibir() {
     cardsContainer.classList.remove("animate__animated", "animate__bounce", "animate__infinite");
   }
 
-// limitando usuario de digitar numeros no campo funcionario
 
-  document.getElementById("altname").addEventListener("keydown",function (event) {
-    if (!isNaN(event.key)){
-      event.preventDefault();
-    }
-  });
 
-  
+
   
 // Preencher o modal de editar
  
@@ -114,8 +108,12 @@ function Exibir() {
       modal.querySelector('#altpreco').value = bancoPets[idrecipient].preco;
       modal.querySelector('#altobs').value = bancoPets[idrecipient].obs;
       
-        
-      
+       // limitando usuario de digitar numeros no campo funcionario 
+      document.getElementById("altname").addEventListener("keydown",function (event) {
+        if (!isNaN(event.key)){
+          event.preventDefault();
+        }
+      });
 
       opcoes = document.getElementsByName("Altescolha")
       for(var i = 0; i < opcoes.length; i++){
@@ -154,6 +152,8 @@ function cadastroPet() {
   var observacao = document.getElementById("observacao").value;
   var preco = document.getElementById("preco").value;
   
+
+ 
 
   if (nome == '' || observacao == '' || preco == '') {
     AlertPreencher();
