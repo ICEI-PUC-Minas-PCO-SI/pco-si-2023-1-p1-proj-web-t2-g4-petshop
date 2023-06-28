@@ -70,6 +70,40 @@ checkboxIsento.addEventListener("change", function () {
 
 // começando parte do cadastro do usuario (pessoa FISICA)
 
+// VALIDANDO INPUT NOME (feito)
+function validarNome() {
+  const nomeInput = document.getElementById('nome');
+  const mensagemErro = document.getElementById('erro-nome');
+  const nome = nomeInput.value.trim();
+  if (nome.length >= 6) {
+    nomeInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    nomeInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'O nome deve ter pelo menos 6 caracteres';
+    return false;
+  }
+}
+
+// VALIDANDO INPUT EMAIL (feito)
+function validarEmail(field) {
+  const emailInput = document.getElementById('email');
+  const mensagemErro = document.getElementById('erro-email');
+  const email = field.value;
+
+  // Expressão regular para validar o formato do e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailRegex.test(email)) {
+    emailInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+  } else {
+    emailInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Email Inválido';
+  }
+}
+
 // obtendo os dados do formulario 
 function salvaLogin(event) {
   // cancela a submissão do form para tratar sem fazer refresh da tela
@@ -84,6 +118,18 @@ function salvaLogin(event) {
   let nascimento = document.getElementById('data').value;
   let cpf = document.querySelector('.cpf').value;
   let senha = document.querySelector('.senha').value;
+
+  // Validando o campo nome antes de prosseguir com o cadastro
+  if (!validarNome()) {
+    alert('Por favor, preencha o campo de nome corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando o campo email antes de prosseguir com o cadastro
+  if (!validarEmail(email)) {
+    alert('Por favor, preencha o campo de email corretamente.');
+    return; // Interrompe o cadastro
+  }
 
   // adicionando usuario no banco de dados (função ja existente na parte script.js)
   if (nome && email && celular && genero && nascimento && cpf && senha) {

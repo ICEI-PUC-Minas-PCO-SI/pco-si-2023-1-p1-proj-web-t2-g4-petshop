@@ -96,6 +96,11 @@ h1 {
     margin: auto;
 }
 
+.mensagemErro {
+    margin: 0;
+    font-size: 12px;
+}
+
 input:not([type="checkbox"]) {
     width: 90%;
     height: 2.2em;

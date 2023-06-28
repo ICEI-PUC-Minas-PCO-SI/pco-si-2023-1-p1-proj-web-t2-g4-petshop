@@ -49,7 +49,7 @@
         <section class="flex-row">
             <div class="containerForm row">
                 <h1>Criar uma conta é rápido, fácil e gratuito!</h1>
-                <form action="" id="formCriarConta">
+                <form action="" name="cadastroFisico" id="formCriarConta">
                     <fieldset id="fieldsetPessoaFis" style="display: flex; justify-content: space-around;">
                         <div
                             style="display: flex; flex-direction: column; justify-content: start; align-items: center; gap: 1em; ">
@@ -67,14 +67,19 @@
                                 <label for="nome">
                                     * Nome completo:
                                     <br>
+                                    <!--add validação de nome-->
                                     <input type="text" name="nome" class="nome" id="nome" placeholder="Digite seu nome completo"
-                                        required>
+                                       onblur="validarNome()" required>
+                                    <p class="mensagemErro" id="erro-nome"></p>
                                 </label>
+                                
                                 <label for="email">
-                                   * E-mail:
+                                   * E-mail: 
                                     <br>
+                                    <!--começando parte de validação do input email-->
                                     <input type="email" name="email" class="email" id="email" placeholder="Digite seu e-mail"
-                                        required>
+                                       onblur="validarEmail(cadastroFisico.email)" required>
+                                    <p class="mensagemErro" id="erro-email"></p>
                                 </label>
                                 <label for="celular">
                                    * Celular:
