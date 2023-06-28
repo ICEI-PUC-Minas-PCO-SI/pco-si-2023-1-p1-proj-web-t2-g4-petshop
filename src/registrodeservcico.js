@@ -150,7 +150,15 @@ function cadastroPet() {
 
   if (nome == '' || observacao == '' || preco == '') {
     AlertPreencher();
-  } else {
+  } else if (isNaN(preco) || preco<=0) {
+    Swal.fire({
+      title:'erro',
+      text:'Insira um valor valido',
+      icon:'error'
+    })
+  }
+
+   else {
     var addservico = {
       "pessoa": idPessoa,
       "nome": nome,
@@ -264,6 +272,13 @@ function Editar() {
 
     if(nomeEdit == ''  || observEdit == '' || preco == ''){
       AlertPreencher();
+    }
+    else if (isNaN(preco) || preco<=0) {
+      Swal.fire({
+        title:'erro',
+        text:'Insira um valor valido',
+        icon:'error'
+      })
     }else{
       bancoPets[pegarID].nome = nomeEdit
       bancoPets[pegarID].obs = observEdit;
