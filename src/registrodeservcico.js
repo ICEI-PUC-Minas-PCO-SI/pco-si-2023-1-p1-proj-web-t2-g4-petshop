@@ -88,6 +88,7 @@ function Exibir() {
     cardsContainer.classList.remove("animate__animated", "animate__bounce", "animate__infinite");
   }
 
+// limitando usuario de digitar numeros no campo funcionario
 
   document.getElementById("altname").addEventListener("keydown",function (event) {
     if (!isNaN(event.key)){
