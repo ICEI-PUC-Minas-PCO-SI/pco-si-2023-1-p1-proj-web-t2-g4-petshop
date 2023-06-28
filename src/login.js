@@ -1,9 +1,3 @@
-const EntrarFacebookBtn = document.querySelector('.entrarfacebook');
-
-EntrarFacebookBtn.addEventListener('click', function () {
-    window.location.href = "https://www.facebook.com/login.php";
-});
-
 // declarando função p/ processar form de login
 function processaFormLogin(event) {
     // cancela submissão do form p/ tratar os dados sem fazer refresh da tela
