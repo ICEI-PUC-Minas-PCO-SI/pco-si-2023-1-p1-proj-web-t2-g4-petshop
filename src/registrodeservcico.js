@@ -110,7 +110,7 @@ function Exibir() {
         
       
 
-      opcoes = document.getElementsByName("observacaoo")
+      opcoes = document.getElementsByName("Altescolha")
       for(var i = 0; i < opcoes.length; i++){
         if(opcoes[i].value === bancoPets[idrecipient].escolha){
           opcoes[i].checked = true;
