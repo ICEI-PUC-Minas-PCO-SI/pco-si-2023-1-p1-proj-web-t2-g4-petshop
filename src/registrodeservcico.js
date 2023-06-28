@@ -77,6 +77,7 @@ function Exibir() {
     }
   }
 
+  
   const cardsContainer = document.querySelector("#Cards");
 
   if (cards == '') {
@@ -88,6 +89,11 @@ function Exibir() {
   }
 
 
+  document.getElementById("altname").addEventListener("keydown",function (event) {
+    if (!isNaN(event.key)){
+      event.preventDefault();
+    }
+  });
 
   
   
@@ -150,6 +156,7 @@ function cadastroPet() {
 
   if (nome == '' || observacao == '' || preco == '') {
     AlertPreencher();
+    // limitando input numerico
   } else if (isNaN(preco) || preco<=0) {
     Swal.fire({
       title:'erro',
