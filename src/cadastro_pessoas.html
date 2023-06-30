@@ -84,7 +84,10 @@
                                 <label for="celular">
                                    * Celular:
                                     <br>
-                                    <input type="tel" name="celular" class="celular" id="celular" placeholder="DDD + Celular" required>
+                                    <!--começando parte de validação do input celular-->
+                                    <input type="tel" name="celular" class="celular" id="celular" placeholder="(XX) XXXXX-XXXX" 
+                                    onblur="validarCelular(cadastroFisico.celular)" required>
+                                    <p class="mensagemErro" id="erro-celular"></p>
                                 </label>
                                 <label for="telefone">
                                     Telefone (opcional):
@@ -105,8 +108,10 @@
                                 <label for="data">
                                    * Data de nascimento:
                                     <br>
+                                    <!--começando parte de validação de data de nascimento-->
                                     <input type="date" name="data" id="data" placeholder="Insira sua data de nascimento"
-                                        required>
+                                        onblur="validarNascimento(cadastroFisico.data)" required>
+                                    <p class="mensagemErro" id="erro-nascimento"></p>
                                 </label>
                                 <label for="cpf">
                                     * CPF:

@@ -68,8 +68,8 @@ checkboxIsento.addEventListener("change", function () {
   }
 });
 
-// começando parte do cadastro do usuario (pessoa FISICA)
 
+// COMEÇO DO CADASTRO DO USUARIO (PESSOA FISICA) E VALIDAÇÃO DOS INPUTS
 // VALIDANDO INPUT NOME (feito)
 function validarNome() {
   const nomeInput = document.getElementById('nome');
@@ -98,9 +98,68 @@ function validarEmail(field) {
   if (emailRegex.test(email)) {
     emailInput.style.border = '2px solid green';
     mensagemErro.textContent = '';
+    return true;
   } else {
     emailInput.style.border = '2px solid red';
     mensagemErro.textContent = 'Email Inválido';
+    return false;
+  }
+}
+
+// VALIDANDO INPUT DE CELULAR
+function validarCelular(field) {
+  const celularInput = document.getElementById('celular');
+  const mensagemErro = document.getElementById('erro-celular');
+  const celular = field.value;
+
+  const celularRegex = /^(\(\d{2}\) \d \d{4}-\d{4})$|^(\d{2} \d{5}-\d{4})$|^(\d{2} \d \d{4}-\d{4})$|^\((\d{2})\) (\d{5}-\d{4})$/;
+  if (celularRegex.test(celular)) {
+    celularInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    celularInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Nº de celular em formato inválido.';
+    return false;
+  }
+}
+
+// VALIDANDO INPUT DE DATA DE NASCIMENTO
+function validarNascimento() {
+  const nascimentoInput = document.getElementById('data');
+  const mensagemErro = document.getElementById('erro-nascimento');
+  let data = document.getElementById('data').value; // pegando valor do input
+  data = data.replace(/\//g, "-"); // substitui as barras por hífen
+  let data_array = data.split("-"); // quebrando a data em array
+
+  // Verificar se o input está vazio
+  if (data.trim() === '') {
+    nascimentoInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Data de nascimento não preenchida';
+    return false;
+  }
+
+  if(data_array[0].length != 4){
+    data = data_array[2]+"-"+data_array[1]+"-"+data_array[0]; // remontando a data no formato yyyy/mm/dd
+  }
+
+  // comparando as datas e calculando a idade
+  let hoje = new Date();
+  let nasc = new Date(data);
+  let idade = hoje.getFullYear() - nasc.getFullYear();
+  let m = hoje.getMonth() - nasc.getMonth();
+  if(m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
+
+  // validando pessoas maiores de 18 e menores de 100 anos
+  if(idade < 18 || idade > 100){
+    nascimentoInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Idade inválida';
+    return false;
+  } 
+  else {
+    nascimentoInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
   }
 }
 
@@ -125,9 +184,21 @@ function salvaLogin(event) {
     return; // Interrompe o cadastro
   }
 
-  // validando o campo email antes de prosseguir com o cadastro
-  if (!validarEmail(email)) {
+  // validando o campo email antes de prosseguir com o cadastro (FEITO)
+  if (!validarEmail(document.querySelector('.email'))) {
     alert('Por favor, preencha o campo de email corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando o campo celular antes de prosseguir com o cadastro
+  if (!validarCelular(document.querySelector('.celular'))) {
+    alert('Por favor, preencha o campo de celular corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando data de nascimento antes de prosseguir com o cadastro
+  if (!validarNascimento()) {
+    alert('Por favor, preencha sua data de nascimento corretamente.');
     return; // Interrompe o cadastro
   }
 
