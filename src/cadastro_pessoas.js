@@ -106,7 +106,7 @@ function validarEmail(field) {
   }
 }
 
-// VALIDANDO INPUT DE CELULAR
+// VALIDANDO INPUT DE CELULAR (feito)
 function validarCelular(field) {
   const celularInput = document.getElementById('celular');
   const mensagemErro = document.getElementById('erro-celular');
@@ -119,12 +119,12 @@ function validarCelular(field) {
     return true;
   } else {
     celularInput.style.border = '2px solid red';
-    mensagemErro.textContent = 'Nº de celular em formato inválido.';
+    mensagemErro.textContent = 'Nº de celular inválido.';
     return false;
   }
 }
 
-// VALIDANDO INPUT DE DATA DE NASCIMENTO
+// VALIDANDO INPUT DE DATA DE NASCIMENTO (feito)
 function validarNascimento() {
   const nascimentoInput = document.getElementById('data');
   const mensagemErro = document.getElementById('erro-nascimento');
@@ -163,6 +163,57 @@ function validarNascimento() {
   }
 }
 
+// VALIDANDO INPUT DE CPF (em progresso)
+function validarCPF(field){
+  const cpfInput = document.getElementById('cpf');
+  const mensagemErro = document.getElementById('erro-cpf');
+  let cpf = field.value;
+  // removendo caracteres não numéricos
+  cpf = cpf.replace(/[^\d]/g, '');
+
+  // verificando se possui 11 digitos ou se todos os caracteres são iguais
+  if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) {
+    cpfInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'CPF inválido';
+    return false;
+  }
+
+  // calculando o primeiro díito verificador
+  let soma = 0;
+  for(let i = 0; i < 9; i++) {
+    soma += parseInt(cpf.charAt(i)) * (10 - i);
+  }
+  let resto = 11 - (soma % 11);
+  let digitoVerificador1 = resto === 10 || resto === 11 ? 0 : resto;
+
+  // verificando se o primeiro dígito verificador é valido 
+  if (digitoVerificador1 !== parseInt(cpf.charAt(9))) {
+    cpfInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'CPF inválido';
+    return false;
+  }
+
+  // calculando segundo digito verificador
+  soma = 0;
+  for (let i = 0; i < 10; i++) {
+    soma += parseInt(cpf.charAt(i)) * (11 - i);
+  }
+  resto = 11 - (soma % 11);
+  let digitoVerificador2 = resto === 10 || resto === 11 ? 0 : resto;
+
+  // Verifica se o segundo dígito verificador é válido
+  if (digitoVerificador2 !== parseInt(cpf.charAt(10))) {
+    cpfInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'CPF inválido';
+    return false;
+  }
+
+  // se chegou aqui, o cpf é valido 
+  cpfInput.style.border = '2px solid green';
+  mensagemErro.textContent = '';
+  return true;
+}
+
 // obtendo os dados do formulario 
 function salvaLogin(event) {
   // cancela a submissão do form para tratar sem fazer refresh da tela
@@ -196,9 +247,15 @@ function salvaLogin(event) {
     return; // Interrompe o cadastro
   }
 
-  // validando data de nascimento antes de prosseguir com o cadastro
+  // validando data de nascimento antes de prosseguir com o cadastro (FEITO)
   if (!validarNascimento()) {
     alert('Por favor, preencha sua data de nascimento corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando o campo cpf antes de prosseguir com o cadastro
+  if (!validarEmail(document.querySelector('.cpf'))) {
+    alert('Por favor, preencha o campo de cpf corretamente.');
     return; // Interrompe o cadastro
   }
 

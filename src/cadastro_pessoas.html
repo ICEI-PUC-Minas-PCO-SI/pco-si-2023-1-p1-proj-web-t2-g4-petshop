@@ -95,7 +95,7 @@
                                     <input type="tel" name="telefone" class="telefone" id="telefone" placeholder="DDD + Telefone">
                                 </label>
                                 <label for="genero">
-                                   * Gênero:
+                                    Gênero:
                                     <br>
                                     <select name="genero" id="genero">
                                         <option value="masculino">Masculino</option>
@@ -110,15 +110,15 @@
                                     <br>
                                     <!--começando parte de validação de data de nascimento-->
                                     <input type="date" name="data" id="data" placeholder="Insira sua data de nascimento"
-                                        onblur="validarNascimento(cadastroFisico.data)" required>
+                                        onblur="validarNascimento()" required>
                                     <p class="mensagemErro" id="erro-nascimento"></p>
                                 </label>
                                 <label for="cpf">
                                     * CPF:
                                     <br>
                                     <input type="text" name="cpf" class="cpf" id="cpf" placeholder="Digite seu CPF"
-                                        pattern="^(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})$"
-                                        required>
+                                     maxlength="14" onblur="validarCPF(cadastroFisico.cpf)" required>
+                                    <p class="mensagemErro" id="erro-cpf"></p>    
                                 </label>
                                 <label for="senha">
                                     * Senha:
