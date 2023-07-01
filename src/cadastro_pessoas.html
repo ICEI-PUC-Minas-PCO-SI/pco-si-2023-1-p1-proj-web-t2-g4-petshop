@@ -123,13 +123,16 @@
                                 <label for="senha">
                                     * Senha:
                                     <br>
-                                    <input type="password" name="senha" class="senha" id="senha" placeholder="Digite sua senha" required>
+                                    <input type="password" name="senha" class="senha" id="senha" placeholder="Digite sua senha" 
+                                    onblur="validarSenha(cadastroFisico.senha)" required>
+                                    <p class="mensagemErro" id="erro-senha"></p>
                                 </label>
                                 <label for="confirmarSenha">
                                     * Confirme sua senha:
                                     <br>
                                     <input type="password" name="confirmarSenha" class="confirmarSenha" id="confirmarSenha"
-                                        placeholder="Confirmar senha" required>
+                                        placeholder="Confirmar senha" onblur="confirmaSenha(cadastroFisico.confirmarSenha)" required>
+                                    <p class="mensagemErro" id="erro-confirmacao"></p>
                                 </label>
                                 <label for="termos" style="display: flex; justify-content: center; gap: 5px;">
                                     <input type="checkbox" name="termos" id="termos" required>

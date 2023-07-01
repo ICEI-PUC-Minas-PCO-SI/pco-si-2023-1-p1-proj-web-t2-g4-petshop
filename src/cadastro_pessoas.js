@@ -75,7 +75,7 @@ function validarNome() {
   const nomeInput = document.getElementById('nome');
   const mensagemErro = document.getElementById('erro-nome');
   const nome = nomeInput.value.trim();
-  if (nome.length >= 6) {
+  if (nome.length >= 6 && isNaN(nome)) {
     nomeInput.style.border = '2px solid green';
     mensagemErro.textContent = '';
     return true;
@@ -139,8 +139,8 @@ function validarNascimento() {
     return false;
   }
 
-  if(data_array[0].length != 4){
-    data = data_array[2]+"-"+data_array[1]+"-"+data_array[0]; // remontando a data no formato yyyy/mm/dd
+  if (data_array[0].length != 4) {
+    data = data_array[2] + "-" + data_array[1] + "-" + data_array[0]; // remontando a data no formato yyyy/mm/dd
   }
 
   // comparando as datas e calculando a idade
@@ -148,14 +148,14 @@ function validarNascimento() {
   let nasc = new Date(data);
   let idade = hoje.getFullYear() - nasc.getFullYear();
   let m = hoje.getMonth() - nasc.getMonth();
-  if(m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
+  if (m < 0 || (m === 0 && hoje.getDate() < nasc.getDate())) idade--;
 
   // validando pessoas maiores de 18 e menores de 100 anos
-  if(idade < 18 || idade > 100){
+  if (idade < 18 || idade > 100) {
     nascimentoInput.style.border = '2px solid red';
     mensagemErro.textContent = 'Idade inválida';
     return false;
-  } 
+  }
   else {
     nascimentoInput.style.border = '2px solid green';
     mensagemErro.textContent = '';
@@ -163,8 +163,8 @@ function validarNascimento() {
   }
 }
 
-// VALIDANDO INPUT DE CPF (em progresso)
-function validarCPF(field){
+// VALIDANDO INPUT DE CPF (feito)
+function validarCPF(field) {
   const cpfInput = document.getElementById('cpf');
   const mensagemErro = document.getElementById('erro-cpf');
   let cpf = field.value;
@@ -180,7 +180,7 @@ function validarCPF(field){
 
   // calculando o primeiro díito verificador
   let soma = 0;
-  for(let i = 0; i < 9; i++) {
+  for (let i = 0; i < 9; i++) {
     soma += parseInt(cpf.charAt(i)) * (10 - i);
   }
   let resto = 11 - (soma % 11);
@@ -214,6 +214,42 @@ function validarCPF(field){
   return true;
 }
 
+// VALIDANDO INPUT DE SENHA (feito)
+function validarSenha(field) {
+  const senhaInput = document.getElementById('senha');
+  const mensagemErro = document.getElementById('erro-senha');
+  const senha = field.value;
+
+  if (senha.length < 6) {
+    senhaInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'A senha deve conter no mínimo 6 caracteres';
+    return false;
+  }
+  else {
+    senhaInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  }
+}
+
+// VALIDANDO INPUT DE CONFIRMAÇÃO DE SENHA 
+function confirmaSenha(field) {
+  const senhaInput = document.getElementById('senha').value; // pegando valor do input de senha normal]
+  const confirmarInput = document.getElementById('confirmarSenha');
+  const confirmar = field.value;
+  const mensagemError = document.getElementById('erro-confirmacao');
+
+  if (senhaInput === confirmar) {
+    confirmarInput.style.border = '2px solid green';
+    mensagemError.textContent = '';
+    return true;
+  } else {
+    confirmarInput.style.border = '2px solid red';
+    mensagemError.textContent = 'As senhas digitadas não coincidem';
+    return false;
+  }
+}
+
 // obtendo os dados do formulario 
 function salvaLogin(event) {
   // cancela a submissão do form para tratar sem fazer refresh da tela
@@ -241,7 +277,7 @@ function salvaLogin(event) {
     return; // Interrompe o cadastro
   }
 
-  // validando o campo celular antes de prosseguir com o cadastro
+  // validando o campo celular antes de prosseguir com o cadastro (FEITO)
   if (!validarCelular(document.querySelector('.celular'))) {
     alert('Por favor, preencha o campo de celular corretamente.');
     return; // Interrompe o cadastro
@@ -253,9 +289,21 @@ function salvaLogin(event) {
     return; // Interrompe o cadastro
   }
 
-  // validando o campo cpf antes de prosseguir com o cadastro
-  if (!validarEmail(document.querySelector('.cpf'))) {
+  // validando o campo cpf antes de prosseguir com o cadastro (FEITO)
+  if (!validarCPF(document.querySelector('.cpf'))) {
     alert('Por favor, preencha o campo de cpf corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando a senha antes de prosseguir com o cadastro (FEITO)
+  if (!validarSenha(document.querySelector('.senha'))) {
+    alert('Por favor, preencha uma senha válida.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando a confirmação de senha antes de prosseguir com o cadastro (FEITO)
+  if (!confirmaSenha(document.querySelector('.confirmarSenha'))) {
+    alert('Por favor, preencha confirme sua senha corretamente.');
     return; // Interrompe o cadastro
   }
 
