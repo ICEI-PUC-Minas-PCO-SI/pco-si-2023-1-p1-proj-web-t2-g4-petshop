@@ -92,7 +92,8 @@
                                 <label for="telefone">
                                     Telefone (opcional):
                                     <br>
-                                    <input type="tel" name="telefone" class="telefone" id="telefone" placeholder="DDD + Telefone">
+                                    <input type="tel" name="telefone" class="telefone" id="telefone" oninput="validarTelefone(cadastroFisico.telefone)" placeholder="Telefone">
+                                    <p class="mensagemErro" id="erro-telefone"></p> 
                                 </label>
                                 <label for="genero">
                                     Gênero:

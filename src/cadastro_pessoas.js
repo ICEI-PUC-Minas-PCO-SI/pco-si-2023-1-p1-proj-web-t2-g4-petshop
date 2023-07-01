@@ -124,6 +124,23 @@ function validarCelular(field) {
   }
 }
 
+function validarTelefone(field) {
+  const telefoneInput = document.getElementById('telefone');
+  const mensagemErro = document.getElementById('erro-telefone');
+  const telefone = field.value;
+
+  const telefoneRegex = /^3\d{3}-\d{4}$/;
+  if (telefoneRegex.test(telefone)) {
+    telefoneInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    telefoneInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Nº de telefone inválido.';
+    return false;
+  }
+}
+
 // VALIDANDO INPUT DE DATA DE NASCIMENTO (feito)
 function validarNascimento() {
   const nascimentoInput = document.getElementById('data');
