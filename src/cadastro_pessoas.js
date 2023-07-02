@@ -70,7 +70,7 @@ checkboxIsento.addEventListener("change", function () {
 
 
 // COMEÇO DO CADASTRO DO USUARIO (PESSOA FISICA) E VALIDAÇÃO DOS INPUTS
-// VALIDANDO INPUT NOME (feito)
+// VALIDANDO INPUT NOME
 function validarNome() {
   const nomeInput = document.getElementById('nome');
   const mensagemErro = document.getElementById('erro-nome');
@@ -86,7 +86,7 @@ function validarNome() {
   }
 }
 
-// VALIDANDO INPUT EMAIL (feito)
+// VALIDANDO INPUT EMAIL
 function validarEmail(field) {
   const emailInput = document.getElementById('email');
   const mensagemErro = document.getElementById('erro-email');
@@ -106,7 +106,7 @@ function validarEmail(field) {
   }
 }
 
-// VALIDANDO INPUT DE CELULAR (feito)
+// VALIDANDO INPUT DE CELULAR
 function validarCelular(field) {
   const celularInput = document.getElementById('celular');
   const mensagemErro = document.getElementById('erro-celular');
@@ -141,7 +141,7 @@ function validarTelefone(field) {
   }
 }
 
-// VALIDANDO INPUT DE DATA DE NASCIMENTO (feito)
+// VALIDANDO INPUT DE DATA DE NASCIMENTO
 function validarNascimento() {
   const nascimentoInput = document.getElementById('data');
   const mensagemErro = document.getElementById('erro-nascimento');
@@ -180,7 +180,7 @@ function validarNascimento() {
   }
 }
 
-// VALIDANDO INPUT DE CPF (feito)
+// VALIDANDO INPUT DE CPF
 function validarCPF(field) {
   const cpfInput = document.getElementById('cpf');
   const mensagemErro = document.getElementById('erro-cpf');
@@ -231,7 +231,7 @@ function validarCPF(field) {
   return true;
 }
 
-// VALIDANDO INPUT DE SENHA (feito)
+// VALIDANDO INPUT DE SENHA
 function validarSenha(field) {
   const senhaInput = document.getElementById('senha');
   const mensagemErro = document.getElementById('erro-senha');
@@ -265,6 +265,14 @@ function confirmaSenha(field) {
     mensagemError.textContent = 'As senhas digitadas não coincidem';
     return false;
   }
+}
+
+// verificando checkbox marcado 
+function verificarCheckbox() {
+  var checkbox = document.getElementById("termos");
+  
+  if (checkbox.checked) return true;
+  else return false;
 }
 
 // obtendo os dados do formulario 
@@ -320,8 +328,13 @@ function salvaLogin(event) {
 
   // validando a confirmação de senha antes de prosseguir com o cadastro (FEITO)
   if (!confirmaSenha(document.querySelector('.confirmarSenha'))) {
-    alert('Por favor, preencha confirme sua senha corretamente.');
+    alert('Por favor, confirme sua senha corretamente.');
     return; // Interrompe o cadastro
+  }
+
+  if(!verificarCheckbox()) {
+    alert('Por favor, aceite os termos e condições antes de prosseguir com o cadastro.');
+    return
   }
 
   // adicionando usuario no banco de dados (função ja existente na parte script.js)
@@ -334,11 +347,222 @@ function salvaLogin(event) {
   }
 }
 
+
+
 // associando salvamento ao botao 
 document.querySelector('.criarConta').addEventListener('click', salvaLogin);
 
 
 // começando parte de cadastro de usuario JURIDICO
+// validando input de razão social (feito)
+function validarRazao() {
+  const razaoInput = document.getElementById('nome-juridica');
+  const mensagemErro = document.getElementById('erro-razaoSocial');
+  const razao = razaoInput.value;
+  if (razao.length >= 4) {
+    razaoInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    razaoInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'A razão social deve ter pelo menos 4 caracteres';
+    return false;
+  }
+}
+
+// VALIDANDO INPUT EMAIL (feito)
+function validarEmailJuridico(field) {
+  const emailInput = document.getElementById('email-juridica');
+  const mensagemErro = document.getElementById('erro-emailJuridico');
+  const email = field.value;
+
+  // Expressão regular para validar o formato do e-mail
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailRegex.test(email)) {
+    emailInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    emailInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Email Inválido';
+    return false;
+  }
+}
+
+// validando input de celular e telefone
+function validarCelularJuridico(field) {
+  const celularInput = document.getElementById('celular-juridica');
+  const mensagemErro = document.getElementById('erro-celularJuridico');
+  const celular = field.value;
+
+  const celularRegex = /^(\(\d{2}\) \d \d{4}-\d{4})$|^(\d{2} \d{5}-\d{4})$|^(\d{2} \d \d{4}-\d{4})$|^\((\d{2})\) (\d{5}-\d{4})$/;
+  if (celularRegex.test(celular)) {
+    celularInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    celularInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Nº de celular inválido. Atente-se ao formato requisitado.';
+    return false;
+  }
+}
+
+function validarTelefoneJuridico(field) {
+  const telefoneInput = document.getElementById('telefone-juridica');
+  const mensagemErro = document.getElementById('erro-telefoneJuridico');
+  const telefone = field.value;
+
+  const telefoneRegex = /^3\d{3}-\d{4}$/;
+  if (telefoneRegex.test(telefone)) {
+    telefoneInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    telefoneInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Nº de telefone inválido.';
+    return false;
+  }
+}
+
+// validando input de nome do contato
+function validarNomeContato() {
+  const nomeInput = document.getElementById('nome-contato');
+  const mensagemErro = document.getElementById('erro-nomeContato');
+  const nome = nomeInput.value.trim();
+  if (nome.length >= 6 && isNaN(nome)) {
+    nomeInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  } else {
+    nomeInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'O nome deve ter pelo menos 6 caracteres';
+    return false;
+  }
+}
+
+// validando input de cnpj 
+function validarCNPJ(field) {
+  const cnpjInput = document.getElementById('cnpj');
+  const mensagemErro = document.getElementById('erro-cnpj');
+  let cnpj = field.value;
+
+  // removendo caracteres especiais 
+  cnpj = cnpj.replace(/[^\d]+/g, '');
+  // verificando se possui 14 digitos ou se todos são iguais
+  if (cnpj.length !== 14 || /^(\d)\1+$/.test(cnpj)) {
+    cnpjInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'CNPJ inválido';
+    return false;
+  }
+  // Validar dígitos verificadores
+  var tamanho = cnpj.length - 2;
+  var numeros = cnpj.substring(0, tamanho);
+  var digitos = cnpj.substring(tamanho);
+  var soma = 0;
+  var pos = tamanho - 7;
+
+  for (var i = tamanho; i >= 1; i--) {
+    soma += numeros.charAt(tamanho - i) * pos--;
+    if (pos < 2) {
+      pos = 9;
+    }
+  }
+
+  var resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+
+  if (resultado != digitos.charAt(0)) {
+    cnpjInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'CNPJ inválido';
+    return false;
+  }
+
+  tamanho = tamanho + 1;
+  numeros = cnpj.substring(0, tamanho);
+  soma = 0;
+  pos = tamanho - 7;
+
+  for (var i = tamanho; i >= 1; i--) {
+    soma += numeros.charAt(tamanho - i) * pos--;
+    if (pos < 2) {
+      pos = 9;
+    }
+  }
+
+  resultado = soma % 11 < 2 ? 0 : 11 - (soma % 11);
+
+  if (resultado != digitos.charAt(1)) {
+    cnpjInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'CNPJ inválido';
+    return false;
+  }
+
+  // se chegou aqui, o cpf é valido 
+  cnpjInput.style.border = '2px solid green';
+  mensagemErro.textContent = '';
+  return true;
+}
+
+// VALIDAR INPUT DE INSCRIÇÃO ESTADUAL
+function validarIE(field){
+  const inscricaoInput = document.getElementById('inscricao-estadual');
+  const mensagemErro = document.getElementById('erro-IE');
+  const ie = field.value;
+  if (ie.length > 16 || ie.length < 9) {
+    inscricaoInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'Inscrição estadual inválida';
+    return false;
+  } else {
+    inscricaoInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  }
+}
+
+// VALIDANDO INPUT DE SENHA
+function validarSenhaJuridica(field) {
+  const senhaInput = document.getElementById('senha-juridica');
+  const mensagemErro = document.getElementById('erro-SenhaJuridica');
+  const senha = field.value;
+
+  if (senha.length < 6) {
+    senhaInput.style.border = '2px solid red';
+    mensagemErro.textContent = 'A senha deve conter no mínimo 6 caracteres';
+    return false;
+  }
+  else {
+    senhaInput.style.border = '2px solid green';
+    mensagemErro.textContent = '';
+    return true;
+  }
+}
+
+// VALIDANDO INPUT DE CONFIRMAÇÃO DE SENHA 
+function confirmaSenhaJuridica(field) {
+  const senhaInput = document.getElementById('senha-juridica').value; // pegando valor do input de senha normal]
+  const confirmarInput = document.getElementById('confirmarSenha-juridica');
+  const confirmar = field.value;
+  const mensagemError = document.getElementById('erro-confirmaSenhaJuridica');
+
+  if (senhaInput === confirmar) {
+    confirmarInput.style.border = '2px solid green';
+    mensagemError.textContent = '';
+    return true;
+  } else {
+    confirmarInput.style.border = '2px solid red';
+    mensagemError.textContent = 'As senhas digitadas não coincidem';
+    return false;
+  }
+}
+
+// validando checkbox marcado
+function verificarCheckboxJuridico() {
+  var checkbox = document.getElementById("termos-juridica");
+  
+  if (checkbox.checked) return true;
+  else return false;
+}
+
 function salvaLoginJuridico(event) {
   // cancela a submissão do form para tratar sem fazer refresh da tela
   event.preventDefault();
@@ -353,7 +577,47 @@ function salvaLoginJuridico(event) {
   let inscricao = document.getElementById('inscricao-estadual').value;
   let estadoIE = document.getElementById('estado-inscricao').value;
   let senha = document.getElementById('senha-juridica').value;
-  console.log(razao);
+
+  // Validando o campo razao social antes de prosseguir com o cadastro
+  if (!validarRazao()) {
+    alert('Por favor, preencha a razão social corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando o campo email antes de prosseguir com o cadastro (FEITO)
+  if (!validarEmailJuridico(document.getElementById('email-juridica'))) {
+    alert('Por favor, preencha o campo de email corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando o campo celular antes de prosseguir com o cadastro (FEITO)
+  if (!validarCelular(document.getElementById('celular-juridica'))) {
+    alert('Por favor, preencha o campo de celular corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando o campo cnpj antes de prosseguir com o cadastro (FEITO)
+  if (!validarCNPJ(document.getElementById('cnpj'))) {
+    alert('Por favor, preencha o campo de CNPJ corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando a senha antes de prosseguir com o cadastro (FEITO)
+  if (!validarSenhaJuridica(document.getElementById('senha-juridica'))) {
+    alert('Por favor, preencha uma senha válida.');
+    return; // Interrompe o cadastro
+  }
+
+  // validando a confirmação de senha antes de prosseguir com o cadastro (FEITO)
+  if (!confirmaSenhaJuridica(document.getElementById('confirmarSenha-juridica'))) {
+    alert('Por favor, confirme sua senha corretamente.');
+    return; // Interrompe o cadastro
+  }
+
+  if(!verificarCheckboxJuridico()) {
+    alert('Por favor, aceite os termos e condições antes de prosseguir com o cadastro.');
+    return
+  }
 
   // adicionando usuario no banco de dados (função ja existente na parte script.js)
   if (razao && email && celular && cnpj && senha) {
