@@ -6,7 +6,12 @@ function processaFormLogin(event) {
     // obtem os dados de login e senha a partir do form de login
     var username = document.getElementById('dadosUsuario').value;
     var password = document.getElementById('senha').value;
-    console.log(username, password);
+
+    // verificando se os campos estão vazios
+    if (username === '' || password === '') {
+        alert('Para prosseguir com o login, preencha todos os campos corretamente.');
+        return
+    }
 
     // valida login e se estiver ok, redireciona para a tela inicial da aplicação
     resultadoLogin = loginUser(username, password);
