@@ -8,23 +8,22 @@ function processaFormLogin(event) {
     var password = document.getElementById('senha').value;
     console.log(username, password);
 
-    // valida login e se estiver ok, redireciona para a tela inicial da apicação
+    // valida login e se estiver ok, redireciona para a tela inicial da aplicação
     resultadoLogin = loginUser(username, password);
-    console.log(resultadoLogin);
     if (resultadoLogin) {
         var usuarioCorrenteIndex = JSON.parse(localStorage.getItem('usuarioCorrente'));
         var usuario = db_usuarios.usuarios[usuarioCorrenteIndex];
 
-        // verificando se o usuario é fisico ou juridico para redirecionamento personalizado 
-        if(usuario.hasOwnProperty('cpf')) {
+        // verificando se o usuario é dono ou cliente para redirecionar
+        if (username === "admin@admin.com" && password === "123") {
+            window.location.href = "HomeAdm.html";
+        }
+        else if (usuario.hasOwnProperty('cpf') || usuario.hasOwnProperty('cnpj')) {
             window.location.href = 'home.html';
         }
-        else if (usuario.hasOwnProperty('cnpj')) {
-            window.location.href = 'index.html';
+        else {
+            alert('Usuário ou senha incorretos.');
         }
-    }
-    else {
-        alert('usuario ou senha incorretos');
     }
 }
 
