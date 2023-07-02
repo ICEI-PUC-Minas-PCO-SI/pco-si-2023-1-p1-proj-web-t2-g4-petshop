@@ -73,7 +73,7 @@
             </div>
         </div>        
         
-        <form id="form-contato">            
+        <form id="form-produto">            
             <div class="form-group row">
                 <div class="col-sm-4">
                     <select name="filtro_CATEGORIA" id="filtro_CATEGORIA" onchange="Listaproduto()" class="form-control">
@@ -127,7 +127,7 @@
                     // Add the product to the table    
                     $("#table-produto").append(`
                         <tr>
-                            <td scope="row">${produto.ID}</td>
+                            <td scope="row">${produto.Id}</td>
                             <td>${produto.NOME}</td>
                             <td>${produto.CATEGORIA}</td>
                             <td>${produto.PREÇO}</td>
