@@ -163,19 +163,22 @@ function processaFormLogin(event) {
         return
     }
 
-    // valida login e se estiver ok, redireciona para a tela inicial da aplicação
-    resultadoLogin = loginUser(username, password);
-    if (resultadoLogin) {
-        var usuarioCorrenteIndex = JSON.parse(localStorage.getItem('usuarioCorrente'));
-        var usuario = db_usuarios.usuarios[usuarioCorrenteIndex];
+   // valida login e se estiver ok, redireciona para a tela inicial da aplicação
+   resultadoLogin = loginUser(username, password);
+   if (resultadoLogin) {
+       var usuarioCorrenteIndex = JSON.parse(localStorage.getItem('usuarioCorrente'));
+       var usuario = db_usuarios.usuarios[usuarioCorrenteIndex];
 
-        // verificando se o usuario é fisico ou juridico para redirecionamento personalizado 
-        if(usuario.hasOwnProperty('cpf')) {
-            window.location.href = 'home.html';
-        }
-    } else {
-        alert('Usuário ou senha incorretos.');
-    }
+       // verificando se o usuario é dono ou cliente para redirecionar
+       if (username === "admin@admin.com" && password === "123") {
+           window.location.href = "HomeAdm.html";
+       }
+       else if (usuario.hasOwnProperty('cpf') || usuario.hasOwnProperty('cnpj')) {
+           window.location.href = 'home.html';
+       }
+   } else {
+       alert('Usuário ou senha incorretos.');
+   }
 }
 
 // associando função ao botão de entrar na conta 

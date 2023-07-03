@@ -28,6 +28,13 @@
                             <b>Início</b>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="./listadeagenda.html">
+                            <img src="../src/imagens/produtos.png" alt="" height="45px">
+                            <br>
+                            <b>Agenda</b>
+                        </a>
+                    </li>
 
                     <li class="nav-item">
                         <a class="nav-link " href="./estoque2.html">
@@ -99,10 +106,20 @@
 
                         <div class="col-sm-1 me-5">
                             <label for="inputPREÇO">Preço</label>
-                            <input type="number" class="form-control" id="inputPREÇO" required placeholder="R$ 00.00"
+                            <input type="text" class="form-control" id="inputPREÇO" required placeholder="R$ 00.00"
                                 style="width: 95px;">
 
                         </div>
+
+                        <script>
+                            const num = document.getElementById('inputPREÇO');
+                          
+                            num.addEventListener('input', function() {
+                                num.value = num.value.replace(/[^\d.]/g, '');
+                                
+                                
+                          });
+                        </script>
 
                         <div class="col-sm-1">
                             <label for="inputQUANTIDADE">Quantidade</label>

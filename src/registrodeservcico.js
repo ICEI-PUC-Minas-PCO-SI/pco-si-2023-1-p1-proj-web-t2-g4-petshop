@@ -14,13 +14,6 @@ function popularVetor(dados) {
   }
   Exibir();
 }
-function popularVetor(dados) {
-  bancoServ = [];
-  for (var index = 0; index < dados.length; index++) {
-    bancoServ.push(dados[index]);
-  }
-  Exibir();
-}
 
 
 
@@ -260,10 +253,11 @@ function AlertExcluir(index) {
 
 function excluirServ(id) {
 
-  
-    bancoPets.splice(id, 1);
-    localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
-
+fetch(`${URL}/${id}`,{
+  method: 'DELETE',
+}) 
+.then(res => res.json())
+.then(() => location.reload());
 
 
 }
