@@ -59,7 +59,7 @@ db_estoque_inicial = {
         {
             "Id":8,
             "NOME": "Desinfetante e Bactericida Petz 1l",
-            "CATEGORIA": "Pós limpesa",
+            "CATEGORIA": "Pós limpeza",
             "PREÇO": 74.99,
             "QUANTIDADE": 3,
             "DESCRIÇÃO": "Elimina 99,9% das bactérias."
@@ -104,6 +104,7 @@ db_estoque_inicial = {
 var db = JSON.parse(localStorage.getItem('db_estoque'));
 if (!db) {
     db = db_estoque_inicial
+    localStorage.setItem("db_estoque", JSON.stringify(db));
 };
     
 function displayMessage(msg) {
@@ -129,7 +130,7 @@ function insertproduto(Produto) {
      displayMessage("produto inserido com sucesso");
  
      // Atualiza os dados no Local Storage
-     localStorage.setItem('db_produto', JSON.stringify(db));
+     localStorage.setItem('db_estoque', JSON.stringify(db));
  }
  
  function updateproduto(Id, produto) {
@@ -138,26 +139,30 @@ function insertproduto(Produto) {
  
      // Altera os dados do objeto no array
      db.data[index].Nome = produto.NOME,
-     db.data[index].CATEGORAIA = produto.CATEGORAIA,
+     db.data[index].CATEGORIA = produto.CATEGORIA,
      db.data[index].PREÇO = produto.PREÇO,
      db.data[index].QUANTIDADE = produto.QUANTIDADE,
-     db.data[index].DESCRIÇÃO = produto.categoria,
+     db.data[index].DESCRIÇÃO = produto.DESCRIÇÃO,
      db.data[index].website = produto.website
  
      displayMessage("produto alterado com sucesso");
  
      // Atualiza os dados no Local Storage
-     localStorage.setItem('db_produto', JSON.stringify(db));
+     localStorage.setItem('db_estoque', JSON.stringify(db));
  }
  
- function deleteproduto(Id) {    
-     // Filtra o array removendo o elemento com o id passado
-     db.data = db.data.filter(function (element) { return element.Id != Id });
- 
-     displayMessage("produto removido com sucesso");
- 
-     // Atualiza os dados no Local Storage
-     localStorage.setItem('db_produto', JSON.stringify(db));
+ function deleteproduto(Id) {   
+    var posid = '';
+    for(var i = 0; i < db.data.length; i++){
+        if(Id == db.data[i].Id){
+            posid = i;
+        }
+    }
+
+    db.data.splice(posid, 1);
+    
+    // Atualiza os dados no Local Storage
+     localStorage.setItem('db_estoque', JSON.stringify(db));
  }
 
 

@@ -1,5 +1,5 @@
 html {
-    background-color: #808080;
+    /* background-color: #808080; */
 }
 
 .header {
@@ -33,7 +33,7 @@ button {
 }
 
 main {
-    background-color: #175EA8;
+    /* background-color: #175EA8; */
     color: white;
     width: 100vw;
     height: 100vh;
@@ -80,4 +80,8 @@ footer {
 .copyright {
     text-align: center;
     background-color: #808080;
+}
+
+.navbar-nav .nav-link {
+    color: black;
 }

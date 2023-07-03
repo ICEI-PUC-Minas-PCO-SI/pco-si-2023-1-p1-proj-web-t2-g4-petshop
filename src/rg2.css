@@ -15,5 +15,12 @@ main {
     margin-top: 100px;
 }
 
+#id, #cofreBanco{
+    width: 53px;
+}
+
+#preco, #altpreco{
+    width: 82px;
+}
 
   
