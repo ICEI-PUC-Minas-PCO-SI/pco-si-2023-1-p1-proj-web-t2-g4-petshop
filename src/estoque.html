@@ -1,45 +1,41 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Estoque</title>
     <link rel="stylesheet" href="estoque.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../src/imagens/Logo_sem_fundo.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="estoque.js"></script>
 </head>
 <header>
-        <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#collapsibleNavbar">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" Id="collapsibleNavbar">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="./HomeAdm.html">
-                                <img src="../src/imagens/home.png" alt="" height="45px">
-                                <br>
-                                <b>Início</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="./registro-de-produtos.html">
-                                <img src="../src/imagens/produtos.png" alt="" height="45px">
-                                <br>
-                                <b>Produtos</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="./estoque2.html">
-                                <img src="../src/imagens/estoque.png" alt="" height="45px">
-                                <br>
-                                <b>Estoque</b>
-                            </a>
-                        </li>
+    <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href=""><img src="../src/imagens/Logo_sem_fundo.png" alt="" height="110px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" Id="collapsibleNavbar">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="./HomeAdm.html">
+                            <img src="../src/imagens/home.png" alt="" height="45px">
+                            <br>
+                            <b>Início</b>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="./estoque2.html">
+                            <img src="../src/imagens/estoque.png" alt="" height="45px">
+                            <br>
+                            <b>Estoque</b>
+                        </a>
+                    </li>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="registrodeserv2.html">
@@ -48,80 +44,117 @@
                             <b>Serviços</b>
                         </a>
                     </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#" onclick="sair()">
-                                <img src="../src/imagens/sair.png" alt="" height="45px">
-                                <br>
-                                <b>Sair</b>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="#" onclick="sair()">
+                            <img src="../src/imagens/sair.png" alt="" height="45px">
+                            <br>
+                            <b>Sair</b>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+</header>
+
 <body>
+
     <body onload="init()">
-    <script src="sair.js"></script>
+        <script src="sair.js"></script>
 
 
         <body onload="init()">
-            
-        
+
+
             <div class="container ">
                 <div class="row">
                     <div Id="msg" class="col-sm-10 offset-sm-1 ">
                         <!--<div class="alert alert-warning">produto não encontrado.</div>-->
                     </div>
                 </div>
-        
+
                 <form Id="form-produto" class="mt-3">
                     <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="inputId">Id</label>
-                            <input type="text" class="form-control" id="inputId" placeholder="Id" disabled>
+                        <div class="col-sm-1">
+                            <label for="inputId">ID</label>
+                            <input type="text" class="form-control" id="inputId" placeholder="ID" disabled>
                         </div>
-                        <div class="col-sm-8">
+                        
+                        <div class="col-sm-3 me-5">
                             <label for="inputNOME">Nome</label>
-                            <input type="text" class="form-control" Id="inputNOME" required placeholder="Informe o nome do produto">
+                            <input type="text" class="form-control" Id="inputNOME" required
+                                placeholder="Informe o nome do produto" style="width: 280px;">
                         </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="inputCATEGORIA">Categoria</label>
-                            <input type="text" class="form-control" id="inputCATEGORIA" placeholder="Informe a categoria do produto" >
-                        </div>
-                        <div class="col-sm-7">
+                        <script>
+                            const input = document.getElementById('inputNOME');
+                          
+                            input.addEventListener('input', function() {
+                              const maxLength = 20; // Define o limite máximo de caracteres
+                          
+                              if (this.value.length > maxLength) {
+                                this.value = this.value.slice(0, maxLength); // Trunca o valor para o limite máximo de caracteres
+                              }
+                            });
+                          </script>
+
+                        <div class="col-sm-1 me-5">
                             <label for="inputPREÇO">Preço</label>
-                            <input type="PREÇO" class="form-control" id="inputPREÇO" required placeholder="Informe o preço">
+                            <input type="number" class="form-control" id="inputPREÇO" required placeholder="R$ 00.00"
+                                style="width: 95px;">
+
                         </div>
+
+                        <div class="col-sm-1">
+                            <label for="inputQUANTIDADE">Quantidade</label>
+                            <input type="number"  min="1" max="100" class="form-control" id="inputQUANTIDADE" placeholder="Ex:10 "
+                                style="width: 96px;">
+                               
+                                  </div>               
+                                  
+                                   
+                         
                     </div>
                     <div class="form-group row">
-                        <div class="col-sm-6">
-                            <label for="inputQUANTIDADE">Quantidade</label>
-                            <input type="text" class="form-control" id="inputQUANTIDADE" placeholder="Informe a quantidade do produto" >
+                        <div class="col-sm-4">  
+                            <label for="inputCATEGORIA">Categoria</label>
+
+                            <select name="inputCATEGORIA" id="inputCATEGORIA">
+                                <option value="selecione">Selecione a categoria</option>
+                                <option value="Higiene">Higiene</option>
+                                <option value="Aparo">Aparo</option>
+                                <option value="Proteção">Proteção</option>
+                                <option value="Pós limpeza">Pós limpeza</option>
+                            </select>
                         </div>
-                        <div class="col-sm-6">
+                        
+                        <div class="col-sm-8">
                             <label for="inputDESCRIÇÃO">Descrição</label>
-                            <input type="text" class="form-control" id="inputDESCRIÇÃO" required placeholder="Informe a descrição do produto">
+                            <input type="text" class="form-control" id="inputDESCRIÇÃO" required
+                                placeholder="Informe a descrição do produto">
                         </div>
+
+                    </div>
+                    <div class="form-group row">
+
+                        
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-4">
-                            <small>Campos obrigatórios</small>
+                            <small><b>Campos obrigatórios </b></small>
                         </div>
                     </div>
-                    <div class="form-group row">
-                        <div class="col-sm-12">
-                            <input type="button" class="btn btn-dark" id="btnInsert" value="Inserir">
-                            <input type="button" class="btn btn-dark" id="btnUpdate" value="Alterar">
-                            <input type="button" class="btn btn-dark" id="btnDelete" value="Excluir">
-                            <input type="button" class="btn btn-dark" id="btnClear" value="Limpar Form">
-                            <a href="estoque2.html"><input type="button" class="btn btn-dark" id="btnClear" value="Pesquisar produtos"></a>
+                    <div class="form-group row justify-content-center">
+                        <div class="col-sm-12 text-center">
+                            <input type="button" class="btn btn-dark text-black" id="btnInsert" value="Inserir" style="width: 95px; background-color:#F9E6B3 ;">
+                            <input type="button" class="btn btn-dark  text-black" id="btnUpdate" value="Alterar"  style="width: 95px;  background-color: #F9E6B3;">
+                            <input type="button" class="btn btn-dark  text-black" id="btnDelete" value="Excluir"  style="width: 95px;  background-color: #F9E6B3;">
+                            <input type="button" class="btn btn-dark  text-black" id="btnClear" value="Limpar Form" style="width: 125px;  background-color: #F9E6B3;">
+                            <a href="estoque2.html"><input type="button" class="btn btn-dark  text-black" id="btnClear"
+                                    value="Pesquisar produtos" style="width: 175px; background-color: #F9E6B3;"></a>
                         </div>
                     </div>
                 </form>
-        
+
                 <div class="row">
                     <div class="col-sm-12">
                         <table id="grid-produtos" class="table table-striped">
@@ -149,13 +182,13 @@
                     </div>
                 </div>
             </div>
-        
+
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
             <script>
                 function exibeprodutos() {
                     // Remove todas as linhas do corpo da tabela
                     $("#table-produtos").html("");
-            
+
                     // Popula a tabela com os registros do banco de dados
                     for (i = 0; i < db.data.length; i++) {
                         let produto = db.data[i];
@@ -168,7 +201,7 @@
                                                     </tr>`);
                     }
                 }
-            
+
                 function init() {
                     // Adiciona funções para tratar os eventos 
                     $("#btnInsert").click(function () {
@@ -176,8 +209,11 @@
                         if (!$('#form-produto')[0].checkValidity()) {
                             displayMessage("Preencha o formulário corretamente.");
                             return;
+                        } else if ($("#inputCATEGORIA").val() == 'selecione') {
+                            displayMessage("Selecione a categoria.");
+                            return;
                         }
-            
+
                         // Obtém os valores dos campos do formulário
                         let campoNOME = $("#inputNOME").val();
                         let campoCATEGORIA = $("#inputCATEGORIA").val();
@@ -191,16 +227,16 @@
                             QUANTIDADE: campoQUANTIDADE,
                             DESCRIÇÃO: campoDESCRIÇÃO
                         };
-            
+
                         insertproduto(produto);
-            
+
                         // Reexibe os produtos
                         exibeprodutos();
-            
+
                         // Limpa o formulário
                         $("#form-produto")[0].reset();
                     });
-            
+
                     // Intercepta o clique do botão Alterar
                     $("#btnUpdate").click(function () {
                         // Obtém os valores dos campos do formulário
@@ -214,6 +250,7 @@
                         let campoPREÇO = $("#inputPREÇO").val();
                         let campoQUANTIDADE = $("#inputQUANTIDADE").val();
                         let campoDESCRIÇÃO = $("#inputDESCRIÇÃO").val();
+
                         let produto = {
                             NOME: campoNOME,
                             CATEGORIA: campoCATEGORIA,
@@ -221,16 +258,16 @@
                             QUANTIDADE: campoQUANTIDADE,
                             DESCRIÇÃO: campoDESCRIÇÃO
                         };
-            
+
                         updateproduto(parseInt(campoId), produto);
-            
+
                         // Reexibe os produtos
                         exibeprodutos();
-            
+
                         // Limpa o formulário
                         $("#form-produto")[0].reset();
                     });
-            
+
                     // Intercepta o clique do botão Excluir
                     $("#btnDelete").click(function () {
                         let campoId = $("#inputId").val();
@@ -239,19 +276,19 @@
                             return;
                         }
                         deleteproduto(parseInt(campoId));
-            
+
                         // Reexibe os produtos
                         exibeprodutos();
-            
+
                         // Limpa o formulário
                         $("#form-produto")[0].reset();
                     });
-            
+
                     // Intercepta o clique do botão Limpar Formulário
                     $("#btnClear").click(function () {
                         $("#form-produto")[0].reset();
                     });
-            
+
                     // Oculta a mensagem de aviso após alguns segundos
                     $('#msg').bind("DOMSubtreeModified", function () {
                         window.setTimeout(function () {
@@ -260,12 +297,12 @@
                             });
                         }, 5000);
                     });
-            
+
                     // Preenche o formulário quando o usuário clicar em uma linha da tabela 
                     $("#grid-produtos").on("click", "tr", function (e) {
                         let linhaproduto = this;
                         colunas = linhaproduto.querySelectorAll("td");
-            
+
                         $("#inputId").val(colunas[0].innerText);
                         $("#inputNOME").val(colunas[1].innerText);
                         $("#inputCATEGORIA").val(colunas[2].innerText);
@@ -273,70 +310,74 @@
                         $("#inputQUANTIDADE").val(colunas[4].innerText);
                         $("#inputDESCRIÇÃO").val(colunas[5].innerText);
                     });
-            
+
                     exibeprodutos();
                 }
             </script>
-<div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
-    <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
-        <div class="col-md-6 col-lg-3 mt-4">
-            <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
+            <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
+                <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
+                    <div class="col-md-6 col-lg-3 mt-4">
+                        <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
 
-            <i class="fa fa-cc-mastercard " style="font-size:36px; color: #000000;"></i>
-            <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
-            <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
-        </div>
+                        <i class="fa fa-cc-mastercard " style="font-size:36px; color: #000000;"></i>
+                        <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
+                        <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
+                    </div>
 
-        <div class="col-md-6 col-lg-3 mt-4">
-            <h6 class="text-black"><strong>Funcionamento</strong></h6>
-            <p>Segunda à Sexta - 08:00 às 18:00</p>
-            <p>Sábado - 08:00 às 14:00</p>
-            Domingo e Feriado - Fechado
-        </div>
+                    <div class="col-md-6 col-lg-3 mt-4">
+                        <h6 class="text-black"><strong>Funcionamento</strong></h6>
+                        <p>Segunda à Sexta - 08:00 às 18:00</p>
+                        <p>Sábado - 08:00 às 14:00</p>
+                        Domingo e Feriado - Fechado
+                    </div>
 
-        <div class="col-md-6 col-lg-2 mt-4">
-            <h6 class="text-black"><strong>Redes sociais</strong></h6>
-            <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook"
-                    style="color: #000000; font-size:36px"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
-                    style="color: #000000; font-size:36px"></i></a>
-            <a href="https://api.whatsapp.com/send?phone=5531998765432" target="_blank"><i class="fa fa-whatsapp"
-                    style="color: #000000; font-size:36px"></i></a>
-        </div>
+                    <div class="col-md-6 col-lg-2 mt-4">
+                        <h6 class="text-black"><strong>Redes sociais</strong></h6>
+                        <a href="https://pt-br.facebook.com/" target="_blank"><i class="fa fa-facebook"
+                                style="color: #000000; font-size:36px"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="fa fa-instagram"
+                                style="color: #000000; font-size:36px"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5531998765432" target="_blank"><i
+                                class="fa fa-whatsapp" style="color: #000000; font-size:36px"></i></a>
+                    </div>
 
-        <div class="col-md-6 col-lg-3 mt-4 mb-4">
-            <h6 class="text-black"><strong>Entre em produto</strong></h6>
+                    <div class="col-md-6 col-lg-3 mt-4 mb-4">
+                        <h6 class="text-black"><strong>Entre em produto</strong></h6>
 
-            <i class="fa fa-map-marker ps-1 pe-2" style="color: #000000; font-size:22px"></i>Rua Jardins, 57,
-            Savassi, BH
-            <br>
-            <i class="fa fa-envelope mt-2 pe-1" style="font-size:22px; color: #000000;"></i> <a
-                href="mailto:dogsecats@gmail.com">dogsecats@gmail.com</a>
-            <br>
-            <i class="fa fa-phone mt-2 ps-1 pe-2" style="color: #000000; font-size:22px"></i>(31) 3345-9876
-        </div>
-    </div>
-    <footer style="background-color: #f8e2a7; text-align: center;">
-        <i class="fa fa-copyright mb-3" style="font: size 22px; color: #000000;"> <strong> Dogs&amp;Cats - 2023</strong>
-        </i>
-    </footer>
-</div>
-     
-   
-    
-</body>
+                        <i class="fa fa-map-marker ps-1 pe-2" style="color: #000000; font-size:22px"></i>Rua Jardins,
+                        57,
+                        Savassi, BH
+                        <br>
+                        <i class="fa fa-envelope mt-2 pe-1" style="font-size:22px; color: #000000;"></i> <a
+                            href="mailto:dogsecats@gmail.com">dogsecats@gmail.com</a>
+                        <br>
+                        <i class="fa fa-phone mt-2 ps-1 pe-2" style="color: #000000; font-size:22px"></i>(31) 3345-9876
+                    </div>
+                </div>
+                <footer style="background-color: #f8e2a7; text-align: center;">
+                    <i class="fa fa-copyright mb-3" style="font: size 22px; color: #000000;"> <strong> Dogs&amp;Cats -
+                            2023</strong>
+                    </i>
+                </footer>
+            </div>
+
+
+
+        </body>
+
 </html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Cadastro de produto</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    
-    
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cadastro de produto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estoque2.css">
+</head>
+
+
 </body>
 
 </html>
