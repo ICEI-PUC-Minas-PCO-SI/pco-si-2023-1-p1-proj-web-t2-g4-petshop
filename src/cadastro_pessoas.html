@@ -31,38 +31,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
                     <ul class="navbar-nav text-center">
                         <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/home.png" alt="" height="45px">
+                            <a class="nav-link text-black" href="login.html">
+                                <img src="../src/imagens/voltar.png" alt="" height="45px">
                                 <br>
-                                <b>Início</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/livro.png" alt="" height="45px">
-                                <br>
-                                <b>Agenda</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="../src/imagens/pata.png" alt="" height="45px">
-                                <br>
-                                <b>Pets</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/usuario.png" alt="" height="45px">
-                                <br>
-                                <b>Perfil</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/sair.png" alt="" height="45px">
-                                <br>
-                                <b>Sair</b>
+                                <b>Voltar</b>
                             </a>
                         </li>
                     </ul>
@@ -74,10 +46,10 @@
 
     <!--Início main-->
     <main>
-        <section>
-            <div class="containerForm">
+        <section class="flex-row">
+            <div class="containerForm row">
                 <h1>Criar uma conta é rápido, fácil e gratuito!</h1>
-                <form action="" id="formCriarConta">
+                <form action="" name="cadastroFisico" id="formCriarConta">
                     <fieldset id="fieldsetPessoaFis" style="display: flex; justify-content: space-around;">
                         <div
                             style="display: flex; flex-direction: column; justify-content: start; align-items: center; gap: 1em; ">
@@ -93,31 +65,40 @@
                         <div id="form-pessoa-fisica" style="display: flex;">
                             <div class="containerInputs">
                                 <label for="nome">
-                                    Nome completo:
+                                    * Nome completo:
                                     <br>
-                                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome completo"
-                                        required>
+                                    <!--add validação de nome-->
+                                    <input type="text" name="nome" class="nome" id="nome" placeholder="Digite seu nome completo"
+                                       onblur="validarNome()" required>
+                                    <p class="mensagemErro" id="erro-nome"></p>
                                 </label>
+                                
                                 <label for="email">
-                                    E-mail:
+                                   * E-mail: 
                                     <br>
-                                    <input type="email" name="email" id="email" placeholder="Digite seu e-mail"
-                                        required>
+                                    <!--começando parte de validação do input email-->
+                                    <input type="email" name="email" class="email" id="email" placeholder="Digite seu e-mail"
+                                       onblur="validarEmail(cadastroFisico.email)" required>
+                                    <p class="mensagemErro" id="erro-email"></p>
                                 </label>
                                 <label for="celular">
-                                    Celular:
+                                   * Celular:
                                     <br>
-                                    <input type="tel" name="celular" id="celular" placeholder="DDD + Celular" required>
+                                    <!--começando parte de validação do input celular-->
+                                    <input type="tel" name="celular" class="celular" id="celular" placeholder="(XX) XXXXX-XXXX" 
+                                    onblur="validarCelular(cadastroFisico.celular)" required>
+                                    <p class="mensagemErro" id="erro-celular"></p>
                                 </label>
                                 <label for="telefone">
                                     Telefone (opcional):
                                     <br>
-                                    <input type="tel" name="telefone" id="telefone" placeholder="DDD + Telefone">
+                                    <input type="tel" name="telefone" class="telefone" id="telefone" oninput="validarTelefone(cadastroFisico.telefone)" placeholder="Telefone">
+                                    <p class="mensagemErro" id="erro-telefone"></p> 
                                 </label>
                                 <label for="genero">
                                     Gênero:
                                     <br>
-                                    <select name="genero" id="">
+                                    <select name="genero" id="genero">
                                         <option value="masculino">Masculino</option>
                                         <option value="feminino">Feminino</option>
                                         <option value="naoinformar">Não informar</option>
@@ -126,42 +107,46 @@
                             </div>
                             <div class="containerInputs">
                                 <label for="data">
-                                    Data de nascimento:
+                                   * Data de nascimento:
                                     <br>
+                                    <!--começando parte de validação de data de nascimento-->
                                     <input type="date" name="data" id="data" placeholder="Insira sua data de nascimento"
-                                        required>
+                                        onblur="validarNascimento()" required>
+                                    <p class="mensagemErro" id="erro-nascimento"></p>
                                 </label>
                                 <label for="cpf">
-                                    CPF/CNPJ:
+                                    * CPF:
                                     <br>
-                                    <input type="text" name="cpf" id="cpf" placeholder="Digite seu CPF/CNPJ"
-                                        pattern="^(\d{3}\.?\d{3}\.?\d{3}-?\d{2}|\d{2}\.?\d{3}\.?\d{3}/?\d{4}-?\d{2})$"
-                                        required>
+                                    <input type="text" name="cpf" class="cpf" id="cpf" placeholder="Digite seu CPF"
+                                     maxlength="14" onblur="validarCPF(cadastroFisico.cpf)" required>
+                                    <p class="mensagemErro" id="erro-cpf"></p>    
                                 </label>
                                 <label for="senha">
-                                    Senha:
+                                    * Senha:
                                     <br>
-                                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha"
-                                        minlength="8" pattern="(?=.*\d.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <input type="password" name="senha" class="senha" id="senha" placeholder="Digite sua senha" 
+                                    onblur="validarSenha(this)" required>
+                                    <p class="mensagemErro" id="erro-senha"></p>
                                 </label>
                                 <label for="confirmarSenha">
-                                    Confirme sua senha:
+                                    * Confirme sua senha:
                                     <br>
-                                    <input type="password" name="confirmarSenha" id="confirmarSenha"
-                                        placeholder="Confirmar senha" required>
+                                    <input type="password" name="confirmarSenha" class="confirmarSenha" id="confirmarSenha"
+                                        placeholder="Confirmar senha" onblur="confirmaSenha(cadastroFisico.confirmarSenha)" required>
+                                    <p class="mensagemErro" id="erro-confirmacao"></p>
                                 </label>
                                 <label for="termos" style="display: flex; justify-content: center; gap: 5px;">
                                     <input type="checkbox" name="termos" id="termos" required>
-                                    Eu li e concordo com os <a href="#">termos e condições</a>.
+                                   * Eu li e concordo com os <a href="#">termos e condições</a>.
                                 </label>
-                                <button type="button" class="criarconta" id="BtnCriarContaFisica"
+                                <button type="button" class="criarConta" id="btnCriarContaFisica"
                                     title="Criar minha conta">Cadastrar</button>
                             </div>
                         </div>
                     </fieldset>
                 </form>
                 <!--começando o codigo de pessoa juridica-->
-                <form action="" id="CriarContaJuridica">
+                <form action="GET" id="CriarContaJuridica" name="cadastroJuridico">
                     <fieldset id="fieldsetPessoaJur"
                         style="display: flex; justify-content: space-around; display: none;">
                         <div
@@ -183,39 +168,45 @@
                                 <label for="razao-social">
                                     Razão social:
                                     <br>
-                                    <input type="text" name="nome-juridica" id="nome-juridica"
-                                        placeholder="Digite a razão social" required>
+                                    <input type="text" name="nome-juridica" class="nome" id="nome-juridica"
+                                        placeholder="Digite a razão social" onblur="validarRazao()" required>
+                                    <p class="mensagemErro" id="erro-razaoSocial"></p>
                                 </label>
                                 <label for="email">
                                     E-mail:
                                     <br>
-                                    <input type="email" name="email-juridica" id="email-juridica"
-                                        placeholder="Digite seu e-mail" required>
+                                    <input type="email" name="email-juridica" class="email" id="email-juridica"
+                                        placeholder="Digite seu e-mail" onblur="validarEmailJuridico(this)" required>
+                                    <p class="mensagemErro" id="erro-emailJuridico"></p>
                                 </label>
                                 <label for="celular">
                                     Celular:
                                     <br>
-                                    <input type="tel" name="celular-juridica" id="celular-juridica"
-                                        placeholder="DDD + Celular" required>
+                                    <input type="tel" name="celular-juridica" class="celular" id="celular-juridica"
+                                        placeholder="(XX) XXXXX-XXXX" onblur="validarCelularJuridico(this)" required>
+                                    <p class="mensagemErro" id="erro-celularJuridico"></p>    
                                 </label>
                                 <label for="telefone">
                                     Telefone (opcional):
                                     <br>
-                                    <input type="tel" name="telefone-juridica" id="telefone-juridica"
-                                        placeholder="DDD + Telefone">
+                                    <input type="tel" name="telefone-juridica" class="telefone" id="telefone-juridica"
+                                        placeholder="DDD + Telefone" oninput="validarTelefoneJuridico(this)">
+                                    <p class="mensagemErro" id="erro-telefoneJuridico"></p>
                                 </label>
                                 <label for="nome-contato">
-                                    Nome do contato (opcional):
+                                    Nome completo do contato (opcional):
                                     <br>
                                     <input type="text" name="nome-contato" id="nome-contato"
-                                        placeholder="Digite o nome do contato">
+                                        placeholder="Digite o nome do contato" oninput="validarNomeContato()" >
+                                    <p class="mensagemErro" id="erro-nomeContato"></p>
                                 </label>
                             </div>
                             <div class="containerInputs">
                                 <label for="cnpj">
                                     CNPJ:
                                     <br>
-                                    <input type="text" name="cnpj" id="cnpj" placeholder="CNPJ">
+                                    <input type="text" name="cnpj" class="cpf" id="cnpj" placeholder="CNPJ" onblur="validarCNPJ(this)">
+                                    <p class="mensagemErro" id="erro-cnpj"></p>
                                 </label>
                                 <div style="display: flex; width: 90%; align-items:center;">
                                     <label for="isentoIE" style="width: 30%;">
@@ -226,7 +217,8 @@
                                         Inscrição Estadual:
                                         <br>
                                         <input type="text" name="inscricao-estadual" id="inscricao-estadual"
-                                            placeholder="Inscrição Estadual" required>
+                                            placeholder="Inscrição Estadual" oninput="validarIE(this)" required>
+                                        <p class="mensagemErro" id="erro-IE"></p>
                                     </label>
                                     <label for="estado-inscricao" style="width: 30%;">
                                         Estado da IE:
@@ -266,21 +258,22 @@
                                 <label for="senha">
                                     Senha:
                                     <br>
-                                    <input type="password" name="senha-juridica" id="senha-juridica"
-                                        placeholder="Digite sua senha" minlength="8"
-                                        pattern="(?=.*\d.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                                    <input type="password" name="senha-juridica" class="senha" id="senha-juridica"
+                                        placeholder="Digite sua senha" onblur="validarSenhaJuridica(this)" required>
+                                    <p class="mensagemErro" id="erro-SenhaJuridica"></p>
                                 </label>
                                 <label for="confirmarSenha">
                                     Confirme sua senha:
                                     <br>
-                                    <input type="password" name="confirmarSenha-juridica" id="confirmarSenha-juridica"
-                                        placeholder="Confirmar senha" required>
+                                    <input type="password" name="confirmarSenha-juridica" class="confirmarSenha" id="confirmarSenha-juridica"
+                                        placeholder="Confirmar senha" onblur="confirmaSenhaJuridica(this)" required>
+                                    <p class="mensagemErro" id="erro-confirmaSenhaJuridica"></p>
                                 </label>
                                 <label for="termos-juridica" style="display: flex; justify-content: center; gap: 5px;">
                                     <input type="checkbox" name="termos-juridica" id="termos-juridica" required>
-                                    Eu li e concordo com os <a href="#">termos e condições</a>.
+                                    * Eu li e concordo com os <a href="#">termos e condições</a>.
                                 </label>
-                                <button type="button" class="criarconta" id="BtnCriarContaJuridica"
+                                <button type="button" class="criarConta" id="btnCriarContaJuridica"
                                     title="Criar minha conta">Cadastrar</button>
                             </div>
                         </div>
@@ -306,7 +299,6 @@
         <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
             <div class="col-md-6 col-lg-3 mt-4">
                 <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
-
                 <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
                 <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
                 <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
@@ -350,6 +342,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="funcoesLogin.js"></script>
     <script src="cadastro_pessoas.js"></script>
 </body>
 

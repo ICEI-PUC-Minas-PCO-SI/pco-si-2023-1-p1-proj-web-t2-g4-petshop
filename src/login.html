@@ -19,6 +19,13 @@
 </head>
 
 <body>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
     <!--Início header-->
     <header>
         <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
@@ -28,46 +35,16 @@
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                    <ul class="navbar-nav text-center">
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/home.png" alt="" height="45px">
-                                <br>
-                                <b>Início</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/livro.png" alt="" height="45px">
-                                <br>
-                                <b>Agenda</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                <img src="../src/imagens/pata.png" alt="" height="45px">
-                                <br>
-                                <b>Pets</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/usuario.png" alt="" height="45px">
-                                <br>
-                                <b>Perfil</b>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-black" href="#">
-                                <img src="../src/imagens/sair.png" alt="" height="45px">
-                                <br>
-                                <b>Sair</b>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link text-black" href="index.html">
+                        <img src="../src/imagens/voltar.png" alt="" height="45px">
+                        <br>
+                        <b>Voltar</b>
+                    </a>
+                </li>
+            </ul>
         </nav>
     </header>
     <!--Fim header-->
@@ -84,46 +61,108 @@
                         gerenciar a sua Assinatura Petz e <strong> muito mais!</strong>
                     </p>
                     <hr style="width: 30em;">
-                    <button type="submit" class="criarconta" id="criar-conta-btn" title="Criar minha conta"
-                        onclick="window.location.href = '/src/cadastro_pessoas.html'">Criar minha conta</button>
+                    <button type="submit" onclick="window.location.href = 'cadastro_pessoas.html' " class="criarconta"
+                        id="criar-conta-btn" title="Criar minha conta">Criar minha conta</button>
                 </section>
             </div>
             <div class="containersections col-sm-12 col-md-6">
                 <section class="sectionmain" id="sectionAcessarConta">
                     <p> <strong> Acesse sua conta</strong></p>
-                    <button class="entrarfacebook" title="Entrar com Facebook" onclick="loginFacebook()">
-                        <span> Entrar com Facebook</span>
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                            <path
-                                d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z" />
-                        </svg>
-                    </button>
                     <hr style="width: 25em;">
-                    <p> <strong> Insira seu e-mail ou CPF/CNPJ</strong></p>
-                    <input class="inscricao" type="text" id="dadosUsuario" autocomplete="email"
-                        title="Email ou CPF/CNPJ" placeholder="Digite seu e-mail ou CPF/CNPJ">
+                    <p> <strong> Insira o e-mail cadastrado</strong></p>
+                    <form action="" method="get" id="formLogin">
+                        <input class="inscricao" type="text" id="dadosUsuario" autocomplete="email"
+                            title="Digite o Email" placeholder="Digite seu e-mail">
 
-                    <p style="margin-top: 17px;"><strong>Senha</strong></p>
-                    <input class="inscricao" type="password" id="senha" autocomplete="new-password" title="Senha"
-                        placeholder="Digite sua senha">
-                    <button type="submit" class="botaoEntrar" title="Entrar">Entrar</button>
+                        <p style="margin-top: 17px;"><strong>Senha</strong></p>
+                        <input class="inscricao" type="password" id="senha" autocomplete="new-password" title="Senha"
+                            placeholder="Digite sua senha">
+                        <br>
+
+                        <!--COMEÇANDO PARTE DO MODAL DE RECUP. DE SENHA-->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Recuperar Senha
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Insira os dados da conta
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="width: 100%;">
+                                        <p><strong>Atenção: os dados deverão ser idênticos aos que foram cadastrados!</strong></p>
+                                        <form action="" style="width: 100%;">
+                                            <div class="m-2">
+                                                <label for="nome">
+                                                    * Nome completo ou Razão social cadastrado:
+                                                    <br>
+                                                    <input type="text" name="nome" class="nome" id="nomeRecup"
+                                                        placeholder="Nome completo cadastrado" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                            <div class="m-2">
+                                                <label for="email">
+                                                    * E-mail cadastrado:
+                                                    <br>
+                                                    <input type="email" name="email" class="email" id="emailRecup"
+                                                        placeholder="E-mail cadastrado" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                            <div class="m-2">
+                                                <label for="data">
+                                                    * Celular cadastrado:
+                                                    <br>
+                                                    <input type="tel" name="celular" id="celularRecup"
+                                                        placeholder="Celular cadastrado" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                            <div class="m-2">
+                                                <label for="cpf">
+                                                    * CPF/ CNPJ cadastrado:
+                                                    <br>
+                                                    <input type="text" name="cpf" class="cpf" id="cpf"
+                                                        placeholder="CPF/ CNPJ cadastrado" maxlength="20" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="prosseguirRecupSenha" onclick="verificarUsuario()">Prosseguir</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--TERMINANDO PARTE DO MODAL DE RECUP. DE SENHA-->
+
+                        <button type="submit" class="botaoEntrar" title="Entrar" id="entrar"
+                            form="formLogin">Entrar</button>
+                    </form>
+
                 </section>
             </div>
         </div>
     </main>
     <!--Fim main-->
 
-    <!--Início aside-->
-    <aside></aside>
-    <!--Fim aside-->
-
     <!--Início footer-->
     <div class="container-fluid" style="background-color: #F9E6B3;" id="rodape">
         <div class="row mt-5 ms-5 justify-content-center " id="rodape2">
             <div class="col-md-6 col-lg-3 mt-4">
                 <h6 class="text-black"><strong>Métodos de pagamento</strong></h6>
-
                 <i class="fa fa-cc-mastercard" style="font-size:36px; color: #000000;"></i>
                 <i class="fa fa-cc-visa" style="font-size:36px; color: #000000;"></i>
                 <i class="fa fa-money" style="font-size:36px; color: #000000;"></i>
@@ -164,10 +203,13 @@
         </footer>
     </div>
     <!--Fim footer-->
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="funcoesLogin.js"></script>
     <script src="login.js"></script>
 </body>
 
