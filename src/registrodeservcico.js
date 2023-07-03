@@ -14,6 +14,13 @@ function popularVetor(dados) {
   }
   Exibir();
 }
+function popularVetor(dados) {
+  bancoServ = [];
+  for (var index = 0; index < dados.length; index++) {
+    bancoServ.push(dados[index]);
+  }
+  Exibir();
+}
 
 
 
@@ -70,10 +77,10 @@ function Exibir() {
   
   if (cards == '') {
     document.querySelector("#alert").innerHTML = `<h3 class="text-center mt-5"><b>Nenhum serviço cadastrado !</b></h3>`;
-    cardsContainer.classList.add("animate__animated", "animate__bounce", "animate__infinite");
+    cardsContainer.classList.add("animate_animated", "animatebounce", "animate_infinite");
   } else {
     cardsContainer.innerHTML = cards;
-    cardsContainer.classList.remove("animate__animated", "animate__bounce", "animate__infinite");
+    cardsContainer.classList.remove("animate_animated", "animatebounce", "animate_infinite");
   }
 
 
@@ -124,7 +131,40 @@ function cadastroServ() {
   var observacao = document.getElementById("observacao").value;
   var preco = document.getElementById("preco").value;
 
-var idveri = verificarID(id);
+
+
+
+  var idveri = verificarID(id);
+
+  // Verificar se o número é maior que 0
+  if (parseInt(id) <= 0) {
+    Swal.fire(
+      'Erro',
+      'O número deve ser maior que 0.',
+      'error'
+    );
+    return; // Encerrar a função caso a validação falhe
+  }
+
+
+
+  // Verificar se o preço é um número maior que 0
+  if (parseFloat(preco) <= 0) {
+    Swal.fire(
+      'Erro',
+      'O preço deve ser um número maior que 0.',
+      'error'
+    );
+    return; // Encerrar a função caso a validação falhe
+  }
+
+// Verificar se todos os campos foram preenchidos
+if (id === '' || servic === '' || observacao === '' || preco === '') {
+  AlertPreencher();
+  return; // Encerrar a função caso a validação falhe
+}
+
+
   if (id == '' || servic == '' || observacao == '' || preco == '') {
     AlertPreencher();
   }else if(idveri){
@@ -220,11 +260,10 @@ function AlertExcluir(index) {
 
 function excluirServ(id) {
 
-fetch(`${URL}/${id}`,{
-  method: 'DELETE',
-}) 
-.then(res => res.json())
-.then(() => location.reload());
+  
+    bancoPets.splice(id, 1);
+    localStorage.setItem("BancoPets", JSON.stringify(bancoPets));
+
 
 
 }
@@ -236,7 +275,53 @@ function Editar() {
   var observEdit = document.getElementById("altobs").value;
   var precoEdit = document.getElementById("altpreco").value;
 
-  
+     // Verificar se o id é um número maior que zero
+  if (parseInt(pegarID) <= 0) {
+    Swal.fire(
+      'Erro',
+      'O número do ID deve ser maior que zero.',
+      'error'
+    );
+    return; // Encerrar a função caso a validação falhe
+  }
+
+
+  // Verificar se o preço é um número maior que zero
+  if (parseFloat(precoEdit) <= 0) {
+    Swal.fire(
+      'Erro',
+      'O preço deve ser um número maior que zero.',
+      'error'
+    );
+    return; // Encerrar a função caso a validação falhe
+  }
+
+  // Verificar se todos os campos foram preenchidos
+  if (servEdit === '' || observEdit === '' || precoEdit === '') {
+    AlertPreencher();
+    return; // Encerrar a função caso a validação falhe
+  }
+
+  const servicoedit = JSON.stringify({
+    id: pegarID,
+    servico: servEdit,
+    preco: precoEdit,
+    obs: observEdit
+  });
+
+  fetch(`${URL}/${pegarID}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: servicoedit
+    })
+    .then(res => res.json())
+    .then(() => {
+      AlertSucesso("Editar");
+      $('#edit').modal('hide');
+    });
+
 
 
   if (servEdit == '' || observEdit == '' || precoEdit == '') {

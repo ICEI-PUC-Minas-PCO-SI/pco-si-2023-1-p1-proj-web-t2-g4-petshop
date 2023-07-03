@@ -164,6 +164,3 @@ function insertproduto(Produto) {
     // Atualiza os dados no Local Storage
      localStorage.setItem('db_estoque', JSON.stringify(db));
  }
-
-
-
