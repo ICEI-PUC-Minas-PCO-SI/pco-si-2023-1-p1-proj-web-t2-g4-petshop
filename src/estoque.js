@@ -138,7 +138,7 @@ function insertproduto(Produto) {
      let index = db.data.map(obj => obj.Id).indexOf(Id);
  
      // Altera os dados do objeto no array
-     db.data[index].Nome = produto.NOME,
+     db.data[index].NOME = produto.NOME,
      db.data[index].CATEGORIA = produto.CATEGORIA,
      db.data[index].PREÇO = produto.PREÇO,
      db.data[index].QUANTIDADE = produto.QUANTIDADE,
