@@ -8,116 +8,110 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   </head>
-  
-<link rel="stylesheet" href="rg2.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="shortcut icon" href="../src/imagens/Logo_sem_fundo.png" type="image/x-icon">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="rg2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="shortcut icon" href="../src/imagens/Logo_sem_fundo.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
   <title>Registro de Serviço</title>
 </head>
 
 <body>
-  
-<script src="sair.js"></script>
+
+  <script src="sair.js"></script>
   <!-- Modal editar -->
-    <div class="modal" tabindex="-1" id="edit">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Editar Dados de Registro</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body float-center">
-
-
-            <label for="escolha" class="pe-2  pb-4"><b>Tipo de Serviço:</b></label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Altescolha"  value="Banho" />
-              <label class="form-check-label" for="Radio1">Banho\Tosa</label>
-            </div>
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="Altescolha"  value="Veterinário" />
-              <label class="form-check-label" for="Radio2">Atendimento veterinário</label>
-            </div>
-            <br>
-
-            <label for="name" class="pe-2  pb-4 mt-5"><b>Funcionário:</b></label><input type="text" name="Nome" id="altname" placeholder="Digite o nome do Funcionário.">
-            <br>
-
-            <label for="text" class="pe-2  pb-4 mt-4"><b>Preço:</b></label><input type="text" name="altpreco" id="altpreco" placeholder="Digite o preco.">
-
-            <br>
-          
-            <label for="observacao" class="pe-2 pb-4 mt-4 align-top"><b>Observações:</b></label>
-            <textarea name="observacao" id="altobs" class="align-top" placeholder="Digite as Observações."></textarea>
-
-            
-          
+  <div class="modal" tabindex="-1" id="edit">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Dados de Serviço</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-         
-          <div class="modal-footer">
-            <input type="text" id="cofreBanco" style = "visibility: hidden;">
-           <button type="button" class="btn btn-success" onclick="Editar()">Salvar</button>
-          </div>
+        <div class="modal-body float-center">
+
+          <label for="number"><b>Código:</b></label>
+          <input type="number" id="cofreBanco" disabled>
+
+          <br>
+          <label for="escolha" class="mt-5"><b>Tipo de Serviço:</b></label>
+          <input type="text" id="altserv" />
+
+          <br>
+
+          <label for="text" class="mt-5"><b>Preço:</b></label>
+          <input type="text" name="altpreco" id="altpreco">
+
+          <br>
+
+          <label for="Idade" class="mt-5"><b>Observações:</b></label>
+
+          <center><textarea  cols="50" rows="5" name="observacaoo" id="altobs"></textarea></center>
+
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button type="button" class="btn btn-success" onclick="Editar()">Salvar</button>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- Modal Cadastrar -->
-    
-    <div class="modal fade" tabindex="-1" id="Cadastro" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title"><b>Registrar Serviço</b></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body float-center" >
+  <!-- Modal Cadastrar -->
 
-          <label for="escolha" class="pe-2  pb-4"><b>Tipo de Serviço:</b></label>
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="escolha" id="inlineRadio1" value="Banho" checked/>
-              <label class="form-check-label" for="inlineRadio1">banho\Tosa</label>
-            </div>
-            
-            <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="escolha" id="inlineRadio2" value="Veterinário" />
-              <label class="form-check-label" for="inlineRadio2">Atendimento Veterinário</label>
-            </div>
-            <br>
-  
-            <label for="name" class="pe-2  pb-4 mt-5"><b>Funcionário:</b></label><input type="text" name="Nome" id="name" placeholder="Digite o nome do Funcionário." required>
-         
-           <br>
-           <label for="Idade" class="pe-2  pb-4 mt-4"><b>Preço:</b></label>
-         <input type="number" name="pre" id="preco" placeholder="Digite o Preço." required>
-         
-         <br>
+  <div class="modal fade" tabindex="-1" id="Cadastro" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"><b>Registrar Serviço</b></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body float-center">
 
-           <label for="Idade" class="pe-2  pb-4 mt-4"><b>Observações:</b></label>
-         <input type="text" name="obs" id="observacao" placeholder="Digite as Observações." required>
-         
-  
-          </div>
-         
-          <div class="modal-footer">
-           <button type="button" class="btn btn-primary" onclick = "cadastroPet()">Registrar</button>
-          </div>
+
+          <label for="number" class=""><b>Código:</b></label>
+          <input type="number" id="id" placeholder="Ex: 2" required>
+
+
+          <br>
+          <label for="escolha" class="mt-5"><b>Tipo de Serviço:</b></label>
+          <input type="text" id="serv" placeholder="Digite o nome do serviço." required>
+
+
+          <br>
+          <label for="Idade" class="mt-5"><b>Preço:</b></label>
+          <input type="number" name="pre" id="preco" placeholder="Ex: 50.00" required>
+
+          <br>
+
+          <label for="Idade" class="mt-5"><b>Observações:</b></label>
+          <br>
+
+          <center><textarea name="obs" cols="50" rows="5" id="observacao" placeholder="Digite as observações."
+              required></textarea> </center>
+
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="cadastroServ()">Registrar</button>
         </div>
       </div>
     </div>
-  
-  
-  
+  </div>
 
-  
-    <!-- NAVBAR -->
+
+
+
+
+  <!-- NAVBAR -->
 
   <nav class="navbar navbar-expand-sm px-4 py-0" style="background-color: #F9E6B3;">
     <div class="container-fluid">
@@ -128,76 +122,94 @@
       <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
         <ul class="navbar-nav text-center">
           <li class="nav-item">
-              <a class="nav-link text-black " href="./HomeAdm.html">
-                  <img src="../src/imagens/home.png" alt="" height="45px">
-                  <br>
-                  <b>Início</b>
-              </a>
+            <a class="nav-link text-black " href="./HomeAdm.html">
+              <img src="../src/imagens/home.png" alt="" height="45px">
+              <br>
+              <b>Início</b>
+            </a>
+          </li>
+
+          
+          <li class="nav-item">
+            <a class="nav-link text-black" href="listadeagenda.html">
+              <img src="../src/imagens/produtos.png" alt="" height="45px">
+              <br>
+              <b>Agenda</b>
+            </a>
+          </li>
+         
+          <li class="nav-item">
+            <a class="nav-link text-black" href="./estoque.html">
+              <img src="../src/imagens/estoque.png" alt="" height="45px">
+              <br>
+              <b>Estoque</b>
+            </a>
+          </li>
           </li>
           <li class="nav-item">
-              <a class="nav-link text-black" href="./registro-de-produtos.html">
-                  <img src="../src/imagens/produtos.png" alt="" height="45px">
-                  <br>
-                  <b>Produtos</b>
-              </a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link text-black" href="./estoque2.html">
-                  <img src="../src/imagens/estoque.png" alt="" height="45px">
-                  <br>
-                  <b>Estoque</b>
-              </a>
-          </li>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link " href="registrodeserv2.html">
+            <a class="nav-link " href="registrodeserv2.html">
               <img src="../src/imagens/livro.png" alt="" height="45px">
               <br>
               <b>Serviços</b>
-          </a>
-      </li>
-          <li class="nav-item">
-              <a class="nav-link text-black" href="#" onclick="sair()">
-                  <img src="../src/imagens/sair.png" alt="" height="45px">
-                  <br>
-                  <b>Sair</b>
-              </a>
+            </a>
           </li>
-      </ul>
+          <li class="nav-item">
+            <a class="nav-link text-black" href="#" onclick="sair()">
+              <img src="../src/imagens/sair.png" alt="" height="45px">
+              <br>
+              <b>Sair</b>
+            </a>
+          </li>
+        </ul>
       </div>
 
     </div>
 
-    
+
   </nav>
 
-  
 
 
-<main>
-  <div class="container-fluid" id="content">
-    <div class="row justify-content-center pt-3">
-      <div class="col-md-4 text-center">
-        <button type="button" class="btn mt-1 " data-bs-toggle="modal" data-bs-target="#Cadastro" id="mcadas" style="background-color: #f9e6d3;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-      <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path>
-      </svg>
-          <b>Registrar novo serviço</b>
-        </button>
+
+  <main>
+    <div class="container-fluid" id="content">
+      <div class="row justify-content-center pt-3">
+        <div class="col-md-4 text-center">
+          <button type="button" class="btn mt-1 " data-bs-toggle="modal" data-bs-target="#Cadastro" id="mcadas"
+            style="background-color: #f9e6d3;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill"
+              viewBox="0 0 16 16">
+              <path
+                d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z">
+              </path>
+            </svg>
+            <b>Registrar novo serviço</b>
+          </button>
+        </div>
       </div>
+      <div class="row mt-4 justify-content-center">
+        <div class="col-11" id="alert">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width=2%>Código</th>
+                        <th width=8%>Serviço</th>
+                        <th width=5%>Preço</th>
+                        <th width=25%>Observações</th>
+                        <th width=10%>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id='servico-list'>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="row justify-content-center pt-4" id="Cards">
-
-    
     </div>
-  </div>
-</main>
+  </main>
 
 
-  
 
 
-    
 
 
 
@@ -310,10 +322,12 @@
 
 
 
-  
 
 
- 
+
+
+
+
 
   <!-- footer -->
 
@@ -365,17 +379,16 @@
       <i class="fa fa-copyright" style="font: size 22px; color: #000000;"> <strong> Dogs&Cats - 2023</strong></i>
     </footer>
   </div>
-  <script src ="registrodeservcico.js"></script>
+  <script src="registrodeservcico.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
     crossorigin="anonymous"></script>
-  
+
 </body>
 
 
 </html>
-
-
-
