@@ -139,15 +139,7 @@ function cadastroServ() {
     return; // Encerrar a função caso a validação falhe
   }
 
-  // Verificar se o nome do serviço contém apenas letras
-  if (!/^[a-zA-Z]+$/.test(servic)) {
-    Swal.fire(
-      'Erro',
-      'O nome do serviço deve conter apenas letras.',
-      'error'
-    );
-    return; // Encerrar a função caso a validação falhe
-  }
+
 
   // Verificar se o preço é um número maior que 0
   if (parseFloat(preco) <= 0) {
