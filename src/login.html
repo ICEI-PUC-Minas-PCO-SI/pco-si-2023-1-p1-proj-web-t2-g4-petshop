@@ -72,34 +72,86 @@
                     <p> <strong> Insira o e-mail cadastrado</strong></p>
                     <form action="" method="get" id="formLogin">
                         <input class="inscricao" type="text" id="dadosUsuario" autocomplete="email"
-                            title="Digite o Email" placeholder="Digite seu e-mail" required>
+                            title="Digite o Email" placeholder="Digite seu e-mail">
 
                         <p style="margin-top: 17px;"><strong>Senha</strong></p>
                         <input class="inscricao" type="password" id="senha" autocomplete="new-password" title="Senha"
-                            placeholder="Digite sua senha" required>
-                        <button type="submit" class="botaoEntrar" title="Entrar" id="entrar"
-                            form="formLogin">Entrar</button>
-                    </form>
-                    <!--COMEÇANDO PARTE DE RECUPERAÇÃO DE SENHAS-->
-                    <div class="modal" tabindex="-1">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Modal body text goes here.</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                            placeholder="Digite sua senha">
+                        <br>
+
+                        <!--COMEÇANDO PARTE DO MODAL DE RECUP. DE SENHA-->
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Recuperar Senha
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Insira os dados da conta
+                                        </h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="width: 100%;">
+                                        <p><strong>Atenção: os dados deverão ser idênticos aos que foram cadastrados!</strong></p>
+                                        <form action="" style="width: 100%;">
+                                            <div class="m-2">
+                                                <label for="nome">
+                                                    * Nome completo ou Razão social cadastrado:
+                                                    <br>
+                                                    <input type="text" name="nome" class="nome" id="nomeRecup"
+                                                        placeholder="Nome completo cadastrado" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                            <div class="m-2">
+                                                <label for="email">
+                                                    * E-mail cadastrado:
+                                                    <br>
+                                                    <input type="email" name="email" class="email" id="emailRecup"
+                                                        placeholder="E-mail cadastrado" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                            <div class="m-2">
+                                                <label for="data">
+                                                    * Celular cadastrado:
+                                                    <br>
+                                                    <input type="tel" name="celular" id="celularRecup"
+                                                        placeholder="Celular cadastrado" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                            <div class="m-2">
+                                                <label for="cpf">
+                                                    * CPF/ CNPJ cadastrado:
+                                                    <br>
+                                                    <input type="text" name="cpf" class="cpf" id="cpf"
+                                                        placeholder="CPF/ CNPJ cadastrado" maxlength="20" required
+                                                        style="border-color: rgba(127, 178, 241, 0.567);">
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary" id="prosseguirRecupSenha" onclick="verificarUsuario()">Prosseguir</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <!--TERMINANDO PARTE DO MODAL DE RECUP. DE SENHA-->
+
+                        <button type="submit" class="botaoEntrar" title="Entrar" id="entrar"
+                            form="formLogin">Entrar</button>
+                    </form>
+
                 </section>
             </div>
         </div>

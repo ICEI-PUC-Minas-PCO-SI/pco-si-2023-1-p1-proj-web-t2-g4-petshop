@@ -119,7 +119,7 @@ function validarCelular(field) {
     return true;
   } else {
     celularInput.style.border = '2px solid red';
-    mensagemErro.textContent = 'Nº de celular inválido.';
+    mensagemErro.textContent = 'Nº de celular inválido. Atente-se ao formato.';
     return false;
   }
 }
@@ -310,7 +310,7 @@ function salvaLogin(event) {
 
   // validando data de nascimento antes de prosseguir com o cadastro (FEITO)
   if (!validarNascimento()) {
-    alert('Por favor, preencha sua data de nascimento corretamente.');
+    alert('Por favor, preencha sua data de nascimento corretamente. O usuário deve ser maior de 18 anos.');
     return; // Interrompe o cadastro
   }
 
