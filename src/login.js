@@ -26,7 +26,7 @@ function processaFormLogin(event) {
             window.location.href = 'home.html';
         }
         else if (usuario.hasOwnProperty('cnpj')) {
-            window.location.href = 'HomeAdm.html';
+            window.location.href = 'index.html';
         }
     }
     else {
