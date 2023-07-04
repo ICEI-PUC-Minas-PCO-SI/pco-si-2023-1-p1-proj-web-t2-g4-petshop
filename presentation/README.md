@@ -2,8 +2,9 @@
 
 ## Título do Projeto
 > Dogs&Cats
+[Apresentação Final - TIAW (2).pdf](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g4-petshop/files/11943822/Apresentacao.Final.-.TIAW.2.pdf)
 
-[Apresentação Final - TIAW.pdf](https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2023-1-p1-proj-web-t2-g4-petshop/files/11943734/Apresentacao.Final.-.TIAW.pdf)
+
 
 
 ## Vídeo de demonstração
