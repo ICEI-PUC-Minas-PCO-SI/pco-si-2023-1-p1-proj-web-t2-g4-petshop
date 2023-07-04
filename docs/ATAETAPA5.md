@@ -6,3 +6,6 @@
 
 # Erick Fabricio Rodrigues Ribeiro
 >-  Eu contribuí nesta última etapa, a princípio, corrigindo erros básicos informados pelo nosso professor para a finalização do nosso projeto, visando um melhor uso para o usuário e administrador. Além disso, eu e Gabriel Paiva implementamos o server JSON  promovendo uma grande mudança e aprimoramento do nosso projeto. Também, estou sempre participando e colaborando com nossas reuniões para tomada de decisões.
+
+# Guilherme Souto Borges da Costa
+>- Eu contribuí nesta última etapa corrigindo os erros e aperfeiçoando minha tela de agendamento de serviço, conforme as colocações do professor. Sempre me mantive comunicativo e disposto a ajudar o grupo no que for preciso.
