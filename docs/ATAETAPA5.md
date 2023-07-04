@@ -5,4 +5,4 @@
 >- Eu contribui para a etapa corrigindo os erros que foram apontados pelo professor nas minhas telas de cadastro de usuários e login, fiz o slide da apresentação final e estive sempre presente nas reuniões do grupo.
 
 # Erick Fabricio Rodrigues Ribeiro
->-  Eu contribuí nesta última etapa, a princípio, corrigindo erros básicos informados pelo nosso professor para a finalização do nosso projeto, visando um melhor uso para o usuário e administrador. Além disso, devido à exigência do projeto de utilizar o server JSON, eu e Gabriel Paiva implementamos essa funcionalidade, promovendo uma grande mudança e aprimoramento do nosso projeto. Também, estou sempre participando e colaborando com nossas reuniões para tomada de decisões.
+>-  Eu contribuí nesta última etapa, a princípio, corrigindo erros básicos informados pelo nosso professor para a finalização do nosso projeto, visando um melhor uso para o usuário e administrador. Além disso, eu e Gabriel Paiva implementamos o server JSON  promovendo uma grande mudança e aprimoramento do nosso projeto. Também, estou sempre participando e colaborando com nossas reuniões para tomada de decisões.
