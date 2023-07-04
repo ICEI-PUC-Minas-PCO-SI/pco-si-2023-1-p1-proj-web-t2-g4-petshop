@@ -1,5 +1,5 @@
 var bancoServ = []
-var URL = 'https://server-json-black.vercel.app/servico';
+var URL = 'https://jsonserver-lilac.vercel.app/servicos';
 function iniciar() {
   fetch(URL)
     .then(response => response.json())

@@ -86,7 +86,7 @@ function pegarNomes() {
 //Função para criar as opções de select com os serviços já cadastrados
 function pegarServiços() {
 
-    fetch('https://server-json-black.vercel.app/servico')
+    fetch('https://jsonserver-lilac.vercel.app/servicos')
         .then(res => res.json())
         .then(dados => {
             var select = document.getElementById("servico");
