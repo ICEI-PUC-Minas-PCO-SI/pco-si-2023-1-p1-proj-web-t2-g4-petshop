@@ -1,5 +1,5 @@
 var bancoServ = []
-var URL = 'http://localhost:3000/servicos';
+var URL = 'https://server-json-black.vercel.app/servico';
 function iniciar() {
   fetch(URL)
     .then(response => response.json())
