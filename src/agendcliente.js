@@ -86,7 +86,7 @@ function pegarNomes() {
 //Função para criar as opções de select com os serviços já cadastrados
 function pegarServiços() {
 
-    fetch('http://localhost:3000/servicos')
+    fetch('https://server-json-black.vercel.app/servico')
         .then(res => res.json())
         .then(dados => {
             var select = document.getElementById("servico");
