@@ -40,7 +40,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-001| O sistema deve permitir o  cadastro de produtos | ALTA | João Vitor Vitalino da Silva Roveda |
 |RF-002| O sistema deve permitir o cadastro de pessoas  | ALTA | Carolina Alves Baião Pessoa |
 |RF-003| O sistema deve permitir o agendamento de serviço | ALTA | Guilherme Souto Borges da Costa |
-|RF-004| O sistema deve permitir o gerenciamento de perfis | MÉDIA | Arthur Magalhães Fonseca |
+|RF-004| O sistema deve permitir o listagem de agendamentos| MÉDIA | Gabriel Henrique de Jesus Paiva |
 |RF-005| O sistema deve permitir o registro de serviço | ALTA | Erick Fabrício Rodrigues Ribeiro |
 |RF-006| O sistema deve permitir o acesso e controle do estoque | MÉDIA | Gabriel Leandro Emerick de Azevedo |
 |RF-007| O sistema deve permitir o cadastro dos pets | ALTA | Gabriel Henrique de Jesus Paiva |
