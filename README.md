@@ -18,10 +18,8 @@
 
 * Gabriel Henrique de Jesus Paiva
 * Carolina Alves Baião Pessoa
-* João Vitor Vitalino da Silva Roveda
 * Erick Fabricio Rodrigues Ribeiro
 * Gabriel Leandro Emerick de Azevedo
-* Arthur Magalhães Fonseca
 * Guilherme Souto Borges da Costa
 
 ## Orientador
