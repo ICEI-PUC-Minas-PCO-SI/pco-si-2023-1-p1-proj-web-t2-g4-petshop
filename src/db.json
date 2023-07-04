@@ -1,0 +1,23 @@
+{
+    "servicos": [
+      {
+        "id": "1",
+        "servico": "Tosa",
+        "preco": "150.00",
+        "obs": "Tosa bebê (incluso banho)."
+      },
+      {
+        "id": "2",
+        "servico": "Banho",
+        "preco": "80.00",
+        "obs": "Incluso corte de unha e tosa higiênica. "
+      },
+      {
+        "id": "3",
+        "servico": "Consulta",
+        "preco": "150.00",
+        "obs": "Incluso retorno."
+      }
+    ]
+  }
+  
